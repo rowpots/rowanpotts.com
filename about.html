@@ -17,7 +17,7 @@
   <body>
     <div class="page">
       <header class="topbar">
-        <h1 class="site_title">Rowan Potts</h1>
+        <a class="brand" href="index.html" aria-label="Rowan Potts Photography home">Rowan Potts Photography</a>
         <input class="nav_toggle" type="checkbox" id="about_nav_toggle" />
         <label class="menu_tab" for="about_nav_toggle" aria-label="Toggle navigation menu">
           <span class="sr_only">Toggle navigation menu</span>
@@ -27,26 +27,21 @@
             <span></span>
           </span>
         </label>
-        <nav class="links_list">
-          <a href="index.html" class="link_button"
-            ><button class="buttons">Home</button></a
-          >
+        <nav class="links_list" aria-label="Primary navigation">
+          <a href="gallery_list.html">Galleries</a>
           <a
-            class="link_button"
             href="https://www.instagram.com/pottsey.photos/"
             target="_blank"
-            ><button class="buttons">Instagram</button></a
+            rel="noopener noreferrer"
+            >Instagram</a
           >
           <a
-            class="link_button"
             href="https://www.linkedin.com/in/rowan-potts-7a2a72305/"
             target="_blank"
             rel="noopener noreferrer"
-            ><button class="buttons">LinkedIn</button></a
+            >LinkedIn</a
           >
-          <a class="link_button" href="contact.html"
-            ><button class="buttons">Contact</button></a
-          >
+          <a href="contact.html">Contact</a>
         </nav>
       </header>
 
@@ -149,6 +144,11 @@
           </div>
         </section>
       </main>
+
+      <footer class="footer">
+        <p>Rowan Potts Photography</p>
+        <a href="contact.html">Contact</a>
+      </footer>
     </div>
   </body>
 </html>

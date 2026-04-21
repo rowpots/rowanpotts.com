@@ -3,137 +3,103 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="shortcut icon" type="camera-icon" href="photos/r_icon.png">
+  <link rel="shortcut icon" type="image/png" href="photos/r_icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="Photo, Photography, Rowan, Potts, Rowan Potts" />
-  <meta name="description" content="Welcome to the website of Rowan Potts! Here my portfolio is displayed." />
+  <meta name="keywords" content="Rowan Potts, Photography, Portfolio, Portraits, Events" />
+  <meta name="description" content="Rowan Potts Photography landing page with portraits, events, and portfolio work." />
   <title>Rowan Potts Photography</title>
-  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="landing.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Ramaraja&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <script src="gallery-lightbox.js" defer></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ramaraja&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
-<body id="top">
+<body>
   <div class="page">
-    <!-- top part of the page -->
-    <div class="header_container">
-      <header class="header_main">
-        <!-- site title -->
-        <h1 class="header">Rowan Potts Photography</h1>
-        <input class="nav_toggle" type="checkbox" id="nav_toggle" />
-        <label class="menu_tab" for="nav_toggle" aria-label="Toggle navigation menu">
-          <span class="sr_only">Toggle navigation menu</span>
-          <span class="menu_icon" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </label>
-        <!-- nav links -->
-        <div class="links">
-          <a href="about.html"><button class="buttons">
-              About Me
-            </button></a>
-          <a href="contact.html"><button class="buttons">
-              Contact Me
-            </button></a>
-          <a href="https://www.instagram.com/pottsey.photos/" target="_blank"><button class="buttons">
-              My Instagram
-            </button></a>
-          <a href="https://www.linkedin.com/in/rowan-potts-7a2a72305/" target="_blank" rel="noopener noreferrer"><button class="buttons">
-              LinkedIn
-            </button></a>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Rowan Potts Photography home">Rowan Potts Photography</a>
+
+      <input class="nav_toggle" type="checkbox" id="landing_nav_toggle" />
+      <label class="menu_tab" for="landing_nav_toggle" aria-label="Toggle navigation menu">
+        <span class="sr_only">Toggle navigation menu</span>
+        <span class="menu_icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </label>
+
+      <nav class="links_list" aria-label="Primary navigation">
+        <a href="gallery_list.html">Galleries</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.instagram.com/pottsey.photos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero_title">
+        <img
+          class="hero_image"
+          src="landing photo/Elizabeth-Fowler-Graduation_26_of_80_50.jpg"
+          alt="Graduation portrait session outdoors"
+        />
+        <div class="hero_shade" aria-hidden="true"></div>
+        <div class="hero_content">
+          <p class="eyebrow">Portraits. Sports. Events.</p>
+          <h1 id="hero_title">Rowan Potts Photography</h1>
+          <p class="hero_text">
+            Photographer for <i>The Breeze</i> at James Madison University
+          </p>
+          <div class="hero_actions" aria-label="Landing page actions">
+            <a class="button primary_button" href="gallery_list.html">View Galleries</a>
+            <a class="button secondary_button" href="contact.html">Book a Shoot</a>
+          </div>
         </div>
-      </header>
-    </div>
+      </section>
 
-  <!-- line under the header -->
-  <div class="top_linediv">
-    <hr class="top_line" />
-  </div>
+      <section class="featured" aria-labelledby="featured_title">
+        <div class="featured_intro">
+          <h2 id="featured_title">Recent Frames</h2>
+          <p>
+            Here is some of the recent work I've been doing. Click on an image to check it out
+          </p>
+        </div>
 
-  <!-- main photo gallery -->
-  <div class="photo_container">
-    <div class="box">
-      <!-- first column of photos -->
-      <div class="column">
-        <img class="image" src="photos/jmutroy-50.jpg" alt="Jmutroy 50" loading="lazy" />
-        <img class="image" src="photos/jmutroy-46.jpg" alt="Jmutroy 46" loading="lazy" />
-        <img class="image" src="photos/i1.jpg" alt="I1" loading="lazy" />
-        <img class="image" src="photos/a1.jpg" alt="A1" loading="lazy" />
-        <img class="image" src="photos/app_state-53.jpg" alt="App state 53" loading="lazy" />
-        <img class="image" src="photos/app_state-45.jpg" alt="App state 45" loading="lazy" />
-        <img class="image" src="photos/app_state-38.jpg" alt="App state 38" loading="lazy" />
-        <img class="image" src="photos/RPP_MBBALL_LOUISIANA-9.jpg" alt="JMU Mens Baseball vs Lousiana" loading="lazy" />
-        <img class="image" src="photos/wbb-20.jpg" alt="Wbb 20" loading="lazy" />
-        <img class="image" src="photos/wbb-17.jpg" alt="Wbb 17" loading="lazy" />
-        <img class="image" src="photos/wbb.jpg" alt="Wbb" loading="lazy" />
-        <img class="image" src="photos/liz_portrait-3.jpg" alt="Liz portrait 3" loading="lazy" />
-        <img class="image" src="photos/myfarm-26.jpg" alt="Myfarm 26" loading="lazy" />
-        <img class="image" src="photos/myfarm-10.jpg" alt="Myfarm 10" loading="lazy" />
-        <img class="image" src="photos/resized_JMU_Students-7.jpg" alt="JMU Quad" loading="lazy" />
-        <img class="image" src="photos/resized_lucagrad-1-8.jpg" alt="A Students College Graduation Photo"
-          loading="lazy" />
-        <img class="image" src="photos/resized_lucagrad-1-5.jpg" alt="A Students College Graduation Photo"
-          loading="lazy" />
-        <img class="image" src="photos/resized_Greek_Sing-1.jpg" alt="JMU Greek Sing 2024" loading="lazy" />
-        <img class="image" src="photos/resized_jmu_vs_cornell-5.jpg" alt="JMU Baseball vs Cornell" loading="lazy" />
-        <img class="image" src="photos/resized_jmu_vs_cornell-10.jpg" alt="JMU Baseball vs Cornell" loading="lazy" />
-        <img class="image" src="photos/resized_portrait-2.jpg" alt="Portrait at Osbourn Park High School"
-          loading="lazy" />
-        <img class="image" src="photos/resized_portrait-1.jpg" alt="A portrait of a young woman" loading="lazy" />
-        <img class="image" src="photos/resized_will_rachel_prom-2.jpg" alt="Man and Woman at Jefferson Memorial"
-          loading="lazy" />
-        <img class="image" src="photos/resized_ASPCA-4.jpg" alt="A cat named Archie" loading="lazy" />
-        <img class="image" src="photos/resized_charlie-2.jpg" alt="Dog portrait" loading="lazy" />
-        <img class="image" src="photos/resizedconcert_photo-2-2.jpg" alt="Man Playing Bass" loading="lazy" />
-        <img class="image" src="photos/resized_concert_photo-2.jpg" alt="Man Playing Guitar" loading="lazy" />
-        <img class="image" src="photos/resized_river_photo-2.jpg" alt="photo of occoquan river" loading="lazy" />
-      </div>
-      <!-- second column of photos -->
-      <div class="column">
-        <img class="image" src="photos/jmutroy-48.jpg" alt="Jmutroy 48" loading="lazy" />
-        <img class="image" src="photos/h1.jpg" alt="H1" loading="lazy" />
-        <img class="image" src="photos/j.jpg" alt="J" loading="lazy" />
-        <img class="image" src="photos/b2.jpg" alt="B2" loading="lazy" />
-        <img class="image" src="photos/app_state-48.jpg" alt="App state 48" loading="lazy" />
-        <img class="image" src="photos/app_state-41.jpg" alt="App state 41" loading="lazy" />
-        <img class="image" src="photos/app_state-19.jpg" alt="App state 19" loading="lazy" />
-        <img class="image" src="photos/RPP_MBBALL_LOUISIANA-10.jpg" alt="JMU Mens Baseball vs Lousiana" loading="lazy" />
-        <img class="image" src="photos/wbb-19.jpg" alt="Wbb 19" loading="lazy" />
-        <img class="image" src="photos/wbb-9.jpg" alt="Wbb 9" loading="lazy" />
-        <img class="image" src="photos/liz_portrait-6.jpg" alt="Liz portrait 6" loading="lazy" />
-        <img class="image" src="photos/liz_portrait.jpg" alt="Liz portrait" loading="lazy" />
-        <img class="image" src="photos/myfarm-19.jpg" alt="Myfarm 19" loading="lazy" />
-        <img class="image" src="photos/myfarm-3.jpg" alt="Myfarm 3" loading="lazy" />
-        <img class="image" src="photos/resized_sunset_silhouette-1.jpg" alt="Silhouette at sunset" loading="lazy" />
-        <img class="image" src="photos/resized_lucagrad-1-10.jpg" alt="A Students College Graduation Photo"
-          loading="lazy" />
-        <img class="image" src="photos/resized_lucagrad-1-15.jpg" alt="A Students College Graduation Photo"
-          loading="lazy" />
-        <img class="image" src="photos/resized_skeleton_lightpainting-2.jpg" alt="skeleton light painting"
-          loading="lazy" />
-        <img class="image" src="photos/resized_lights-2.jpg" alt="arcade sign" loading="lazy" />
-        <img class="image" src="photos/resized_deker_ocphoto-2.jpg" alt="man sitting on dock" loading="lazy" />
-        <img class="image" src="photos/resized_sarah_hiking-2.jpg" alt="girl on mountain" loading="lazy" />
-        <img class="image" src="photos/resized_hiking-2.jpg" alt="three people hiking" loading="lazy" />
-        <img class="image" src="photos/resized_eagle-2.jpg" alt="eagle in mountains" loading="lazy" />
-        <img class="image" src="photos/resized_butterfly-2.jpg" alt="butterfly on rock" loading="lazy" />
-        <img class="image" src="photos/ASPCA-22.jpg" alt="A dog named Pancake" loading="lazy" />
-        <img class="image" src="photos/resized_bug_photo-2.jpg" alt="Bug on a plant" loading="lazy" />
-      </div>
-    </div>
-  </div>
-    <!-- simple button to go back to the top -->
-    <a href="#top" class="top_button">Jump to top</a>
-    <!-- popup preview when a photo gets clicked -->
-    <div class="lightbox" id="lightbox" aria-hidden="true">
-      <button class="lightbox_close" id="lightbox_close" type="button" aria-label="Close fullscreen preview">X</button>
-      <img class="lightbox_image" id="lightbox_image" src="" alt="" />
-    </div>
+        <div class="photo_grid">
+          <figure class="photo_tile">
+            <a href="graduation.html">
+              <img
+                src="landing photo/Elizabeth-Fowler-Graduation_8_of_80_50 (1).jpg"
+                alt="Graduation portrait session outdoors"
+                loading="lazy"
+              />
+              <figcaption>Graduation</figcaption>
+            </a>
+          </figure>
+          <figure class="photo_tile tall_tile">
+            <a href="football.html">
+              <img src="landing photo/j.jpg" alt="Football photograph by Rowan Potts" loading="lazy" />
+              <figcaption>Football</figcaption>
+            </a>
+          </figure>
+          <figure class="photo_tile">
+            <a href="myers-farm.html">
+              <img src="landing photo/myfarm-3.jpg" alt="Outdoor farm landscape photograph" loading="lazy" />
+              <figcaption>Myers Farm</figcaption>
+            </a>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Rowan Potts Photography</p>
+      <a href="contact.html">Contact</a>
+    </footer>
   </div>
 </body>
 

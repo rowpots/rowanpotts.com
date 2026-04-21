@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" type="image/png" href="photos/r_icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portrait photography by Rowan Potts." />
+  <title>Portrait | Rowan Potts Photography</title>
+  <link rel="stylesheet" href="gallery_page.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ramaraja&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <script src="gallery-lightbox.js" defer></script>
+</head>
+
+<body id="top">
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="index.html">Rowan Potts Photography</a>
+      <input class="nav_toggle" type="checkbox" id="portrait_nav_toggle" />
+      <label class="menu_tab" for="portrait_nav_toggle" aria-label="Toggle navigation menu">
+        <span class="sr_only">Toggle navigation menu</span>
+        <span class="menu_icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      </label>
+      <nav class="links_list" aria-label="Primary navigation">
+        <a href="gallery_list.html">Galleries</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.instagram.com/pottsey.photos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="photo_container" aria-label="Portrait photos">
+        <div class="gallery_masonry">
+          <img class="image" src="portrait/liz_portrait.jpg" alt="Portrait photo 1" loading="lazy" />
+          <img class="image" src="portrait/liz_portrait-3.jpg" alt="Portrait photo 2" loading="lazy" />
+          <img class="image" src="portrait/liz_portrait-6.jpg" alt="Portrait photo 3" loading="lazy" />
+          <img class="image" src="portrait/resized_deker_ocphoto-2.jpg" alt="Portrait photo 4" loading="lazy" />
+          <img class="image" src="portrait/resized_portrait-1.jpg" alt="Portrait photo 5" loading="lazy" />
+          <img class="image" src="portrait/resized_portrait-2.jpg" alt="Portrait photo 6" loading="lazy" />
+          <img class="image" src="portrait/resized_sunset_silhouette-1.jpg" alt="Portrait photo 7" loading="lazy" />
+          <img class="image" src="portrait/resized_will_rachel_prom-2.jpg" alt="Portrait photo 8" loading="lazy" />
+          <img class="image" src="portrait/resizedconcert_photo-2-2.jpg" alt="Portrait photo 9" loading="lazy" />
+        </div>
+      </section>
+    </main>
+
+    <a href="#top" class="top_button">Top</a>
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox_close" id="lightbox_close" type="button" aria-label="Close fullscreen preview">X</button>
+      <img class="lightbox_image" id="lightbox_image" src="" alt="" />
+    </div>
+  </div>
+</body>
+
+</html>
