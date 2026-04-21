@@ -5,19 +5,18 @@
   <meta charset="UTF-8" />
   <link rel="shortcut icon" type="image/png" href="photos/r_icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Football photography by Rowan Potts." />
+  <meta name="description" content="Football game galleries by Rowan Potts." />
   <title>Football | Rowan Potts Photography</title>
-  <link rel="stylesheet" href="gallery_page.css" />
+  <link rel="stylesheet" href="gallery_list.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Ramaraja&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet"
   />
-  <script src="gallery-lightbox.js" defer></script>
 </head>
 
-<body id="top">
+<body>
   <div class="page">
     <header class="topbar">
       <a class="brand" href="index.html">Rowan Potts Photography</a>
@@ -35,31 +34,40 @@
     </header>
 
     <main>
-      <section class="photo_container" aria-label="Football photos">
-        <div class="gallery_masonry">
-          <img class="image" src="football/a1.jpg" alt="Football photo 1" loading="lazy" />
-          <img class="image" src="football/app_state-19.jpg" alt="Football photo 2" loading="lazy" />
-          <img class="image" src="football/app_state-38.jpg" alt="Football photo 3" loading="lazy" />
-          <img class="image" src="football/app_state-41.jpg" alt="Football photo 4" loading="lazy" />
-          <img class="image" src="football/app_state-45.jpg" alt="Football photo 5" loading="lazy" />
-          <img class="image" src="football/app_state-48.jpg" alt="Football photo 6" loading="lazy" />
-          <img class="image" src="football/app_state-53.jpg" alt="Football photo 7" loading="lazy" />
-          <img class="image" src="football/b2.jpg" alt="Football photo 8" loading="lazy" />
-          <img class="image" src="football/h1.jpg" alt="Football photo 9" loading="lazy" />
-          <img class="image" src="football/i1.jpg" alt="Football photo 10" loading="lazy" />
-          <img class="image" src="football/j.jpg" alt="Football photo 11" loading="lazy" />
-          <img class="image" src="football/jmutroy-46.jpg" alt="Football photo 12" loading="lazy" />
-          <img class="image" src="football/jmutroy-48.jpg" alt="Football photo 13" loading="lazy" />
-          <img class="image" src="football/jmutroy-50.jpg" alt="Football photo 14" loading="lazy" />
+      <section class="list_hero" aria-labelledby="football_title">
+        <img
+          class="list_hero_image"
+          src="football/app_state/app_state-4.jpg"
+          alt="Football game action"
+        />
+        <div class="list_hero_shade" aria-hidden="true"></div>
+        <div class="list_hero_content">
+          <h1 id="football_title">Football</h1>
+          <p>Game galleries</p>
         </div>
+      </section>
+
+      <section class="gallery_list_section football_gallery_list" aria-label="Football game galleries">
+        <h2 class="gallery_year_heading">2025</h2>
+        <article class="gallery_card">
+          <a href="football-app-state.html">
+            <img src="football/app_state/top/app_state-41.jpg" alt="App State football gallery preview" loading="lazy" />
+            <span>JMU vs. App State</span>
+          </a>
+        </article>
+        <article class="gallery_card">
+          <a href="football-troy.html">
+            <img src="football/troy/top/jmutroy-50.jpg" alt="Troy football gallery preview" loading="lazy" />
+            <span>JMU vs. Troy</span>
+          </a>
+        </article>
       </section>
     </main>
 
-    <a href="#top" class="top_button">Top</a>
-    <div class="lightbox" id="lightbox" aria-hidden="true">
-      <button class="lightbox_close" id="lightbox_close" type="button" aria-label="Close fullscreen preview">X</button>
-      <img class="lightbox_image" id="lightbox_image" src="" alt="" />
-    </div>
+    <footer class="footer">
+      <p>Rowan Potts Photography</p>
+      <a href="contact.html">Contact</a>
+    </footer>
   </div>
 </body>
 
