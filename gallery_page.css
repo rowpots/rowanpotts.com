@@ -351,6 +351,12 @@ h1 {
 }
 
 @media (min-width: 1280px) {
+  .topbar {
+    width: min(100%, 1640px);
+    padding-right: clamp(24px, 2vw, 48px);
+    padding-left: clamp(24px, 2vw, 48px);
+  }
+
   .gallery_header {
     padding-top: 68px;
   }
