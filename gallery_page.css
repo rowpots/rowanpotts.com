@@ -221,19 +221,20 @@ h1 {
   position: fixed;
   right: 16px;
   bottom: 16px;
-  padding: 8px 16px;
-  border: 1px solid var(--ink);
+  padding: 11px 12px;
+  border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--white);
   color: var(--ink);
   font-family: "Roboto", sans-serif;
+  font-weight: 600;
   text-decoration: none;
   z-index: 30;
 }
 
-.top_button:hover {
-  background: var(--ink);
-  color: var(--white);
+.top_button:hover,
+.top_button:focus-visible {
+  border-color: var(--ink);
 }
 
 .lightbox {
