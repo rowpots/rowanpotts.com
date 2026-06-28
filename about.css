@@ -27,6 +27,13 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
+}
+
+/* <picture> wrappers (from the image pipeline) are layout-transparent so the
+   inner <img> stays the direct layout child and existing image rules apply. */
+picture {
+  display: contents;
 }
 
 .page {

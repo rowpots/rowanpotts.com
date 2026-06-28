@@ -1,0 +1,16 @@
+{
+  "name": "rowanwebsite-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-only build utilities for rowanpotts.com (image optimization + mirror sync). NOT part of the deployed static site.",
+  "scripts": {
+    "optimize": "node optimize-images.mjs",
+    "rewrite": "node rewrite-html.mjs",
+    "sync": "node sync-mirrors.mjs",
+    "build": "node optimize-images.mjs && node rewrite-html.mjs && node sync-mirrors.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}

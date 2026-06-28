@@ -1,0 +1,7 @@
+# Full-resolution original photos moved aside by tools/move-masters.mjs.
+# Local reversible backup only — never deployed.
+masters/
+
+# Local tooling dependencies (the deployed site is static HTML/CSS).
+node_modules/
+tools/node_modules/
