@@ -21,7 +21,7 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  animation: hero_fade 28s infinite;
+  animation: hero_fade 14s infinite;
 }
 
 .slide img {
@@ -37,28 +37,23 @@
 .slide:nth-child(2) {
   animation-delay: 7s;
 }
-.slide:nth-child(3) {
-  animation-delay: 14s;
-}
-.slide:nth-child(4) {
-  animation-delay: 21s;
-}
 
+/* two-frame crossfade: each frame holds, then cross-dissolves with the other */
 @keyframes hero_fade {
   0% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 1;
+  }
+  50% {
     opacity: 0;
   }
-  3% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  29% {
+  92% {
     opacity: 0;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
