@@ -235,9 +235,9 @@
   transition: transform 0.6s ease;
 }
 
-/* the football frame is a tall portrait — bias its crop to the upper body */
-.work_item img[src*="landing-photo/j-"] {
-  object-position: center 22%;
+/* the football frame is a tall portrait sitting in a portrait cell — center it */
+.work_item img[src*="troy-reedit-1"] {
+  object-position: center 40%;
 }
 
 .work_item::after {
@@ -287,26 +287,26 @@
 .about_inner {
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(36px, 5vw, 60px);
+  gap: clamp(32px, 5vw, 56px);
   align-items: center;
   width: min(100%, var(--container));
   margin-inline: auto;
-  padding: clamp(48px, 7vw, 96px) var(--gutter);
+  padding: clamp(48px, 7vw, 92px) var(--gutter);
 }
 
 .about_media {
   position: relative;
   justify-self: start;
-  width: min(340px, 100%);
+  width: min(400px, 100%);
 }
 
-/* offset accent block peeking out behind the portrait (bottom-right) */
+/* offset outline frame peeking out behind the portrait (bottom-right) */
 .about_media::before {
   content: "";
   position: absolute;
-  inset: 16px -16px -16px 16px;
-  background: var(--clay);
-  border-radius: 8px;
+  inset: 18px -18px -18px 18px;
+  border: 1.5px solid var(--clay);
+  border-radius: 12px;
   z-index: 0;
 }
 
@@ -317,27 +317,19 @@
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 8px;
-}
-
-.about_copy .eyebrow {
-  margin: 0 0 12px;
-  font-size: var(--step--1);
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--clay);
+  border-radius: 12px;
+  box-shadow: 0 22px 48px -28px rgba(22, 22, 22, 0.55);
 }
 
 .about_copy h2 {
   font-size: var(--step-3);
   letter-spacing: -0.02em;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .about_copy p {
-  margin: 0 0 22px;
-  max-width: 54ch;
+  margin: 0 0 34px;
+  max-width: 64ch;
   color: var(--soft-ink);
   line-height: 1.65;
 }
@@ -345,11 +337,20 @@
 .about_actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 12px;
 }
 
-.about_ig {
-  margin: 18px 0 0;
+/* slim the bio buttons to the nav's lighter, compact pill proportions */
+.about_actions .button {
+  min-height: 0;
+  padding: 11px 20px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* needs to out-specify `.about_copy p` above, which otherwise zeroes the top margin */
+.about_copy .about_ig {
+  margin: 48px 0 0;
 }
 
 .about_ig a {
@@ -364,12 +365,14 @@
 
 @media (min-width: 760px) {
   .work_grid {
-    grid-template-columns: 1.6fr 1fr;
+    grid-template-columns: 1.4fr 1fr;
     grid-template-rows: repeat(2, minmax(200px, 1fr));
     height: clamp(520px, 50vw, 660px);
   }
 
+  /* the feature is the tall vertical box on the right (matches a portrait photo) */
   .work_item.is_feature {
+    grid-column: 2;
     grid-row: 1 / span 2;
   }
 
@@ -379,7 +382,7 @@
   }
 
   .about_inner {
-    grid-template-columns: max-content 1fr;
-    gap: clamp(44px, 5vw, 84px);
+    grid-template-columns: 400px minmax(0, 1fr);
+    gap: clamp(48px, 5vw, 88px);
   }
 }
