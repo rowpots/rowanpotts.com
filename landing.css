@@ -5,7 +5,7 @@
 .hero {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   min-height: 86vh;
   min-height: 86svh;
   overflow: hidden;
@@ -29,6 +29,11 @@
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
+}
+
+/* the basketball frame sits low at the shared 30% crop — raise its subject */
+.slide img[src*="basketball-reedit-1"] {
+  object-position: center 50%;
 }
 
 .slide:nth-child(1) {
@@ -80,24 +85,16 @@
 .hero_scrim {
   position: absolute;
   inset: 0;
-  /* bottom band + extra darkening anchored at the bottom-left (where the
-     headline sits) so white text stays legible over bright skies/subjects */
-  background:
-    radial-gradient(125% 100% at 12% 100%, rgba(0, 0, 0, 0.62), transparent 58%),
-    linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(0, 0, 0, 0.34) 34%,
-      rgba(0, 0, 0, 0.08) 64%,
-      rgba(0, 0, 0, 0.12) 100%
-    );
+  /* subtle, localized shade behind the top-left headline only — no full-width
+     top band; the text-shadows carry the rest of the legibility */
+  background: radial-gradient(68% 58% at 0% 0%, rgba(0, 0, 0, 0.4), transparent 62%);
 }
 
 .hero_inner {
   position: relative;
-  width: min(100%, var(--container));
-  margin-inline: auto;
-  padding: 0 var(--gutter) clamp(40px, 7vw, 88px);
+  width: 100%;
+  max-width: 52rem;
+  padding: clamp(28px, 5vw, 64px) clamp(16px, 3vw, 32px) clamp(40px, 7vw, 88px);
   color: var(--white);
 }
 
@@ -146,28 +143,59 @@
   color: var(--ink);
 }
 
-/* ---- featured work grid ---- */
-.featured {
-  width: min(100%, var(--container));
-  margin-inline: auto;
-  padding: clamp(44px, 6vw, 84px) var(--gutter) clamp(24px, 3vw, 40px);
+/* ---- nav logo: aperture mark + wordmark ---- */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.6rem);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: var(--ink);
 }
 
-.featured_head {
+.brand_mark {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  color: var(--clay);
+  transition: transform 0.45s ease;
+}
+
+.brand:hover .brand_mark,
+.brand:focus-visible .brand_mark {
+  transform: rotate(45deg);
+}
+
+/* ---- selected work (asymmetric) ---- */
+.work {
+  width: min(100%, var(--container));
+  margin-inline: auto;
+  padding: clamp(28px, 4vw, 52px) var(--gutter);
+}
+
+.work_head {
   display: flex;
   flex-wrap: wrap;
   gap: 12px 24px;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: clamp(18px, 3vw, 30px);
+  margin-bottom: clamp(16px, 2.5vw, 26px);
 }
 
-.featured_head h2 {
+.work_head h2 {
   font-size: var(--step-2);
   letter-spacing: -0.01em;
 }
 
-.featured_head .all_link {
+.work_head .all_link {
   font-size: var(--step--1);
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -176,17 +204,23 @@
   transition: color 0.2s ease;
 }
 
-.featured_head .all_link:hover {
+.work_head .all_link:hover {
   color: var(--clay);
 }
 
-.tiles {
+.work_grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(14px, 2vw, 22px);
+  gap: clamp(12px, 1.5vw, 18px);
 }
 
-.tile {
+/* <picture> wrappers are layout-transparent here so the <img> fills the cell */
+.work_item picture,
+.about_media picture {
+  display: contents;
+}
+
+.work_item {
   position: relative;
   display: block;
   overflow: hidden;
@@ -194,87 +228,158 @@
   background: var(--paper-2);
 }
 
-.tile img {
+.work_item img {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.6s ease;
 }
 
-.tile::after {
+/* the football frame is a tall portrait — bias its crop to the upper body */
+.work_item img[src*="landing-photo/j-"] {
+  object-position: center 22%;
+}
+
+.work_item::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 52%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0) 55%);
   z-index: 1;
 }
 
-.tile_label {
+.work_meta {
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: 2;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
   padding: 16px 18px;
+  color: var(--white);
+}
+
+.work_index {
+  font-family: var(--serif);
+  font-size: var(--step--1);
+  opacity: 0.75;
+}
+
+.work_name {
   font-family: var(--serif);
   font-weight: 500;
   font-size: var(--step-1);
-  color: var(--white);
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
 }
 
-.tile:hover img,
-.tile:focus-visible img {
-  transform: scale(1.045);
+.work_item:hover img,
+.work_item:focus-visible img {
+  transform: scale(1.05);
 }
 
-/* ---- instagram strip ---- */
-.ig_strip {
+/* ---- about / bio teaser (warm band, offset-framed portrait) ---- */
+.about_teaser {
+  background: var(--paper-2);
+  margin-top: clamp(8px, 2vw, 24px);
+}
+
+.about_inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(36px, 5vw, 60px);
+  align-items: center;
+  width: min(100%, var(--container));
+  margin-inline: auto;
+  padding: clamp(48px, 7vw, 96px) var(--gutter);
+}
+
+.about_media {
+  position: relative;
+  justify-self: start;
+  width: min(340px, 100%);
+}
+
+/* offset accent block peeking out behind the portrait (bottom-right) */
+.about_media::before {
+  content: "";
+  position: absolute;
+  inset: 16px -16px -16px 16px;
+  background: var(--clay);
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.about_media img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.about_copy .eyebrow {
+  margin: 0 0 12px;
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+
+.about_copy h2 {
+  font-size: var(--step-3);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.about_copy p {
+  margin: 0 0 22px;
+  max-width: 54ch;
+  color: var(--soft-ink);
+  line-height: 1.65;
+}
+
+.about_actions {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px 28px;
-  width: min(100%, var(--container));
-  margin: clamp(20px, 3vw, 40px) auto clamp(48px, 7vw, 88px);
-  padding: clamp(22px, 3vw, 32px) clamp(22px, 3vw, 34px);
-  /* pull inside the gutter */
-  max-width: calc(min(100%, var(--container)) - 2 * var(--gutter));
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--paper-2);
+  gap: 14px;
 }
 
-.ig_strip p {
-  margin: 0;
-  max-width: 52ch;
-  color: var(--soft-ink);
+.about_ig {
+  margin: 18px 0 0;
 }
 
-.ig_strip a {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
+.about_ig a {
+  font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--clay);
 }
 
-.ig_strip a:hover {
+.about_ig a:hover {
   color: var(--ink);
 }
 
-.instagram_icon {
-  width: 26px;
-  height: 26px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.8;
-}
+@media (min-width: 760px) {
+  .work_grid {
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-rows: repeat(2, minmax(200px, 1fr));
+    height: clamp(520px, 50vw, 660px);
+  }
 
-@media (min-width: 680px) {
-  .tiles {
-    grid-template-columns: repeat(3, 1fr);
+  .work_item.is_feature {
+    grid-row: 1 / span 2;
+  }
+
+  .work_item img {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+
+  .about_inner {
+    grid-template-columns: max-content 1fr;
+    gap: clamp(44px, 5vw, 84px);
   }
 }
