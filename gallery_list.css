@@ -73,6 +73,7 @@
 .r_item img[src*="wsoftball-louisiana-13"] { object-position: center 62%; }
 .r_item img[src*="sunset-silhouette"] { object-position: center 40%; }
 .r_item img[src*="myfarm-3"] { object-position: center 46%; }
+.r_item img[src*="jmutroy-50"] { object-position: center 22%; }
 
 /* directional scrim: shade the caption side, fade to clear across the frame */
 .r_item::after {
