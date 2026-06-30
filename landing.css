@@ -293,6 +293,11 @@
   }
 }
 
+/* on phones the hero copy crowds the image — drop the lede so the photo breathes */
+@media (max-width: 600px) {
+  .hero .lede { display: none; }
+}
+
 /* stack action buttons full-width on phones so they never crowd the edge */
 @media (max-width: 520px) {
   .hero .actions,
