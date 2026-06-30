@@ -18,11 +18,12 @@
   <meta name="twitter:title" content="Photography Galleries | Rowan Potts Photography" />
   <meta name="twitter:description" content="Browse Rowan Potts Photography galleries featuring JMU sports, graduation portraits, events, landscapes, and editorial work in Harrisonburg, Virginia." />
   <meta name="twitter:image" content="https://rowanpotts.com/football/app_state/top/app_state-41.jpg" />
+  <link rel="stylesheet" href="/base.css" />
   <link rel="stylesheet" href="/gallery_list.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Ramaraja&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
 </head>
@@ -30,7 +31,18 @@
 <body>
   <div class="page">
     <header class="topbar">
-      <a class="brand" href="/" aria-label="Rowan Potts Photography home">Rowan Potts Photography</a>
+      <a class="brand" href="/" aria-label="Rowan Potts Photography home">
+        <svg class="brand_mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+          <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+          <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+          <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+          <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+          <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+        </svg>
+        <span class="brand_name">Rowan Potts</span>
+      </a>
 
       <input class="nav_toggle" type="checkbox" id="gallery_list_nav_toggle" />
       <label class="menu_tab" for="gallery_list_nav_toggle" aria-label="Toggle navigation menu">
@@ -51,76 +63,53 @@
     </header>
 
     <main>
-      <section class="list_hero" aria-labelledby="gallery_list_title">
-        <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-41-480.webp 480w, /img/football/app-state/top/app-state-41-960.webp 960w, /img/football/app-state/top/app-state-41-1600.webp 1600w, /img/football/app-state/top/app-state-41-2400.webp 2400w" sizes="(min-width: 720px) 33vw, 100vw" /><img class="list_hero_image" src="/img/football/app-state/top/app-state-41-1600.jpg" alt="Football game action" width="6240" height="4160" loading="lazy" decoding="async" /></picture>
-        <div class="list_hero_shade" aria-hidden="true"></div>
-        <div class="list_hero_content">
+      <section class="g_hero" aria-labelledby="gallery_list_title">
+        <div class="g_hero_inner">
           <h1 id="gallery_list_title">Galleries</h1>
-          <p>Browse my portfolio</p>
         </div>
       </section>
 
-      <section class="gallery_list_section" aria-label="Gallery categories">
-        <article class="gallery_card">
-          <a href="/featured-works">
-            <picture><source type="image/webp" srcset="/img/bestcomp/football-reedit-5-480.webp 480w, /img/bestcomp/football-reedit-5-960.webp 960w, /img/bestcomp/football-reedit-5-1600.webp 1600w, /img/bestcomp/football-reedit-5-2400.webp 2400w" sizes="(min-width: 720px) 33vw, 100vw" /><img src="/img/bestcomp/football-reedit-5-1600.jpg" alt="Close-up portrait of a JMU football player in a purple jersey" width="6240" height="4160" loading="lazy" decoding="async" /></picture>
-            <span>Featured Works</span>
-          </a>
-        </article>
-        <article class="gallery_card">
-          <a href="/football">
-            <picture><source type="image/webp" srcset="/img/football/troy/top/jmutroy-50-480.webp 480w, /img/football/troy/top/jmutroy-50-960.webp 960w, /img/football/troy/top/jmutroy-50-1600.webp 1600w, /img/football/troy/top/jmutroy-50-2400.webp 2400w" sizes="(min-width: 720px) 33vw, 100vw" /><img src="/img/football/troy/top/jmutroy-50-1600.jpg" alt="JMU football player running with the ball during game coverage" width="3890" height="5835" loading="lazy" decoding="async" /></picture>
-            <span>Football</span>
-          </a>
-        </article>
-        <article class="gallery_card">
-          <a href="/graduation">
-            <picture><source type="image/webp" srcset="/img/graduation/elizabeth-fowler-graduation-26-of-80-480.webp 480w, /img/graduation/elizabeth-fowler-graduation-26-of-80-960.webp 960w, /img/graduation/elizabeth-fowler-graduation-26-of-80-1600.webp 1600w, /img/graduation/elizabeth-fowler-graduation-26-of-80-2400.webp 2400w" sizes="(min-width: 720px) 33vw, 100vw" /><img src="/img/graduation/elizabeth-fowler-graduation-26-of-80-1600.jpg" alt="Graduation portrait session on a college campus" width="6141" height="4094" loading="lazy" decoding="async" /></picture>
-            <span>Graduation</span>
-          </a>
-        </article>
-        <article class="gallery_card">
-          <a href="/basketball">
-            <picture><source type="image/webp" srcset="/img/basketball/wbb-480.webp 480w, /img/basketball/wbb-960.webp 960w, /img/basketball/wbb-1600.webp 1600w, /img/basketball/wbb-2400.webp 2400w" sizes="(min-width: 720px) 33vw, 100vw" /><img src="/img/basketball/wbb-1600.jpg" alt="JMU basketball player in game action" width="4389" height="3343" loading="lazy" decoding="async" /></picture>
-            <span>Basketball</span>
-          </a>
-        </article>
-        <article class="gallery_card">
-          <a href="/myers-farm">
-            <picture><source type="image/webp" srcset="/img/myers-farm/myfarm-3-480.webp 480w, /img/myers-farm/myfarm-3-960.webp 960w, /img/myers-farm/myfarm-3-1600.webp 1600w, /img/myers-farm/myfarm-3-2400.webp 2400w" sizes="(min-width: 720px) 33vw, 100vw" /><img src="/img/myers-farm/myfarm-3-1600.jpg" alt="Highland cow at Myers Farm" width="5701" height="3801" loading="lazy" decoding="async" /></picture>
-            <span>Myers Farm</span>
-          </a>
-        </article>
-        <article class="gallery_card">
-          <a href="/baseball">
-            <picture><source type="image/webp" srcset="/img/baseball/crop-1-of-1-480.webp 480w, /img/baseball/crop-1-of-1-960.webp 960w, /img/baseball/crop-1-of-1-1600.webp 1600w, /img/baseball/crop-1-of-1-2400.webp 2400w" sizes="(min-width: 720px) 33vw, 100vw" /><img src="/img/baseball/crop-1-of-1-1600.jpg" alt="Baseball player during game coverage" width="4387" height="5484" loading="lazy" decoding="async" /></picture>
-            <span>Baseball</span>
-          </a>
-        </article>
-        <article class="gallery_card">
-          <a href="/softball">
-            <picture><source type="image/webp" srcset="/img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-480.webp 480w, /img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-960.webp 960w, /img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-1600.webp 1600w, /img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-2400.webp 2400w" sizes="(min-width: 720px) 33vw, 100vw" /><img src="/img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-1600.jpg" alt="JMU softball player during game coverage" width="8256" height="5504" loading="lazy" decoding="async" /></picture>
-            <span>Softball</span>
-          </a>
-        </article>
-        <article class="gallery_card">
-          <a href="/portrait">
-            <picture><source type="image/webp" srcset="/img/portrait/resized-sunset-silhouette-1-480.webp 480w, /img/portrait/resized-sunset-silhouette-1-960.webp 960w, /img/portrait/resized-sunset-silhouette-1-1600.webp 1600w" sizes="(min-width: 720px) 33vw, 100vw" /><img src="/img/portrait/resized-sunset-silhouette-1-1600.jpg" alt="Silhouette portrait at sunset" width="2000" height="1333" loading="lazy" decoding="async" /></picture>
-            <span>Portrait</span>
-          </a>
-        </article>
-        <article class="gallery_card">
-          <a href="/downtown-gallery">
-            <picture><source type="image/webp" srcset="/img/downtown-gallary/dthp-15-480.webp 480w, /img/downtown-gallary/dthp-15-960.webp 960w, /img/downtown-gallary/dthp-15-1600.webp 1600w, /img/downtown-gallary/dthp-15-2400.webp 2400w" sizes="(min-width: 720px) 33vw, 100vw" /><img src="/img/downtown-gallary/dthp-15-1600.jpg" alt="Downtown Harrisonburg street photography scene" width="6240" height="4160" loading="lazy" decoding="async" /></picture>
-            <span>Downtown Harrisonburg Gallery</span>
-          </a>
-        </article>
-        <article class="gallery_card">
-          <a href="/other">
-            <picture><source type="image/webp" srcset="/img/other/resized-jmu-students-7-480.webp 480w, /img/other/resized-jmu-students-7-960.webp 960w, /img/other/resized-jmu-students-7-1600.webp 1600w" sizes="(min-width: 720px) 33vw, 100vw" /><img src="/img/other/resized-jmu-students-7-1600.jpg" alt="JMU students gathered outdoors" width="2000" height="1533" loading="lazy" decoding="async" /></picture>
-            <span>Assorted</span>
-          </a>
-        </article>
+      <section class="g_rows" aria-label="Gallery categories">
+        <a class="r_item" href="/featured-works">
+          <picture><source type="image/webp" srcset="/img/bestcomp/football-reedit-5-960.webp 960w, /img/bestcomp/football-reedit-5-1600.webp 1600w, /img/bestcomp/football-reedit-5-2400.webp 2400w" sizes="100vw" /><img src="/img/bestcomp/football-reedit-5-1600.jpg" alt="Close-up portrait of a JMU football player in a purple jersey" loading="eager" fetchpriority="high" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Featured Works</span><span class="r_view">View gallery &rarr;</span></span>
+        </a>
+        <a class="r_item" href="/football">
+          <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-41-960.webp 960w, /img/football/app-state/top/app-state-41-1600.webp 1600w, /img/football/app-state/top/app-state-41-2400.webp 2400w" sizes="100vw" /><img src="/img/football/app-state/top/app-state-41-1600.jpg" alt="JMU football player during an Appalachian State game" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Football</span><span class="r_view">View gallery &rarr;</span></span>
+        </a>
+        <a class="r_item" href="/graduation">
+          <picture><source type="image/webp" srcset="/img/graduation/elizabeth-fowler-graduation-26-of-80-960.webp 960w, /img/graduation/elizabeth-fowler-graduation-26-of-80-1600.webp 1600w, /img/graduation/elizabeth-fowler-graduation-26-of-80-2400.webp 2400w" sizes="100vw" /><img src="/img/graduation/elizabeth-fowler-graduation-26-of-80-1600.jpg" alt="Graduation portrait session on a college campus" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Graduation</span><span class="r_view">View gallery &rarr;</span></span>
+        </a>
+        <a class="r_item" href="/basketball">
+          <picture><source type="image/webp" srcset="/img/basketball/wbb-16-960.webp 960w, /img/basketball/wbb-16-1600.webp 1600w, /img/basketball/wbb-16-2400.webp 2400w" sizes="100vw" /><img src="/img/basketball/wbb-16-1600.jpg" alt="JMU basketball player going up for a layup" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Basketball</span><span class="r_view">View gallery &rarr;</span></span>
+        </a>
+        <a class="r_item" href="/myers-farm">
+          <picture><source type="image/webp" srcset="/img/myers-farm/myfarm-3-960.webp 960w, /img/myers-farm/myfarm-3-1600.webp 1600w, /img/myers-farm/myfarm-3-2400.webp 2400w" sizes="100vw" /><img src="/img/myers-farm/myfarm-3-1600.jpg" alt="Highland cow at Myers Farm" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Myers Farm</span><span class="r_view">View gallery &rarr;</span></span>
+        </a>
+        <a class="r_item" href="/baseball">
+          <picture><source type="image/webp" srcset="/img/baseball/crop-1-of-1-960.webp 960w, /img/baseball/crop-1-of-1-1600.webp 1600w, /img/baseball/crop-1-of-1-2400.webp 2400w" sizes="100vw" /><img src="/img/baseball/crop-1-of-1-1600.jpg" alt="Baseball player during game coverage" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Baseball</span><span class="r_view">View gallery &rarr;</span></span>
+        </a>
+        <a class="r_item" href="/softball">
+          <picture><source type="image/webp" srcset="/img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-960.webp 960w, /img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-1600.webp 1600w, /img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-2400.webp 2400w" sizes="100vw" /><img src="/img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-1600.jpg" alt="JMU softball player during game coverage" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Softball</span><span class="r_view">View gallery &rarr;</span></span>
+        </a>
+        <a class="r_item" href="/portrait">
+          <picture><source type="image/webp" srcset="/img/portrait/resized-sunset-silhouette-1-960.webp 960w, /img/portrait/resized-sunset-silhouette-1-1600.webp 1600w" sizes="100vw" /><img src="/img/portrait/resized-sunset-silhouette-1-1600.jpg" alt="Silhouette portrait at sunset" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Portrait</span><span class="r_view">View gallery &rarr;</span></span>
+        </a>
+        <a class="r_item" href="/downtown-gallery">
+          <picture><source type="image/webp" srcset="/img/downtown-gallary/dthp-15-960.webp 960w, /img/downtown-gallary/dthp-15-1600.webp 1600w, /img/downtown-gallary/dthp-15-2400.webp 2400w" sizes="100vw" /><img src="/img/downtown-gallary/dthp-15-1600.jpg" alt="Downtown Harrisonburg street photography scene" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Downtown</span><span class="r_view">View gallery &rarr;</span></span>
+        </a>
+        <a class="r_item" href="/other">
+          <picture><source type="image/webp" srcset="/img/other/resized-jmu-students-7-960.webp 960w, /img/other/resized-jmu-students-7-1600.webp 1600w" sizes="100vw" /><img src="/img/other/resized-jmu-students-7-1600.jpg" alt="JMU students gathered outdoors" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Assorted</span><span class="r_view">View gallery &rarr;</span></span>
+        </a>
       </section>
     </main>
 
