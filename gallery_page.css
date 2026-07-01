@@ -71,9 +71,8 @@ picture { display: contents; }
 
 /* ---- photo masonry (uncropped, two columns) ---- */
 .photo_container {
-  width: min(100%, 1760px);
-  margin-inline: auto;
-  padding: clamp(40px, 5vw, 76px) clamp(14px, 2vw, 28px) clamp(64px, 8vw, 110px);
+  width: 100%;
+  padding: clamp(40px, 5vw, 76px) clamp(16px, 2.4vw, 44px) clamp(64px, 8vw, 110px);
 }
 
 .gallery_masonry {
