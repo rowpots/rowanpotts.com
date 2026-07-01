@@ -18,11 +18,12 @@
   <meta name="twitter:title" content="JMU vs. App State Football Photos | Rowan Potts Photography" />
   <meta name="twitter:description" content="Photo gallery from JMU vs. App State football by Rowan Potts, featuring game action, sideline moments, and editorial sports photography." />
   <meta name="twitter:image" content="https://rowanpotts.com/football/app_state/top/app_state-41.jpg" />
+  <link rel="stylesheet" href="/base.css" />
   <link rel="stylesheet" href="/gallery_page.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Ramaraja&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
   <script src="/gallery-lightbox.js" defer></script>
@@ -31,7 +32,18 @@
 <body id="top">
   <div class="page">
     <header class="topbar">
-      <a class="brand" href="/">Rowan Potts Photography</a>
+      <a class="brand" href="/" aria-label="Rowan Potts Photography home">
+        <svg class="brand_mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+          <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+          <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+          <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+          <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+          <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+        </svg>
+        <span class="brand_name">Rowan Potts</span>
+      </a>
       <input class="nav_toggle" type="checkbox" id="app_state_nav_toggle" />
       <label class="menu_tab" for="app_state_nav_toggle" aria-label="Toggle navigation menu">
         <span class="sr_only">Toggle navigation menu</span>
@@ -47,17 +59,20 @@
     </header>
 
     <main>
-      <section class="gallery_header" aria-labelledby="app_state_title">
-        <h1 id="app_state_title">JMU vs. App State</h1>
+      <section class="gp_cover" aria-labelledby="app_state_title">
+        <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-41-960.webp 960w, /img/football/app-state/top/app-state-41-1600.webp 1600w, /img/football/app-state/top/app-state-41-2400.webp 2400w" sizes="100vw" /><img class="gp_cover_img" src="/img/football/app-state/top/app-state-41-1600.jpg" alt="JMU football player during an Appalachian State game" loading="eager" fetchpriority="high" decoding="async" /></picture>
+        <div class="gp_cover_cap">
+          <a class="gp_back" href="/galleries">&larr; All galleries</a>
+          <h1 id="app_state_title">JMU vs. App State</h1>
+        </div>
       </section>
 
       <section class="photo_container" aria-label="JMU vs. App State football photos">
-        <div class="gallery_top_grid">
+        <div class="gallery_masonry">
           <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-18-480.webp 480w, /img/football/app-state/top/app-state-18-960.webp 960w, /img/football/app-state/top/app-state-18-1600.webp 1600w, /img/football/app-state/top/app-state-18-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/football/app-state/top/app-state-18-1600.jpg" alt="JMU vs. App State football photo 1" width="6240" height="4160" loading="lazy" decoding="async" data-full="/img/football/app-state/top/app-state-18-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-19-480.webp 480w, /img/football/app-state/top/app-state-19-960.webp 960w, /img/football/app-state/top/app-state-19-1600.webp 1600w, /img/football/app-state/top/app-state-19-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/football/app-state/top/app-state-19-1600.jpg" alt="JMU vs. App State football photo 2" width="6240" height="4160" loading="lazy" decoding="async" data-full="/img/football/app-state/top/app-state-19-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-35-480.webp 480w, /img/football/app-state/top/app-state-35-960.webp 960w, /img/football/app-state/top/app-state-35-1600.webp 1600w, /img/football/app-state/top/app-state-35-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/football/app-state/top/app-state-35-1600.jpg" alt="JMU vs. App State football photo 3" width="6240" height="4160" loading="lazy" decoding="async" data-full="/img/football/app-state/top/app-state-35-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-38-480.webp 480w, /img/football/app-state/top/app-state-38-960.webp 960w, /img/football/app-state/top/app-state-38-1600.webp 1600w, /img/football/app-state/top/app-state-38-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/football/app-state/top/app-state-38-1600.jpg" alt="JMU vs. App State football photo 4" width="6240" height="4160" loading="lazy" decoding="async" data-full="/img/football/app-state/top/app-state-38-2400.webp" /></picture>
-          <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-41-480.webp 480w, /img/football/app-state/top/app-state-41-960.webp 960w, /img/football/app-state/top/app-state-41-1600.webp 1600w, /img/football/app-state/top/app-state-41-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/football/app-state/top/app-state-41-1600.jpg" alt="JMU vs. App State football photo 5" width="6240" height="4160" loading="lazy" decoding="async" data-full="/img/football/app-state/top/app-state-41-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-43-480.webp 480w, /img/football/app-state/top/app-state-43-960.webp 960w, /img/football/app-state/top/app-state-43-1600.webp 1600w, /img/football/app-state/top/app-state-43-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/football/app-state/top/app-state-43-1600.jpg" alt="JMU vs. App State football photo 6" width="6240" height="4160" loading="lazy" decoding="async" data-full="/img/football/app-state/top/app-state-43-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-44-480.webp 480w, /img/football/app-state/top/app-state-44-960.webp 960w, /img/football/app-state/top/app-state-44-1600.webp 1600w, /img/football/app-state/top/app-state-44-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/football/app-state/top/app-state-44-1600.jpg" alt="JMU vs. App State football photo 7" width="6240" height="4160" loading="lazy" decoding="async" data-full="/img/football/app-state/top/app-state-44-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-45-480.webp 480w, /img/football/app-state/top/app-state-45-960.webp 960w, /img/football/app-state/top/app-state-45-1600.webp 1600w, /img/football/app-state/top/app-state-45-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/football/app-state/top/app-state-45-1600.jpg" alt="JMU vs. App State football photo 8" width="6240" height="4160" loading="lazy" decoding="async" data-full="/img/football/app-state/top/app-state-45-2400.webp" /></picture>
@@ -66,9 +81,7 @@
           <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-52-480.webp 480w, /img/football/app-state/top/app-state-52-960.webp 960w, /img/football/app-state/top/app-state-52-1600.webp 1600w, /img/football/app-state/top/app-state-52-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/football/app-state/top/app-state-52-1600.jpg" alt="JMU vs. App State football photo 11" width="6240" height="4160" loading="lazy" decoding="async" data-full="/img/football/app-state/top/app-state-52-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-53-480.webp 480w, /img/football/app-state/top/app-state-53-960.webp 960w, /img/football/app-state/top/app-state-53-1600.webp 1600w, /img/football/app-state/top/app-state-53-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/football/app-state/top/app-state-53-1600.jpg" alt="JMU vs. App State football photo 12" width="6240" height="4160" loading="lazy" decoding="async" data-full="/img/football/app-state/top/app-state-53-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-55-480.webp 480w, /img/football/app-state/top/app-state-55-960.webp 960w, /img/football/app-state/top/app-state-55-1600.webp 1600w, /img/football/app-state/top/app-state-55-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/football/app-state/top/app-state-55-1600.jpg" alt="JMU vs. App State football photo 13" width="4160" height="6240" loading="lazy" decoding="async" data-full="/img/football/app-state/top/app-state-55-2400.webp" /></picture>
-        </div>
-
-        <div class="gallery_masonry">
+        
           <picture><source type="image/webp" srcset="/img/football/app-state/app-state-480.webp 480w, /img/football/app-state/app-state-960.webp 960w, /img/football/app-state/app-state-1600.webp 1600w, /img/football/app-state/app-state-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/football/app-state/app-state-1600.jpg" alt="JMU vs. App State football photo 14" width="5818" height="3879" loading="lazy" decoding="async" data-full="/img/football/app-state/app-state-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/football/app-state/app-state-2-480.webp 480w, /img/football/app-state/app-state-2-960.webp 960w, /img/football/app-state/app-state-2-1600.webp 1600w, /img/football/app-state/app-state-2-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/football/app-state/app-state-2-1600.jpg" alt="JMU vs. App State football photo 15" width="5399" height="3893" loading="lazy" decoding="async" data-full="/img/football/app-state/app-state-2-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/football/app-state/app-state-3-480.webp 480w, /img/football/app-state/app-state-3-960.webp 960w, /img/football/app-state/app-state-3-1600.webp 1600w, /img/football/app-state/app-state-3-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/football/app-state/app-state-3-1600.jpg" alt="JMU vs. App State football photo 16" width="6240" height="4160" loading="lazy" decoding="async" data-full="/img/football/app-state/app-state-3-2400.webp" /></picture>

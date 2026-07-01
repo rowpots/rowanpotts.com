@@ -18,11 +18,12 @@
   <meta name="twitter:title" content="Myers Farm | Rowan Potts Photography" />
   <meta name="twitter:description" content="Myers Farm photography by Rowan Potts, featuring outdoor landscape, farm, and documentary-style images." />
   <meta name="twitter:image" content="https://rowanpotts.com/myers_farm/myfarm-3.jpg" />
+  <link rel="stylesheet" href="/base.css" />
   <link rel="stylesheet" href="/gallery_page.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Ramaraja&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
   <script src="/gallery-lightbox.js" defer></script>
@@ -31,7 +32,18 @@
 <body id="top">
   <div class="page">
     <header class="topbar">
-      <a class="brand" href="/">Rowan Potts Photography</a>
+      <a class="brand" href="/" aria-label="Rowan Potts Photography home">
+        <svg class="brand_mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+          <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+          <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+          <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+          <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+          <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+        </svg>
+        <span class="brand_name">Rowan Potts</span>
+      </a>
       <input class="nav_toggle" type="checkbox" id="myers_farm_nav_toggle" />
       <label class="menu_tab" for="myers_farm_nav_toggle" aria-label="Toggle navigation menu">
         <span class="sr_only">Toggle navigation menu</span>
@@ -46,6 +58,14 @@
     </header>
 
     <main>
+      <section class="gp_cover" aria-labelledby="myers_farm_title">
+        <picture><source type="image/webp" srcset="/img/myers-farm/myfarm-3-960.webp 960w, /img/myers-farm/myfarm-3-1600.webp 1600w, /img/myers-farm/myfarm-3-2400.webp 2400w" sizes="100vw" /><img class="gp_cover_img" src="/img/myers-farm/myfarm-3-1600.jpg" alt="Highland cow at Myers Farm" loading="eager" fetchpriority="high" decoding="async" /></picture>
+        <div class="gp_cover_cap">
+          <a class="gp_back" href="/galleries">&larr; All galleries</a>
+          <h1 id="myers_farm_title">Myers Farm</h1>
+        </div>
+      </section>
+
       <section class="photo_container" aria-label="Myers Farm photos">
         <div class="gallery_masonry">
           <picture><source type="image/webp" srcset="/img/myers-farm/myfarm-480.webp 480w, /img/myers-farm/myfarm-960.webp 960w, /img/myers-farm/myfarm-1600.webp 1600w, /img/myers-farm/myfarm-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/myers-farm/myfarm-1600.jpg" alt="Myers Farm photo 1" width="6077" height="4051" loading="lazy" decoding="async" data-full="/img/myers-farm/myfarm-2400.webp" /></picture>
@@ -69,7 +89,6 @@
           <picture><source type="image/webp" srcset="/img/myers-farm/myfarm-26-480.webp 480w, /img/myers-farm/myfarm-26-960.webp 960w, /img/myers-farm/myfarm-26-1600.webp 1600w, /img/myers-farm/myfarm-26-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/myers-farm/myfarm-26-1600.jpg" alt="Myers Farm photo 19" width="6006" height="4160" loading="lazy" decoding="async" data-full="/img/myers-farm/myfarm-26-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/myers-farm/myfarm-27-480.webp 480w, /img/myers-farm/myfarm-27-960.webp 960w, /img/myers-farm/myfarm-27-1600.webp 1600w, /img/myers-farm/myfarm-27-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/myers-farm/myfarm-27-1600.jpg" alt="Myers Farm photo 20" width="5544" height="3696" loading="lazy" decoding="async" data-full="/img/myers-farm/myfarm-27-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/myers-farm/myfarm-28-480.webp 480w, /img/myers-farm/myfarm-28-960.webp 960w, /img/myers-farm/myfarm-28-1600.webp 1600w, /img/myers-farm/myfarm-28-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/myers-farm/myfarm-28-1600.jpg" alt="Myers Farm photo 21" width="5577" height="3990" loading="lazy" decoding="async" data-full="/img/myers-farm/myfarm-28-2400.webp" /></picture>
-          <picture><source type="image/webp" srcset="/img/myers-farm/myfarm-3-480.webp 480w, /img/myers-farm/myfarm-3-960.webp 960w, /img/myers-farm/myfarm-3-1600.webp 1600w, /img/myers-farm/myfarm-3-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/myers-farm/myfarm-3-1600.jpg" alt="Myers Farm photo 22" width="5701" height="3801" loading="lazy" decoding="async" data-full="/img/myers-farm/myfarm-3-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/myers-farm/myfarm-4-480.webp 480w, /img/myers-farm/myfarm-4-960.webp 960w, /img/myers-farm/myfarm-4-1600.webp 1600w, /img/myers-farm/myfarm-4-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/myers-farm/myfarm-4-1600.jpg" alt="Myers Farm photo 23" width="6240" height="4160" loading="lazy" decoding="async" data-full="/img/myers-farm/myfarm-4-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/myers-farm/myfarm-5-480.webp 480w, /img/myers-farm/myfarm-5-960.webp 960w, /img/myers-farm/myfarm-5-1600.webp 1600w, /img/myers-farm/myfarm-5-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/myers-farm/myfarm-5-1600.jpg" alt="Myers Farm photo 24" width="6237" height="4158" loading="lazy" decoding="async" data-full="/img/myers-farm/myfarm-5-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/myers-farm/myfarm-6-480.webp 480w, /img/myers-farm/myfarm-6-960.webp 960w, /img/myers-farm/myfarm-6-1600.webp 1600w, /img/myers-farm/myfarm-6-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/myers-farm/myfarm-6-1600.jpg" alt="Myers Farm photo 25" width="6240" height="4160" loading="lazy" decoding="async" data-full="/img/myers-farm/myfarm-6-2400.webp" /></picture>

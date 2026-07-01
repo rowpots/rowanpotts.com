@@ -18,11 +18,12 @@
   <meta name="twitter:title" content="Portrait Photography | Rowan Potts Photography" />
   <meta name="twitter:description" content="Portrait photography by Rowan Potts, featuring outdoor, lifestyle, and creative portrait sessions in Harrisonburg, Virginia." />
   <meta name="twitter:image" content="https://rowanpotts.com/portrait/resized_sunset_silhouette-1.jpg" />
+  <link rel="stylesheet" href="/base.css" />
   <link rel="stylesheet" href="/gallery_page.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Ramaraja&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
   <script src="/gallery-lightbox.js" defer></script>
@@ -31,7 +32,18 @@
 <body id="top">
   <div class="page">
     <header class="topbar">
-      <a class="brand" href="/">Rowan Potts Photography</a>
+      <a class="brand" href="/" aria-label="Rowan Potts Photography home">
+        <svg class="brand_mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+          <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+          <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+          <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+          <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+          <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+        </svg>
+        <span class="brand_name">Rowan Potts</span>
+      </a>
       <input class="nav_toggle" type="checkbox" id="portrait_nav_toggle" />
       <label class="menu_tab" for="portrait_nav_toggle" aria-label="Toggle navigation menu">
         <span class="sr_only">Toggle navigation menu</span>
@@ -46,6 +58,14 @@
     </header>
 
     <main>
+      <section class="gp_cover" aria-labelledby="portrait_title">
+        <picture><source type="image/webp" srcset="/img/portrait/resized-sunset-silhouette-1-960.webp 960w, /img/portrait/resized-sunset-silhouette-1-1600.webp 1600w" sizes="100vw" /><img class="gp_cover_img" src="/img/portrait/resized-sunset-silhouette-1-1600.jpg" alt="Silhouette portrait at sunset" loading="eager" fetchpriority="high" decoding="async" /></picture>
+        <div class="gp_cover_cap">
+          <a class="gp_back" href="/galleries">&larr; All galleries</a>
+          <h1 id="portrait_title">Portrait</h1>
+        </div>
+      </section>
+
       <section class="photo_container" aria-label="Portrait photos">
         <div class="gallery_masonry">
           <picture><source type="image/webp" srcset="/img/portrait/liz-portrait-480.webp 480w, /img/portrait/liz-portrait-960.webp 960w, /img/portrait/liz-portrait-1600.webp 1600w, /img/portrait/liz-portrait-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/portrait/liz-portrait-1600.jpg" alt="Portrait photo 1" width="5916" height="3944" loading="lazy" decoding="async" data-full="/img/portrait/liz-portrait-2400.webp" /></picture>
@@ -54,7 +74,6 @@
           <picture><source type="image/webp" srcset="/img/portrait/resized-deker-ocphoto-2-480.webp 480w, /img/portrait/resized-deker-ocphoto-2-960.webp 960w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/portrait/resized-deker-ocphoto-2-1333.jpg" alt="Portrait photo 4" width="1333" height="2000" loading="lazy" decoding="async" data-full="/img/portrait/resized-deker-ocphoto-2-960.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/portrait/resized-portrait-1-480.webp 480w, /img/portrait/resized-portrait-1-960.webp 960w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/portrait/resized-portrait-1-1333.jpg" alt="Portrait photo 5" width="1333" height="2000" loading="lazy" decoding="async" data-full="/img/portrait/resized-portrait-1-960.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/portrait/resized-portrait-2-480.webp 480w, /img/portrait/resized-portrait-2-960.webp 960w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/portrait/resized-portrait-2-1333.jpg" alt="Portrait photo 6" width="1333" height="2000" loading="lazy" decoding="async" data-full="/img/portrait/resized-portrait-2-960.webp" /></picture>
-          <picture><source type="image/webp" srcset="/img/portrait/resized-sunset-silhouette-1-480.webp 480w, /img/portrait/resized-sunset-silhouette-1-960.webp 960w, /img/portrait/resized-sunset-silhouette-1-1600.webp 1600w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/portrait/resized-sunset-silhouette-1-1600.jpg" alt="Portrait photo 7" width="2000" height="1333" loading="lazy" decoding="async" data-full="/img/portrait/resized-sunset-silhouette-1-1600.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/portrait/resized-will-rachel-prom-2-480.webp 480w, /img/portrait/resized-will-rachel-prom-2-960.webp 960w, /img/portrait/resized-will-rachel-prom-2-1600.webp 1600w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/portrait/resized-will-rachel-prom-2-1600.jpg" alt="Portrait photo 8" width="2000" height="1599" loading="lazy" decoding="async" data-full="/img/portrait/resized-will-rachel-prom-2-1600.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/portrait/resizedconcert-photo-2-2-480.webp 480w, /img/portrait/resizedconcert-photo-2-2-960.webp 960w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/portrait/resizedconcert-photo-2-2-1333.jpg" alt="Portrait photo 9" width="1333" height="2000" loading="lazy" decoding="async" data-full="/img/portrait/resizedconcert-photo-2-2-960.webp" /></picture>
         </div>

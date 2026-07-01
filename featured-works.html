@@ -18,11 +18,12 @@
   <meta name="twitter:title" content="Featured Works | Rowan Potts Photography" />
   <meta name="twitter:description" content="Featured photography by Rowan Potts, featuring sports, portraits, graduation, editorial, and landscape images from Harrisonburg and James Madison University." />
   <meta name="twitter:image" content="https://rowanpotts.com/bestcomp/football%20reedit-5.jpg" />
+  <link rel="stylesheet" href="/base.css" />
   <link rel="stylesheet" href="/gallery_page.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Ramaraja&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
   <script src="/gallery-lightbox.js" defer></script>
@@ -31,7 +32,18 @@
 <body id="top">
   <div class="page">
     <header class="topbar">
-      <a class="brand" href="/">Rowan Potts Photography</a>
+      <a class="brand" href="/" aria-label="Rowan Potts Photography home">
+        <svg class="brand_mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+          <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+          <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+          <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+          <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+          <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+        </svg>
+        <span class="brand_name">Rowan Potts</span>
+      </a>
       <input class="nav_toggle" type="checkbox" id="featured_works_nav_toggle" />
       <label class="menu_tab" for="featured_works_nav_toggle" aria-label="Toggle navigation menu">
         <span class="sr_only">Toggle navigation menu</span>
@@ -46,16 +58,17 @@
     </header>
 
     <main>
-      <section class="gallery_header" aria-labelledby="featured_works_title">
-        <h1 id="featured_works_title">Featured Works</h1>
+      <section class="gp_cover" aria-labelledby="featured_works_title">
+        <picture><source type="image/webp" srcset="/img/bestcomp/football-reedit-5-960.webp 960w, /img/bestcomp/football-reedit-5-1600.webp 1600w, /img/bestcomp/football-reedit-5-2400.webp 2400w" sizes="100vw" /><img class="gp_cover_img" src="/img/bestcomp/football-reedit-5-1600.jpg" alt="Close-up portrait of a JMU football player" loading="eager" fetchpriority="high" decoding="async" /></picture>
+        <div class="gp_cover_cap">
+          <a class="gp_back" href="/galleries">&larr; All galleries</a>
+          <h1 id="featured_works_title">Featured Works</h1>
+        </div>
       </section>
 
       <section class="photo_container" aria-label="Featured photography">
-        <div class="gallery_top_grid">
-          <picture><source type="image/webp" srcset="/img/bestcomp/football-reedit-5-480.webp 480w, /img/bestcomp/football-reedit-5-960.webp 960w, /img/bestcomp/football-reedit-5-1600.webp 1600w, /img/bestcomp/football-reedit-5-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/bestcomp/football-reedit-5-1600.jpg" alt="Close-up portrait of a JMU football player in a purple jersey" width="6240" height="4160" loading="lazy" decoding="async" data-full="/img/bestcomp/football-reedit-5-2400.webp" /></picture>
-          <picture><source type="image/webp" srcset="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-480.webp 480w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-960.webp 960w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.webp 1600w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.jpg" alt="Virginia Tech graduate posing beside campus statues" width="6141" height="4094" loading="lazy" decoding="async" data-full="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-2400.webp" /></picture>
-        </div>
         <div class="gallery_masonry">
+          <picture><source type="image/webp" srcset="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-480.webp 480w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-960.webp 960w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.webp 1600w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.jpg" alt="Virginia Tech graduate posing beside campus statues" width="6141" height="4094" loading="lazy" decoding="async" data-full="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/bestcomp/basketball-reedit-1-480.webp 480w, /img/bestcomp/basketball-reedit-1-960.webp 960w, /img/bestcomp/basketball-reedit-1-1600.webp 1600w, /img/bestcomp/basketball-reedit-1-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/bestcomp/basketball-reedit-1-1600.jpg" alt="Basketball players emerging through blue smoke before a game" width="7129" height="4753" loading="lazy" decoding="async" data-full="/img/bestcomp/basketball-reedit-1-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/bestcomp/baseball-reedit-2-480.webp 480w, /img/bestcomp/baseball-reedit-2-960.webp 960w, /img/bestcomp/baseball-reedit-2-1600.webp 1600w, /img/bestcomp/baseball-reedit-2-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/bestcomp/baseball-reedit-2-1600.jpg" alt="JMU baseball outfielder leaping for a catch near the wall" width="3544" height="4430" loading="lazy" decoding="async" data-full="/img/bestcomp/baseball-reedit-2-2400.webp" /></picture>
           <picture><source type="image/webp" srcset="/img/bestcomp/softball-reedit-1-480.webp 480w, /img/bestcomp/softball-reedit-1-960.webp 960w, /img/bestcomp/softball-reedit-1-1600.webp 1600w, /img/bestcomp/softball-reedit-1-2400.webp 2400w" sizes="(min-width: 1760px) 880px, (min-width: 720px) 50vw, 100vw" /><img class="image" src="/img/bestcomp/softball-reedit-1-1600.jpg" alt="JMU softball player catching a bright yellow ball in her glove" width="3012" height="3765" loading="lazy" decoding="async" data-full="/img/bestcomp/softball-reedit-1-2400.webp" /></picture>
