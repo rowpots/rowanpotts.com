@@ -83,26 +83,26 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: 16px;
-  width: min(100%, var(--container));
+  gap: 19px;
+  width: 100%;
   margin-inline: auto;
-  padding: 28px var(--gutter);
+  padding: 34px var(--gutter);
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 13px;
+  gap: 16px;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(1.5rem, 1.15rem + 1.15vw, 1.95rem);
+  font-size: clamp(1.8rem, 1.38rem + 1.38vw, 2.34rem);
   letter-spacing: 0.03em;
   line-height: 1;
   color: var(--ink);
 }
 
 .brand_mark {
-  width: 32px; height: 32px;
+  width: 38px; height: 38px;
   flex: none;
   fill: none;
   stroke: currentColor;
@@ -122,16 +122,16 @@ h1, h2, h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 46px; height: 46px;
+  width: 55px; height: 55px;
   border: 1px solid var(--line);
   border-radius: 999px;
   cursor: pointer;
 }
 
-.menu_icon { display: inline-flex; flex-direction: column; gap: 5px; }
+.menu_icon { display: inline-flex; flex-direction: column; gap: 6px; }
 .menu_icon span {
   display: block;
-  width: 18px; height: 2px;
+  width: 22px; height: 2px;
   background: var(--ink);
   transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
 }
@@ -228,7 +228,7 @@ h1, h2, h3 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 34px;
+    gap: 41px;
     padding-top: 0;
   }
   .links_list a {
@@ -236,7 +236,7 @@ h1, h2, h3 {
     background: transparent;
     backdrop-filter: none;
     border: 0;
-    font-size: 0.9rem;
+    font-size: 1.08rem;
     letter-spacing: 0.2em;
     color: rgba(243, 238, 227, 0.82);
   }
