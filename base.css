@@ -1,6 +1,6 @@
 /* base.css — shared design system for the rowanpotts.com homepage
    ("Dark Cinematic"): near-black canvas, off-white text, warm gold accent.
-   Loaded before landing.css. Used by / and /home/ only. */
+   Loaded first on every page, before each page's own stylesheet. */
 
 :root {
   /* palette */
@@ -83,26 +83,26 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   width: min(100%, var(--container));
   margin-inline: auto;
-  padding: 24px var(--gutter);
+  padding: 28px var(--gutter);
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
+  gap: 13px;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(1.3rem, 1rem + 1vw, 1.7rem);
+  font-size: clamp(1.5rem, 1.15rem + 1.15vw, 1.95rem);
   letter-spacing: 0.03em;
   line-height: 1;
   color: var(--ink);
 }
 
 .brand_mark {
-  width: 28px; height: 28px;
+  width: 32px; height: 32px;
   flex: none;
   fill: none;
   stroke: currentColor;
@@ -122,16 +122,16 @@ h1, h2, h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px; height: 40px;
+  width: 46px; height: 46px;
   border: 1px solid var(--line);
   border-radius: 999px;
   cursor: pointer;
 }
 
-.menu_icon { display: inline-flex; flex-direction: column; gap: 4px; }
+.menu_icon { display: inline-flex; flex-direction: column; gap: 5px; }
 .menu_icon span {
   display: block;
-  width: 16px; height: 2px;
+  width: 18px; height: 2px;
   background: var(--ink);
   transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
 }
@@ -145,7 +145,7 @@ h1, h2, h3 {
 }
 
 .links_list a {
-  padding: 12px 16px;
+  padding: 14px 18px;
   border: 1px solid var(--hair);
   border-radius: 4px;
   background: rgba(14, 14, 15, 0.72);
@@ -163,9 +163,9 @@ h1, h2, h3 {
 .nav_toggle:checked + .menu_tab + .links_list { display: flex; }
 .nav_toggle:checked + .menu_tab { background: var(--gold); border-color: var(--gold); }
 .nav_toggle:checked + .menu_tab .menu_icon span { background: #1a1407; }
-.nav_toggle:checked + .menu_tab .menu_icon span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav_toggle:checked + .menu_tab .menu_icon span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav_toggle:checked + .menu_tab .menu_icon span:nth-child(2) { opacity: 0; }
-.nav_toggle:checked + .menu_tab .menu_icon span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+.nav_toggle:checked + .menu_tab .menu_icon span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 .nav_toggle:focus-visible + .menu_tab { outline: 3px solid rgba(201, 169, 106, 0.4); outline-offset: 3px; }
 
 /* ---- buttons ---- */
@@ -228,7 +228,7 @@ h1, h2, h3 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 30px;
+    gap: 34px;
     padding-top: 0;
   }
   .links_list a {
@@ -236,7 +236,7 @@ h1, h2, h3 {
     background: transparent;
     backdrop-filter: none;
     border: 0;
-    font-size: 0.78rem;
+    font-size: 0.9rem;
     letter-spacing: 0.2em;
     color: rgba(243, 238, 227, 0.82);
   }
