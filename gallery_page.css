@@ -81,19 +81,6 @@ picture { display: contents; }
   column-gap: clamp(12px, 1.4vw, 20px);
 }
 
-.gallery_top_grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(12px, 1.4vw, 20px);
-  margin-bottom: clamp(12px, 1.4vw, 20px);
-  align-items: start;
-}
-
-/* make each <picture> a real grid item (override the global display:contents,
-   which otherwise pushes every <img> into a single column) */
-.gallery_top_grid picture { display: block; }
-
-.gallery_top_grid .image,
 .gallery_masonry .image {
   width: 100%;
   display: block;
@@ -104,16 +91,9 @@ picture { display: contents; }
   transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.3s ease;
 }
 
-.gallery_top_grid .image { margin-bottom: 0; }
-
-.gallery_top_grid .image:hover,
 .gallery_masonry .image:hover {
   transform: scale(1.02);
   filter: brightness(1.06);
-}
-
-@media (min-width: 720px) {
-  .gallery_top_grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 600px) {
