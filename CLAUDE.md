@@ -32,7 +32,7 @@ mark, nav, buttons, and the base footer. Page CSS owns everything else.
 | `base.css` | **every page** (loaded first) — except `about.html` |
 | `landing.css` | homepage (`index.html` + `home/index.html`) |
 | `gallery_list.css` | galleries index (`gallery_list.html` + `galleries/index.html`) |
-| `gallery_page.css` | all 11 individual gallery pages + mirrors |
+| `gallery_page.css` | all 12 individual gallery pages + mirrors |
 | `contact_style.css` | contact page |
 | `about.css` | `about.html` only — **LEGACY paper theme, not yet migrated** |
 
@@ -79,6 +79,25 @@ hero onto gallery pages), `hero-hires.mjs` (3840px hero WebP), `reencode-hero1.m
 - Hero images are served up to 3840px WebP (100vw, hi-DPI). The homepage first frame is
   encoded at q88 (others q80).
 
+## Adding a new gallery (established process)
+All the tools auto-discover root HTML — no tool edits needed. (First done for
+`comedy-show.html`, 2026-07-04.)
+1. Drop original JPGs into a source folder in the repo root (e.g. `comedyshow/`).
+2. Copy **`baseball.html`** (canonical template) to a new root `<slug>.html`. Update:
+   title / meta description / canonical / OG+Twitter block, unique `<slug>_nav_toggle` +
+   `<slug>_title` ids, the `gp_cover` h1, and the images as **plain** `<img>` tags — cover:
+   `<img class="gp_cover_img" src="/<folder>/<cover>.jpg" alt="…">`; masonry: one
+   `<img class="image" src="/<folder>/<file>.jpg" alt="<Title> photo N">` per photo
+   (cover not repeated in the grid). Don't hand-write srcsets — the pipeline does that.
+3. `node tools/optimize-images.mjs <folder>` then `node tools/rewrite-html.mjs`.
+4. **Hand-fix the cover `<picture>`** — rewrite-html doesn't know `gp_cover_img`, so it
+   emits content sizes + lazy. Match baseball.html's cover block: `sizes="100vw"`, drop the
+   480w srcset entry, `loading="eager" fetchpriority="high"`, no width/height. Then point
+   `og:image`/`twitter:image` at the optimized `/img/<slug>/…-1600.jpg` URL.
+5. Add an `<a class="r_item" href="/<slug>">` row to `gallery_list.html` (copy an existing
+   row; keep the catch-all "Assorted" row last).
+6. `node tools/sync-mirrors.mjs` + `--check`, review in browser, owner commits.
+
 ## Conventions & gotchas
 - **`picture{display:contents}`** (top of `gallery_page.css`) makes `<picture>` layout-
   transparent so the `<img>` is the layout child. This **breaks CSS `display:grid` cell
@@ -110,7 +129,8 @@ All Dark Cinematic and pushed:
 - **Homepage** — hero crossfade (opens on the graduation-26 frame, q88), Selected Work
   full-width rows, dark About band.
 - **Galleries index** — full-bleed alternating photo rows.
-- **11 individual gallery pages** — cover hero + uncropped 2-col masonry + dark lightbox.
+- **12 individual gallery pages** — cover hero + uncropped 2-col masonry + dark lightbox
+  (Comedy Show added 2026-07-04).
 - **Contact** — full-page dimmed photo-collage background, "Contact me" hero, frosted
   details panel (email / IG / LinkedIn / location / response time / what-to-include) +
   Formspree form with a shoot-type dropdown.
