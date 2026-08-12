@@ -56,7 +56,7 @@ Tokens live in `base.css :root`:
 - Layout: `--container:1320px`, `--gutter:clamp(20px,4vw,56px)`; a fluid `--step--1…--step-4` scale.
 - Brand = inline **aperture (lens) SVG mark** in gold + "Rowan Potts" serif wordmark
   (`.brand`/`.brand_mark`); hovering rotates the aperture.
-- Nav (~15% larger as of 2026-07-01): Home / Galleries / Contact / Instagram. **About was
+- Nav (~15% larger as of 2026-07-01): Galleries / Services / Contact / Instagram. **About was
   removed from all nav/footers** — see backlog.
 
 ## Image pipeline (`tools/`, local-only Node + sharp; not deployed)
@@ -134,20 +134,26 @@ All Dark Cinematic and pushed:
 - **Contact** — full-page dimmed photo-collage background, "Contact me" hero, frosted
   details panel (email / IG / LinkedIn / location / response time / what-to-include) +
   Formspree form with a shoot-type dropdown.
+- **Services / Pricing** (`/services`, shipped 2026-07-01, commit `9979165`) — full-width
+  alternating photo rows, named packages with starting prices (Portraits $100 /
+  Graduation $150 / Sports and Editorial $200); linked in nav + footer of every page.
+  Session-length/turnaround figures on the page are still placeholders pending owner
+  confirmation.
 - **Nav** enlarged ~15% site-wide; **all About links removed** from nav/footers/CTAs.
+- Full-res originals live in git-ignored `masters/` (moved out of the tracked tree
+  2026-08-11 via `tools/move-masters.mjs`); in-tree source folders now only hold the
+  optimized `/img` pipeline output.
 
 ## Backlog — what we still need to do
 1. **About page** — the last page still on the old "paper" theme (`about.css`). It is
    currently **orphaned** (unlinked; reachable only via direct `/about`). Decide:
-   (a) redesign to Dark Cinematic and re-link, or (b) retire it. While it stays unlinked,
-   consider adding `noindex` so search engines drop it.
-2. **Phase 4 — Services / Pricing page** (named packages + starting prices). This is the
-   **#1 revenue goal.** Then the rest of conversion: testimonials, FAQ, a photographer-
-   story About.
-3. **Verify the Formspree form** actually delivers (submit a live test).
-4. **Phase 5 — cleanup / polish:** favicon set, `404.html`, Lighthouse 90+ pass, remove the
-   now-dead `.gallery_top_grid` rules from `gallery_page.css`, optionally run
-   `tools/move-masters.mjs` to slim the in-tree originals.
+   (a) redesign to Dark Cinematic and re-link — this doubles as the photographer-story
+   About that's part of the conversion goal below — or (b) retire it. While it stays
+   unlinked, consider adding `noindex` so search engines drop it.
+2. **Verify the Formspree form** actually delivers (submit a live test).
+3. **Conversion extras:** testimonials + FAQ. (Confirm the Services page's placeholder
+   session-length/turnaround figures while in there.)
+4. **Phase 5 — cleanup / polish:** favicon set, `404.html`, Lighthouse 90+ pass.
 
 ## Related notes
 Deeper session-by-session history lives in the owner's Claude memory
