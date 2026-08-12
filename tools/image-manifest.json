@@ -4879,48 +4879,6 @@
     "jpg": "/img/graduation/elizabeth-fowler-graduation-60-of-80-1600.jpg",
     "full": "/img/graduation/elizabeth-fowler-graduation-60-of-80-2400.webp"
   },
-  "/graduation/resized_lucagrad-1-10.jpg": {
-    "src": "/graduation/resized_lucagrad-1-10.jpg",
-    "width": 2000,
-    "height": 1368,
-    "webp": [
-      {
-        "w": 480,
-        "src": "/img/graduation/resized-lucagrad-1-10-480.webp"
-      },
-      {
-        "w": 960,
-        "src": "/img/graduation/resized-lucagrad-1-10-960.webp"
-      },
-      {
-        "w": 1600,
-        "src": "/img/graduation/resized-lucagrad-1-10-1600.webp"
-      }
-    ],
-    "jpg": "/img/graduation/resized-lucagrad-1-10-1600.jpg",
-    "full": "/img/graduation/resized-lucagrad-1-10-1600.webp"
-  },
-  "/graduation/resized_lucagrad-1-5.jpg": {
-    "src": "/graduation/resized_lucagrad-1-5.jpg",
-    "width": 2000,
-    "height": 1387,
-    "webp": [
-      {
-        "w": 480,
-        "src": "/img/graduation/resized-lucagrad-1-5-480.webp"
-      },
-      {
-        "w": 960,
-        "src": "/img/graduation/resized-lucagrad-1-5-960.webp"
-      },
-      {
-        "w": 1600,
-        "src": "/img/graduation/resized-lucagrad-1-5-1600.webp"
-      }
-    ],
-    "jpg": "/img/graduation/resized-lucagrad-1-5-1600.jpg",
-    "full": "/img/graduation/resized-lucagrad-1-5-1600.webp"
-  },
   "/graduation/Elizabeth-Fowler-Graduation (7 of 80).jpg": {
     "src": "/graduation/Elizabeth-Fowler-Graduation (7 of 80).jpg",
     "width": 4037,
@@ -4945,27 +4903,6 @@
     ],
     "jpg": "/img/graduation/elizabeth-fowler-graduation-7-of-80-1600.jpg",
     "full": "/img/graduation/elizabeth-fowler-graduation-7-of-80-2400.webp"
-  },
-  "/graduation/resized_lucagrad-1-8.jpg": {
-    "src": "/graduation/resized_lucagrad-1-8.jpg",
-    "width": 2000,
-    "height": 1333,
-    "webp": [
-      {
-        "w": 480,
-        "src": "/img/graduation/resized-lucagrad-1-8-480.webp"
-      },
-      {
-        "w": 960,
-        "src": "/img/graduation/resized-lucagrad-1-8-960.webp"
-      },
-      {
-        "w": 1600,
-        "src": "/img/graduation/resized-lucagrad-1-8-1600.webp"
-      }
-    ],
-    "jpg": "/img/graduation/resized-lucagrad-1-8-1600.jpg",
-    "full": "/img/graduation/resized-lucagrad-1-8-1600.webp"
   },
   "/graduation/Elizabeth-Fowler-Graduation (76 of 80).jpg": {
     "src": "/graduation/Elizabeth-Fowler-Graduation (76 of 80).jpg",
@@ -7125,5 +7062,276 @@
     ],
     "jpg": "/img/comedyshow/cs-20-of-20-1600.jpg",
     "full": "/img/comedyshow/cs-20-of-20-2400.webp"
+  },
+  "/graduation/cora_grad (22 of 69).jpg": {
+    "src": "/graduation/cora_grad (22 of 69).jpg",
+    "width": 3535,
+    "height": 2357,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/graduation/cora-grad-22-of-69-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/graduation/cora-grad-22-of-69-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/graduation/cora-grad-22-of-69-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/graduation/cora-grad-22-of-69-2400.webp"
+      }
+    ],
+    "jpg": "/img/graduation/cora-grad-22-of-69-1600.jpg",
+    "full": "/img/graduation/cora-grad-22-of-69-2400.webp"
+  },
+  "/graduation/cora_grad (17 of 69).jpg": {
+    "src": "/graduation/cora_grad (17 of 69).jpg",
+    "width": 6240,
+    "height": 4160,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/graduation/cora-grad-17-of-69-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/graduation/cora-grad-17-of-69-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/graduation/cora-grad-17-of-69-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/graduation/cora-grad-17-of-69-2400.webp"
+      }
+    ],
+    "jpg": "/img/graduation/cora-grad-17-of-69-1600.jpg",
+    "full": "/img/graduation/cora-grad-17-of-69-2400.webp"
+  },
+  "/graduation/cora_grad (2 of 69).jpg": {
+    "src": "/graduation/cora_grad (2 of 69).jpg",
+    "width": 6240,
+    "height": 4160,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/graduation/cora-grad-2-of-69-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/graduation/cora-grad-2-of-69-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/graduation/cora-grad-2-of-69-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/graduation/cora-grad-2-of-69-2400.webp"
+      }
+    ],
+    "jpg": "/img/graduation/cora-grad-2-of-69-1600.jpg",
+    "full": "/img/graduation/cora-grad-2-of-69-2400.webp"
+  },
+  "/graduation/cora_grad (23 of 69).jpg": {
+    "src": "/graduation/cora_grad (23 of 69).jpg",
+    "width": 2268,
+    "height": 3402,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/graduation/cora-grad-23-of-69-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/graduation/cora-grad-23-of-69-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/graduation/cora-grad-23-of-69-1600.webp"
+      }
+    ],
+    "jpg": "/img/graduation/cora-grad-23-of-69-1600.jpg",
+    "full": "/img/graduation/cora-grad-23-of-69-1600.webp"
+  },
+  "/graduation/cora_grad (18 of 69).jpg": {
+    "src": "/graduation/cora_grad (18 of 69).jpg",
+    "width": 4160,
+    "height": 6240,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/graduation/cora-grad-18-of-69-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/graduation/cora-grad-18-of-69-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/graduation/cora-grad-18-of-69-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/graduation/cora-grad-18-of-69-2400.webp"
+      }
+    ],
+    "jpg": "/img/graduation/cora-grad-18-of-69-1600.jpg",
+    "full": "/img/graduation/cora-grad-18-of-69-2400.webp"
+  },
+  "/graduation/cora_grad (27 of 69).jpg": {
+    "src": "/graduation/cora_grad (27 of 69).jpg",
+    "width": 5849,
+    "height": 3899,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/graduation/cora-grad-27-of-69-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/graduation/cora-grad-27-of-69-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/graduation/cora-grad-27-of-69-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/graduation/cora-grad-27-of-69-2400.webp"
+      }
+    ],
+    "jpg": "/img/graduation/cora-grad-27-of-69-1600.jpg",
+    "full": "/img/graduation/cora-grad-27-of-69-2400.webp"
+  },
+  "/graduation/cora_grad (32 of 69).jpg": {
+    "src": "/graduation/cora_grad (32 of 69).jpg",
+    "width": 6217,
+    "height": 4145,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/graduation/cora-grad-32-of-69-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/graduation/cora-grad-32-of-69-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/graduation/cora-grad-32-of-69-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/graduation/cora-grad-32-of-69-2400.webp"
+      }
+    ],
+    "jpg": "/img/graduation/cora-grad-32-of-69-1600.jpg",
+    "full": "/img/graduation/cora-grad-32-of-69-2400.webp"
+  },
+  "/graduation/cora_grad (33 of 69).jpg": {
+    "src": "/graduation/cora_grad (33 of 69).jpg",
+    "width": 6240,
+    "height": 4160,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/graduation/cora-grad-33-of-69-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/graduation/cora-grad-33-of-69-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/graduation/cora-grad-33-of-69-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/graduation/cora-grad-33-of-69-2400.webp"
+      }
+    ],
+    "jpg": "/img/graduation/cora-grad-33-of-69-1600.jpg",
+    "full": "/img/graduation/cora-grad-33-of-69-2400.webp"
+  },
+  "/graduation/cora_grad (36 of 69).jpg": {
+    "src": "/graduation/cora_grad (36 of 69).jpg",
+    "width": 6240,
+    "height": 4160,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/graduation/cora-grad-36-of-69-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/graduation/cora-grad-36-of-69-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/graduation/cora-grad-36-of-69-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/graduation/cora-grad-36-of-69-2400.webp"
+      }
+    ],
+    "jpg": "/img/graduation/cora-grad-36-of-69-1600.jpg",
+    "full": "/img/graduation/cora-grad-36-of-69-2400.webp"
+  },
+  "/graduation/cora_grad (49 of 6).jpg": {
+    "src": "/graduation/cora_grad (49 of 6).jpg",
+    "width": 6240,
+    "height": 4160,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/graduation/cora-grad-49-of-6-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/graduation/cora-grad-49-of-6-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/graduation/cora-grad-49-of-6-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/graduation/cora-grad-49-of-6-2400.webp"
+      }
+    ],
+    "jpg": "/img/graduation/cora-grad-49-of-6-1600.jpg",
+    "full": "/img/graduation/cora-grad-49-of-6-2400.webp"
+  },
+  "/graduation/cora_grad (34 of 69).jpg": {
+    "src": "/graduation/cora_grad (34 of 69).jpg",
+    "width": 4160,
+    "height": 6240,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/graduation/cora-grad-34-of-69-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/graduation/cora-grad-34-of-69-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/graduation/cora-grad-34-of-69-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/graduation/cora-grad-34-of-69-2400.webp"
+      }
+    ],
+    "jpg": "/img/graduation/cora-grad-34-of-69-1600.jpg",
+    "full": "/img/graduation/cora-grad-34-of-69-2400.webp"
   }
 }
