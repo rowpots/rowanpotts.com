@@ -98,6 +98,26 @@ All the tools auto-discover root HTML — no tool edits needed. (First done for
    row; keep the catch-all "Assorted" row last).
 6. `node tools/sync-mirrors.mjs` + `--check`, review in browser, owner commits.
 
+## Adding photos to an EXISTING gallery
+No dimension/file-size prep needed on your end — just drop in full-resolution originals;
+`sharp` never upscales and caps output at 1600px JPG / 480–2400px WebP.
+1. Drop the new JPGs into that gallery's source folder in the repo root (e.g.
+   `graduation/`). Source folders are mostly empty day-to-day now — raw originals get
+   moved out to git-ignored `masters/` (step 4 below), so don't expect to see the
+   existing photos sitting there.
+2. Add one **plain** `<img class="image" src="/<folder>/<file>.jpg" alt="<Title> photo N">`
+   tag per new photo into that page's `.gallery_masonry` (the root `<slug>.html`, never
+   the `/<slug>/index.html` mirror). Don't hand-write srcsets.
+3. `node tools/optimize-images.mjs <folder>` (filtered to just that folder — fast, skips
+   re-processing the whole site) then `node tools/rewrite-html.mjs` (converts the plain
+   `<img>` tags to `<picture>`/srcset from the manifest; safe to run site-wide, it only
+   touches un-converted tags).
+4. `node tools/sync-mirrors.mjs` + `--check`, review in browser.
+5. Optional cleanup, now standard practice: `node tools/move-masters.mjs` (`--dry-run`
+   first to preview) moves the newly-optimized originals into git-ignored `masters/`,
+   keeping the tracked tree slim. Reversible — move them back out of `masters/` to undo.
+6. Owner commits + pushes when happy.
+
 ## Conventions & gotchas
 - **`picture{display:contents}`** (top of `gallery_page.css`) makes `<picture>` layout-
   transparent so the `<img>` is the layout child. This **breaks CSS `display:grid` cell
