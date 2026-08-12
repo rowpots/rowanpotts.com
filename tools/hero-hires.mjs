@@ -14,11 +14,15 @@ const manifest = JSON.parse(await fs.readFile(path.join(HERE, "image-manifest.js
 
 const BASES = [
   "/img/graduation/elizabeth-fowler-graduation-26-of-80",
+  "/img/graduation/cora-grad-27-of-69",
   "/img/myers-farm/myfarm-10",
   "/img/football/app-state/top/app-state-19",
   "/img/football/app-state/top/app-state-41",
 ];
 const WIDTH = 3840;
+
+// Optional substring filter so adding one hero doesn't re-encode the rest.
+const filter = process.argv[2] ?? "";
 
 async function resolveMaster(src) {
   const rel = src.replace(/^\//, "");
@@ -29,7 +33,7 @@ async function resolveMaster(src) {
   return null;
 }
 
-for (const base of BASES) {
+for (const base of BASES.filter((b) => b.includes(filter))) {
   const jpg = `${base}-1600.jpg`;
   const entry = Object.entries(manifest).find(([, e]) => e.jpg === jpg);
   if (!entry) { console.warn(`! no manifest entry for ${base}`); continue; }

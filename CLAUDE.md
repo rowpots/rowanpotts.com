@@ -127,8 +127,12 @@ No dimension/file-size prep needed on your end — just drop in full-resolution 
   of `<picture>`) — target `.gallery_masonry picture:nth-child(...)` instead.
 - **Do NOT add `picture{display:contents}` to `base.css`/`landing.css`** — the homepage
   hero crossfade needs each `.slide` (`<picture>`) to stay a positioned box.
-- Homepage hero = 5-frame CSS crossfade in `landing.css` (`hero_fade`, 30s, delays
-  0/6/12/18/24s). Order is set by DOM order + `nth-child` delays; slide 1 gets
+- Homepage hero = 6-frame CSS crossfade in `landing.css` (`hero_fade`, 36s, delays
+  0/6/12/18/24/30s — 6s per frame; the keyframe percentages are derived from the
+  duration, so changing the frame count means recomputing both). Hero frames need a
+  3840px WebP: add the base to `tools/hero-hires.mjs` and run it with a substring filter
+  (e.g. `node tools/hero-hires.mjs cora-grad-27`) so the others aren't re-encoded.
+  Order is set by DOM order + `nth-child` delays; slide 1 gets
   `loading="eager" fetchpriority="high"` (keep the eager/high-priority attrs on whichever
   frame appears first, for LCP).
 - Galleries use **uncropped 2-column CSS-columns masonry** (`.gallery_masonry`, 1 col

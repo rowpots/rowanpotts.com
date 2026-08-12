@@ -17,7 +17,7 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  animation: hero_fade 30s infinite;
+  animation: hero_fade 36s infinite;
 }
 
 .slide img {
@@ -35,12 +35,15 @@
 .slide:nth-child(3) { animation-delay: 12s; }
 .slide:nth-child(4) { animation-delay: 18s; }
 .slide:nth-child(5) { animation-delay: 24s; }
+.slide:nth-child(6) { animation-delay: 30s; }
 
+/* 6 frames x 6s = 36s. Percentages hold the old cadence: 0.75s fade in
+   (2.083%), held to 6s (16.667%), gone by 6.75s (18.75%). */
 @keyframes hero_fade {
   0% { opacity: 0; }
-  2.5% { opacity: 1; }
-  20% { opacity: 1; }
-  22.5% { opacity: 0; }
+  2.083% { opacity: 1; }
+  16.667% { opacity: 1; }
+  18.75% { opacity: 0; }
   100% { opacity: 0; }
 }
 
