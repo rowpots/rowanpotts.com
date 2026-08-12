@@ -143,6 +143,13 @@ All Dark Cinematic and pushed:
 - Full-res originals live in git-ignored `masters/` (moved out of the tracked tree
   2026-08-11 via `tools/move-masters.mjs`); in-tree source folders now only hold the
   optimized `/img` pipeline output.
+- **Favicon set** (2026-08-11) — generated from the aperture brand mark (`favicon.svg`
+  + `.ico` + PNG sizes + apple-touch-icon), replacing the old leftover yellow "R" icon.
+  **`404.html`** (2026-08-11) — Dark Cinematic themed, not mirrored (in `sync-mirrors.mjs`
+  `SKIP` list; GitHub Pages serves it directly at the root for any unmatched path).
+  Google Fonts stylesheet now loads async (preload + media-swap) site-wide instead of
+  render-blocking. See `tools/generate-favicon.mjs`, `tools/update-favicon-links.mjs`,
+  `tools/async-fonts.mjs`.
 
 ## Backlog — what we still need to do
 1. **About page** — the last page still on the old "paper" theme (`about.css`). It is
@@ -153,7 +160,16 @@ All Dark Cinematic and pushed:
 2. **Verify the Formspree form** actually delivers (submit a live test).
 3. **Conversion extras:** testimonials + FAQ. (Confirm the Services page's placeholder
    session-length/turnaround figures while in there.)
-4. **Phase 5 — cleanup / polish:** favicon set, `404.html`, Lighthouse 90+ pass.
+4. **Re-check Lighthouse post-deploy.** Pre-fix production scores (2026-08-11): Home 75 /
+   Services 81 / a gallery page 86 perf (Accessibility/Best Practices/SEO already 100
+   everywhere). Fixed the two biggest hits — render-blocking Google Fonts (~900ms) and
+   oversized homepage "Selected Work" images (missing 480w/960w srcset entries) — but
+   haven't re-measured against production since deploying (GH Pages' 4-hour cache means
+   the fix needs time to actually serve). If still short of 90, re-run
+   `npx lighthouse <url> --only-categories=performance` and check `image-delivery-insight`/
+   `render-blocking-insight`/`cache-insight` in the JSON output for what's left — the
+   4-hour cache TTL itself isn't fixable from the repo (GH Pages has no custom-headers
+   support).
 
 ## Related notes
 Deeper session-by-session history lives in the owner's Claude memory
