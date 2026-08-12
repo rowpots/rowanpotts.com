@@ -129,12 +129,31 @@ No dimension/file-size prep needed on your end — just drop in full-resolution 
   hero crossfade needs each `.slide` (`<picture>`) to stay a positioned box.
 - Homepage hero = 6-frame CSS crossfade in `landing.css` (`hero_fade`, 36s, delays
   0/6/12/18/24/30s — 6s per frame; the keyframe percentages are derived from the
-  duration, so changing the frame count means recomputing both). Hero frames need a
-  3840px WebP: add the base to `tools/hero-hires.mjs` and run it with a substring filter
+  duration, so changing the frame count means recomputing both). Order is set by DOM
+  order + `nth-child` delays.
+  **Only slide 1 loads with the page.** Frames 2-6 carry their URLs in
+  `data-srcset`/`data-src` and are promoted by the inline script at the end of
+  `index.html` once slide 1 has landed; the script then adds `.is_ready` to
+  `.hero_slides`, which is what actually starts the crossfade. Loading all six up front
+  costs ~4.4MB of contention and pushes the LCP past 4s on a mid-range connection.
+  When editing this, three things bite:
+  - Every rule carrying the animation is scoped under `.is_ready`, so the per-slide
+    `animation-delay` rules must be scoped to match. An unscoped
+    `.slide:nth-child(n)` loses to the `.is_ready` shorthand, which resets all delays
+    to 0 and stacks the six frames on top of each other.
+  - Slide 1 uses `hero_fade_first`, a variant that starts held at opacity 1 (it is
+    already on screen when the gate opens) and fades back in at 97.917% instead of at
+    the wrap. With the shared keyframes it dips to black for 0.75s when `.is_ready`
+    lands.
+  - `loading="lazy"` on a hero frame is a no-op — they are all inside the viewport.
+  Only slide 1 needs a 3840px WebP (frames 2-6 are capped at 2400w — they sit behind
+  the scrim): add the base to `tools/hero-hires.mjs` and run it with a substring filter
   (e.g. `node tools/hero-hires.mjs cora-grad-27`) so the others aren't re-encoded.
-  Order is set by DOM order + `nth-child` delays; slide 1 gets
-  `loading="eager" fetchpriority="high"` (keep the eager/high-priority attrs on whichever
-  frame appears first, for LCP).
+- The homepage `<link rel="preload">` for slide 1 must carry `fetchpriority="high"`
+  **on the link itself**. The preload scanner starts that request before the `<img>` is
+  parsed, at the default Low image priority, and the `<img>` then reuses the in-flight
+  request — so `fetchpriority` on the `<img>` alone silently never applies. Keep the
+  preload pointed at whichever frame is first in the DOM.
 - Galleries use **uncropped 2-column CSS-columns masonry** (`.gallery_masonry`, 1 col
   <600px). No cropping — best for a photographer.
 - **Files are mixed CRLF/LF.** Node scripts that rewrite HTML must detect per-file EOL

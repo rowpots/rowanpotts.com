@@ -17,8 +17,25 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  animation: hero_fade 36s infinite;
 }
+
+/* Frames 2-6 are fetched only after the LCP frame lands (script at the end of
+   index.html), so the crossfade is held until they have decoded -- starting it early
+   fades slide 1 out into a frame with no bytes yet and the hero goes black. Until the
+   script adds .is_ready, slide 1 simply holds. With JS off .is_ready never arrives and
+   the hero stays a still, which is the correct degradation.
+
+   Every rule that carries the animation is scoped under .is_ready and so out-specifies
+   a bare .slide -- the per-slide delays below have to be scoped to match, or the
+   shorthand here resets them all to 0 and the six frames stack on top of each other. */
+.hero_slides:not(.is_ready) .slide:first-child { opacity: 1; }
+.hero_slides.is_ready .slide { animation: hero_fade 36s infinite; }
+
+/* Slide 1 is already on screen when the gate opens, so it uses a variant that starts
+   held at full opacity rather than fading up from black -- with the shared keyframes it
+   would dip to black for 0.75s at the exact moment .is_ready lands. It fades back in over
+   35.25-36s, hidden underneath slide 6, so the wrap-around still crossfades. */
+.hero_slides.is_ready .slide:first-child { animation-name: hero_fade_first; }
 
 .slide img {
   width: 100%;
@@ -30,12 +47,12 @@
 /* the basketball frame sits low at the shared 30% crop — raise its subject */
 .slide img[src*="basketball-reedit-1"] { object-position: center 50%; }
 
-.slide:nth-child(1) { animation-delay: 0s; }
-.slide:nth-child(2) { animation-delay: 6s; }
-.slide:nth-child(3) { animation-delay: 12s; }
-.slide:nth-child(4) { animation-delay: 18s; }
-.slide:nth-child(5) { animation-delay: 24s; }
-.slide:nth-child(6) { animation-delay: 30s; }
+.hero_slides.is_ready .slide:nth-child(1) { animation-delay: 0s; }
+.hero_slides.is_ready .slide:nth-child(2) { animation-delay: 6s; }
+.hero_slides.is_ready .slide:nth-child(3) { animation-delay: 12s; }
+.hero_slides.is_ready .slide:nth-child(4) { animation-delay: 18s; }
+.hero_slides.is_ready .slide:nth-child(5) { animation-delay: 24s; }
+.hero_slides.is_ready .slide:nth-child(6) { animation-delay: 30s; }
 
 /* 6 frames x 6s = 36s. Percentages hold the old cadence: 0.75s fade in
    (2.083%), held to 6s (16.667%), gone by 6.75s (18.75%). */
@@ -47,9 +64,21 @@
   100% { opacity: 0; }
 }
 
+/* as hero_fade, but already held at full opacity at 0% and fading back in at 97.917%
+   (35.25s) instead of at the wrap. */
+@keyframes hero_fade_first {
+  0% { opacity: 1; }
+  16.667% { opacity: 1; }
+  18.75% { opacity: 0; }
+  97.917% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* must out-specify the .is_ready rules above, which carry the animation */
 @media (prefers-reduced-motion: reduce) {
-  .slide { animation: none; }
-  .slide:first-child { opacity: 1; }
+  .hero_slides.is_ready .slide,
+  .hero_slides.is_ready .slide:first-child { animation: none; }
+  .hero_slides .slide:first-child { opacity: 1; }
 }
 
 /* cinematic vertical scrim: shade top (for nav) and bottom (for headline) */

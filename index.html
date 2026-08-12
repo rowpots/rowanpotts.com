@@ -25,8 +25,11 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["ProfessionalService","LocalBusiness"],"@id":"https://rowanpotts.com/#business","name":"Rowan Potts Photography","url":"https://rowanpotts.com/","image":"https://rowanpotts.com/img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-1600.jpg","description":"Portrait, sports, and event photography in Harrisonburg, VA and the Shenandoah Valley.","priceRange":"$$","areaServed":[{"@type":"Place","name":"Harrisonburg, Virginia"},{"@type":"Place","name":"James Madison University"},{"@type":"Place","name":"Shenandoah Valley"}],"founder":{"@type":"Person","name":"Rowan Potts"},"address":{"@type":"PostalAddress","addressLocality":"Harrisonburg","addressRegion":"VA","addressCountry":"US"},"sameAs":["https://www.instagram.com/pottsey.photos/","https://www.linkedin.com/in/rowan-potts-7a2a72305"]},{"@type":"WebSite","@id":"https://rowanpotts.com/#website","url":"https://rowanpotts.com/","name":"Rowan Potts Photography","publisher":{"@id":"https://rowanpotts.com/#business"}}]}</script>
   <!-- seo:auto end -->
   <!-- must stay pointed at the FIRST hero slide (the LCP element), not whichever
-       frame happens to be second -->
-  <link rel="preload" as="image" type="image/webp" imagesrcset="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-960.webp 960w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.webp 1600w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-2400.webp 2400w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-3840.webp 3840w" imagesizes="100vw" />
+       frame happens to be second. fetchpriority="high" belongs HERE, not only on the
+       <img>: the preload scanner starts this request before the <img> is parsed, at the
+       default Low image priority, and the <img> then just reuses the in-flight request --
+       so a hint on the <img> alone never takes effect. -->
+  <link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-960.webp 960w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.webp 1600w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-2400.webp 2400w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-3840.webp 3840w" imagesizes="100vw" />
 
   <link rel="stylesheet" href="/base.css" />
   <link rel="stylesheet" href="/landing.css" />
@@ -80,11 +83,17 @@
       <section class="hero" aria-labelledby="hero_title">
         <div class="hero_slides" aria-hidden="true">
           <picture class="slide"><source type="image/webp" srcset="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-960.webp 960w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.webp 1600w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-2400.webp 2400w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-3840.webp 3840w" sizes="100vw" /><img src="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.jpg" alt="Graduation portrait photography by Rowan Potts" width="6141" height="4094" loading="eager" fetchpriority="high" decoding="async" /></picture>
-          <picture class="slide"><source type="image/webp" srcset="/img/graduation/cora-grad-27-of-69-960.webp 960w, /img/graduation/cora-grad-27-of-69-1600.webp 1600w, /img/graduation/cora-grad-27-of-69-2400.webp 2400w, /img/graduation/cora-grad-27-of-69-3840.webp 3840w" sizes="100vw" /><img src="/img/graduation/cora-grad-27-of-69-1600.jpg" alt="" width="5849" height="3899" loading="lazy" decoding="async" /></picture>
-          <picture class="slide"><source type="image/webp" srcset="/img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-960.webp 960w, /img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-1600.webp 1600w, /img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-2400.webp 2400w, /img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-3840.webp 3840w" sizes="100vw" /><img src="/img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-1600.jpg" alt="" width="5771" height="3847" loading="lazy" decoding="async" /></picture>
-          <picture class="slide"><source type="image/webp" srcset="/img/bestcomp/myfarm-3-960.webp 960w, /img/bestcomp/myfarm-3-1600.webp 1600w, /img/bestcomp/myfarm-3-2400.webp 2400w, /img/bestcomp/myfarm-3-3840.webp 3840w" sizes="100vw" /><img src="/img/bestcomp/myfarm-3-1600.jpg" alt="" width="5701" height="3801" loading="lazy" decoding="async" /></picture>
-          <picture class="slide"><source type="image/webp" srcset="/img/bestcomp/football-reedit-5-960.webp 960w, /img/bestcomp/football-reedit-5-1600.webp 1600w, /img/bestcomp/football-reedit-5-2400.webp 2400w, /img/bestcomp/football-reedit-5-3840.webp 3840w" sizes="100vw" /><img src="/img/bestcomp/football-reedit-5-1600.jpg" alt="" width="6240" height="4160" loading="lazy" decoding="async" /></picture>
-          <picture class="slide"><source type="image/webp" srcset="/img/bestcomp/basketball-reedit-1-960.webp 960w, /img/bestcomp/basketball-reedit-1-1600.webp 1600w, /img/bestcomp/basketball-reedit-1-2400.webp 2400w, /img/bestcomp/basketball-reedit-1-3840.webp 3840w" sizes="100vw" /><img src="/img/bestcomp/basketball-reedit-1-1600.jpg" alt="" width="7129" height="4753" loading="lazy" decoding="async" /></picture>
+          <!-- Slides 2-6 are decorative and nobody sees them for 6-30s, but the browser
+               fetches every in-viewport <img> up front, so they used to race the LCP frame
+               for bandwidth. loading="lazy" is a no-op here (they are all inside the
+               viewport) and fetchpriority="low" only reorders the race. So they hold their
+               URLs in data-* and get promoted after load -- see the script at end of body.
+               Capped at 2400w: they sit behind the scrim, 3840w is not worth the bytes. -->
+          <picture class="slide" data-defer><source type="image/webp" data-srcset="/img/graduation/cora-grad-27-of-69-960.webp 960w, /img/graduation/cora-grad-27-of-69-1600.webp 1600w, /img/graduation/cora-grad-27-of-69-2400.webp 2400w" sizes="100vw" /><img data-src="/img/graduation/cora-grad-27-of-69-1600.jpg" alt="" width="5849" height="3899" decoding="async" /></picture>
+          <picture class="slide" data-defer><source type="image/webp" data-srcset="/img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-960.webp 960w, /img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-1600.webp 1600w, /img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-2400.webp 2400w" sizes="100vw" /><img data-src="/img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-1600.jpg" alt="" width="5771" height="3847" decoding="async" /></picture>
+          <picture class="slide" data-defer><source type="image/webp" data-srcset="/img/bestcomp/myfarm-3-960.webp 960w, /img/bestcomp/myfarm-3-1600.webp 1600w, /img/bestcomp/myfarm-3-2400.webp 2400w" sizes="100vw" /><img data-src="/img/bestcomp/myfarm-3-1600.jpg" alt="" width="5701" height="3801" decoding="async" /></picture>
+          <picture class="slide" data-defer><source type="image/webp" data-srcset="/img/bestcomp/football-reedit-5-960.webp 960w, /img/bestcomp/football-reedit-5-1600.webp 1600w, /img/bestcomp/football-reedit-5-2400.webp 2400w" sizes="100vw" /><img data-src="/img/bestcomp/football-reedit-5-1600.jpg" alt="" width="6240" height="4160" decoding="async" /></picture>
+          <picture class="slide" data-defer><source type="image/webp" data-srcset="/img/bestcomp/basketball-reedit-1-960.webp 960w, /img/bestcomp/basketball-reedit-1-1600.webp 1600w, /img/bestcomp/basketball-reedit-1-2400.webp 2400w" sizes="100vw" /><img data-src="/img/bestcomp/basketball-reedit-1-1600.jpg" alt="" width="7129" height="4753" decoding="async" /></picture>
         </div>
         <div class="hero_scrim" aria-hidden="true"></div>
         <div class="hero_inner">
@@ -107,15 +116,15 @@
         </div>
         <div class="work_rows">
           <a class="work_row" href="/graduation">
-            <picture><source type="image/webp" srcset="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-480.webp 480w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-960.webp 960w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.webp 1600w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-2400.webp 2400w" sizes="100vw" /><img src="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.jpg" alt="Graduation portrait session by Rowan Potts" width="6141" height="4094" loading="lazy" decoding="async" /></picture>
+            <picture><source type="image/webp" srcset="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-480.webp 480w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-960.webp 960w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.webp 1600w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-2400.webp 2400w" sizes="100vw" /><img src="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.jpg" alt="Graduation portrait session by Rowan Potts" width="6141" height="4094" loading="lazy" fetchpriority="low" decoding="async" /></picture>
             <span class="work_cap"><span class="work_num">01</span><span class="work_name">Graduation</span></span>
           </a>
           <a class="work_row" href="/football">
-            <picture><source type="image/webp" srcset="/img/bestcomp/football-reedit-5-480.webp 480w, /img/bestcomp/football-reedit-5-960.webp 960w, /img/bestcomp/football-reedit-5-1600.webp 1600w, /img/bestcomp/football-reedit-5-2400.webp 2400w" sizes="100vw" /><img src="/img/bestcomp/football-reedit-5-1600.jpg" alt="JMU football photograph by Rowan Potts" width="6240" height="4160" loading="lazy" decoding="async" /></picture>
+            <picture><source type="image/webp" srcset="/img/bestcomp/football-reedit-5-480.webp 480w, /img/bestcomp/football-reedit-5-960.webp 960w, /img/bestcomp/football-reedit-5-1600.webp 1600w, /img/bestcomp/football-reedit-5-2400.webp 2400w" sizes="100vw" /><img src="/img/bestcomp/football-reedit-5-1600.jpg" alt="JMU football photograph by Rowan Potts" width="6240" height="4160" loading="lazy" fetchpriority="low" decoding="async" /></picture>
             <span class="work_cap"><span class="work_num">02</span><span class="work_name">Football</span></span>
           </a>
           <a class="work_row" href="/myers-farm">
-            <picture><source type="image/webp" srcset="/img/bestcomp/myfarm-3-480.webp 480w, /img/bestcomp/myfarm-3-960.webp 960w, /img/bestcomp/myfarm-3-1600.webp 1600w, /img/bestcomp/myfarm-3-2400.webp 2400w" sizes="100vw" /><img src="/img/bestcomp/myfarm-3-1600.jpg" alt="Myers Farm event photograph by Rowan Potts" width="5701" height="3801" loading="lazy" decoding="async" /></picture>
+            <picture><source type="image/webp" srcset="/img/bestcomp/myfarm-3-480.webp 480w, /img/bestcomp/myfarm-3-960.webp 960w, /img/bestcomp/myfarm-3-1600.webp 1600w, /img/bestcomp/myfarm-3-2400.webp 2400w" sizes="100vw" /><img src="/img/bestcomp/myfarm-3-1600.jpg" alt="Myers Farm event photograph by Rowan Potts" width="5701" height="3801" loading="lazy" fetchpriority="low" decoding="async" /></picture>
             <span class="work_cap"><span class="work_num">03</span><span class="work_name">Myers Farm</span></span>
           </a>
         </div>
@@ -155,6 +164,45 @@
       </nav>
     </footer>
   </div>
+
+  <script>
+    // Hero frames 2-6 are held out of the initial fetch so they cannot compete with
+    // slide 1 (the LCP element) for bandwidth -- six full-bleed frames at once used to
+    // push the LCP past 4s on a mid-range connection and paint the hero in black bands.
+    // They are promoted the moment slide 1 has landed, which is both the earliest point
+    // at which they are free and ~6s of lead time before frame 2 is due. The crossfade
+    // then waits for them to decode, so it can never fade into a frame with no bytes.
+    // With JS off nothing is promoted, .is_ready never lands, and the CSS leaves the
+    // hero parked on slide 1 as a still.
+    (function () {
+      var wrap = document.querySelector(".hero_slides");
+      var slides = wrap ? wrap.querySelectorAll(".slide[data-defer]") : [];
+      if (!slides.length) return;
+
+      function start() {
+        var pending = slides.length;
+        function settled() {
+          // errors count too: a missing frame must not wedge the hero on slide 1
+          if (--pending === 0) wrap.classList.add("is_ready");
+        }
+        Array.prototype.forEach.call(slides, function (slide) {
+          var source = slide.querySelector("source");
+          var img = slide.querySelector("img");
+          img.addEventListener("load", settled, { once: true });
+          img.addEventListener("error", settled, { once: true });
+          if (source) source.srcset = source.dataset.srcset;
+          img.src = img.dataset.src;
+        });
+      }
+
+      var lead = wrap.querySelector(".slide:first-child img");
+      if (!lead || lead.complete) start();
+      else {
+        lead.addEventListener("load", start, { once: true });
+        lead.addEventListener("error", start, { once: true });
+      }
+    })();
+  </script>
 </body>
 
 </html>
