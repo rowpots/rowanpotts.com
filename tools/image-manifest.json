@@ -4429,31 +4429,6 @@
     "jpg": "/img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-1600.jpg",
     "full": "/img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-2400.webp"
   },
-  "/graduation/Elizabeth-Fowler-Graduation (14 of 80).jpg": {
-    "src": "/graduation/Elizabeth-Fowler-Graduation (14 of 80).jpg",
-    "width": 4160,
-    "height": 6240,
-    "webp": [
-      {
-        "w": 480,
-        "src": "/img/graduation/elizabeth-fowler-graduation-14-of-80-480.webp"
-      },
-      {
-        "w": 960,
-        "src": "/img/graduation/elizabeth-fowler-graduation-14-of-80-960.webp"
-      },
-      {
-        "w": 1600,
-        "src": "/img/graduation/elizabeth-fowler-graduation-14-of-80-1600.webp"
-      },
-      {
-        "w": 2400,
-        "src": "/img/graduation/elizabeth-fowler-graduation-14-of-80-2400.webp"
-      }
-    ],
-    "jpg": "/img/graduation/elizabeth-fowler-graduation-14-of-80-1600.jpg",
-    "full": "/img/graduation/elizabeth-fowler-graduation-14-of-80-2400.webp"
-  },
   "/graduation/best_compressed/J_GRAD (5 of 45).jpg": {
     "src": "/graduation/best_compressed/J_GRAD (5 of 45).jpg",
     "width": 3998,
@@ -4679,31 +4654,6 @@
     "jpg": "/img/graduation/best-compressed/j-grad-33-of-45-1600.jpg",
     "full": "/img/graduation/best-compressed/j-grad-33-of-45-2400.webp"
   },
-  "/graduation/best_compressed/J_GRAD (44 of 45).jpg": {
-    "src": "/graduation/best_compressed/J_GRAD (44 of 45).jpg",
-    "width": 6240,
-    "height": 4160,
-    "webp": [
-      {
-        "w": 480,
-        "src": "/img/graduation/best-compressed/j-grad-44-of-45-480.webp"
-      },
-      {
-        "w": 960,
-        "src": "/img/graduation/best-compressed/j-grad-44-of-45-960.webp"
-      },
-      {
-        "w": 1600,
-        "src": "/img/graduation/best-compressed/j-grad-44-of-45-1600.webp"
-      },
-      {
-        "w": 2400,
-        "src": "/img/graduation/best-compressed/j-grad-44-of-45-2400.webp"
-      }
-    ],
-    "jpg": "/img/graduation/best-compressed/j-grad-44-of-45-1600.jpg",
-    "full": "/img/graduation/best-compressed/j-grad-44-of-45-2400.webp"
-  },
   "/graduation/Elizabeth-Fowler-Graduation (34 of 80).jpg": {
     "src": "/graduation/Elizabeth-Fowler-Graduation (34 of 80).jpg",
     "width": 6082,
@@ -4778,31 +4728,6 @@
     ],
     "jpg": "/img/graduation/elizabeth-fowler-graduation-53-of-80-1600.jpg",
     "full": "/img/graduation/elizabeth-fowler-graduation-53-of-80-2400.webp"
-  },
-  "/graduation/Elizabeth-Fowler-Graduation (36 of 80).jpg": {
-    "src": "/graduation/Elizabeth-Fowler-Graduation (36 of 80).jpg",
-    "width": 4160,
-    "height": 6240,
-    "webp": [
-      {
-        "w": 480,
-        "src": "/img/graduation/elizabeth-fowler-graduation-36-of-80-480.webp"
-      },
-      {
-        "w": 960,
-        "src": "/img/graduation/elizabeth-fowler-graduation-36-of-80-960.webp"
-      },
-      {
-        "w": 1600,
-        "src": "/img/graduation/elizabeth-fowler-graduation-36-of-80-1600.webp"
-      },
-      {
-        "w": 2400,
-        "src": "/img/graduation/elizabeth-fowler-graduation-36-of-80-2400.webp"
-      }
-    ],
-    "jpg": "/img/graduation/elizabeth-fowler-graduation-36-of-80-1600.jpg",
-    "full": "/img/graduation/elizabeth-fowler-graduation-36-of-80-2400.webp"
   },
   "/graduation/Elizabeth-Fowler-Graduation (45 of 80).jpg": {
     "src": "/graduation/Elizabeth-Fowler-Graduation (45 of 80).jpg",
