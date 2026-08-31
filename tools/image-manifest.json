@@ -8916,5 +8916,743 @@
     ],
     "jpg": "/img/pitbull/pitbull-0873-1600.jpg",
     "full": "/img/pitbull/pitbull-0873-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-12.jpg": {
+    "src": "/volleyball/loyola/vbloyola-12.jpg",
+    "width": 3340,
+    "height": 2227,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-12-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-12-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-12-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-12-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-12-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-12-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-03.jpg": {
+    "src": "/volleyball/loyola/vbloyola-03.jpg",
+    "width": 6240,
+    "height": 4160,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-03-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-03-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-03-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-03-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-03-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-03-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-01.jpg": {
+    "src": "/volleyball/loyola/vbloyola-01.jpg",
+    "width": 2883,
+    "height": 3604,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-01-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-01-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-01-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-01-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-01-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-01-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-02.jpg": {
+    "src": "/volleyball/loyola/vbloyola-02.jpg",
+    "width": 2751,
+    "height": 4126,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-02-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-02-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-02-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-02-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-02-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-02-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-04.jpg": {
+    "src": "/volleyball/loyola/vbloyola-04.jpg",
+    "width": 4614,
+    "height": 3076,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-04-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-04-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-04-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-04-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-04-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-04-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-06.jpg": {
+    "src": "/volleyball/loyola/vbloyola-06.jpg",
+    "width": 5471,
+    "height": 3647,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-06-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-06-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-06-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-06-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-06-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-06-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-05.jpg": {
+    "src": "/volleyball/loyola/vbloyola-05.jpg",
+    "width": 5730,
+    "height": 3820,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-05-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-05-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-05-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-05-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-05-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-05-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-08.jpg": {
+    "src": "/volleyball/loyola/vbloyola-08.jpg",
+    "width": 2589,
+    "height": 3884,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-08-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-08-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-08-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-08-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-08-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-08-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-09.jpg": {
+    "src": "/volleyball/loyola/vbloyola-09.jpg",
+    "width": 3171,
+    "height": 2114,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-09-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-09-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-09-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-09-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-09-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-09-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-07.jpg": {
+    "src": "/volleyball/loyola/vbloyola-07.jpg",
+    "width": 3910,
+    "height": 5865,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-07-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-07-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-07-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-07-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-07-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-07-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-10.jpg": {
+    "src": "/volleyball/loyola/vbloyola-10.jpg",
+    "width": 5754,
+    "height": 3836,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-10-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-10-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-10-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-10-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-10-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-10-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-13.jpg": {
+    "src": "/volleyball/loyola/vbloyola-13.jpg",
+    "width": 2975,
+    "height": 1983,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-13-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-13-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-13-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-13-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-13-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-13-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-14.jpg": {
+    "src": "/volleyball/loyola/vbloyola-14.jpg",
+    "width": 5195,
+    "height": 3463,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-14-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-14-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-14-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-14-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-14-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-14-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-16.jpg": {
+    "src": "/volleyball/loyola/vbloyola-16.jpg",
+    "width": 5015,
+    "height": 3343,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-16-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-16-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-16-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-16-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-16-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-16-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-17.jpg": {
+    "src": "/volleyball/loyola/vbloyola-17.jpg",
+    "width": 2183,
+    "height": 1455,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-17-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-17-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-17-1600.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-17-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-17-1600.webp"
+  },
+  "/volleyball/loyola/vbloyola-11.jpg": {
+    "src": "/volleyball/loyola/vbloyola-11.jpg",
+    "width": 3778,
+    "height": 5667,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-11-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-11-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-11-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-11-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-11-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-11-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-15.jpg": {
+    "src": "/volleyball/loyola/vbloyola-15.jpg",
+    "width": 3645,
+    "height": 5467,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-15-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-15-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-15-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-15-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-15-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-15-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-20.jpg": {
+    "src": "/volleyball/loyola/vbloyola-20.jpg",
+    "width": 2187,
+    "height": 3281,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-20-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-20-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-20-1600.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-20-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-20-1600.webp"
+  },
+  "/volleyball/loyola/vbloyola-18.jpg": {
+    "src": "/volleyball/loyola/vbloyola-18.jpg",
+    "width": 5046,
+    "height": 3364,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-18-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-18-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-18-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-18-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-18-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-18-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-19.jpg": {
+    "src": "/volleyball/loyola/vbloyola-19.jpg",
+    "width": 4613,
+    "height": 3075,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-19-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-19-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-19-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-19-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-19-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-19-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-23.jpg": {
+    "src": "/volleyball/loyola/vbloyola-23.jpg",
+    "width": 5325,
+    "height": 3550,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-23-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-23-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-23-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-23-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-23-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-23-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-24.jpg": {
+    "src": "/volleyball/loyola/vbloyola-24.jpg",
+    "width": 4160,
+    "height": 2773,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-24-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-24-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-24-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-24-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-24-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-24-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-22.jpg": {
+    "src": "/volleyball/loyola/vbloyola-22.jpg",
+    "width": 4546,
+    "height": 3031,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-22-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-22-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-22-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-22-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-22-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-22-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-21.jpg": {
+    "src": "/volleyball/loyola/vbloyola-21.jpg",
+    "width": 3099,
+    "height": 4649,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-21-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-21-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-21-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-21-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-21-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-21-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-26.jpg": {
+    "src": "/volleyball/loyola/vbloyola-26.jpg",
+    "width": 1727,
+    "height": 2591,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-26-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-26-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-26-1600.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-26-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-26-1600.webp"
+  },
+  "/volleyball/loyola/vbloyola-25.jpg": {
+    "src": "/volleyball/loyola/vbloyola-25.jpg",
+    "width": 5839,
+    "height": 3893,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-25-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-25-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-25-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-25-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-25-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-25-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-28.jpg": {
+    "src": "/volleyball/loyola/vbloyola-28.jpg",
+    "width": 5887,
+    "height": 3925,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-28-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-28-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-28-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-28-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-28-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-28-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-27.jpg": {
+    "src": "/volleyball/loyola/vbloyola-27.jpg",
+    "width": 5888,
+    "height": 3925,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-27-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-27-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-27-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-27-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-27-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-27-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-29.jpg": {
+    "src": "/volleyball/loyola/vbloyola-29.jpg",
+    "width": 4433,
+    "height": 2955,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-29-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-29-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-29-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-29-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-29-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-29-2400.webp"
+  },
+  "/volleyball/loyola/vbloyola-30.jpg": {
+    "src": "/volleyball/loyola/vbloyola-30.jpg",
+    "width": 5552,
+    "height": 3701,
+    "webp": [
+      {
+        "w": 480,
+        "src": "/img/volleyball/loyola/vbloyola-30-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/img/volleyball/loyola/vbloyola-30-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/img/volleyball/loyola/vbloyola-30-1600.webp"
+      },
+      {
+        "w": 2400,
+        "src": "/img/volleyball/loyola/vbloyola-30-2400.webp"
+      }
+    ],
+    "jpg": "/img/volleyball/loyola/vbloyola-30-1600.jpg",
+    "full": "/img/volleyball/loyola/vbloyola-30-2400.webp"
   }
 }
