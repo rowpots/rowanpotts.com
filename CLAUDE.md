@@ -166,6 +166,10 @@ No dimension/file-size prep needed on your end — just drop in full-resolution 
   `@pottsey.photos`. Direct email `rowanpotts2005@gmail.com`.
 - Keep pages that look redundant but aren't: `football.html` (live `/football` hub),
   `selected-work.html` (deliberate meta-refresh redirect → `/featured-works`).
+- **`football.html`'s game-gallery rows are ordered newest-first.** When adding a new
+  football game gallery, put its `r_item` row first (it becomes the LCP image — give it
+  `loading="eager" fetchpriority="high"` and demote the previous first row to
+  `loading="lazy"`).
 
 ## Current state (live on `main`)
 All Dark Cinematic and pushed:
