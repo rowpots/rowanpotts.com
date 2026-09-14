@@ -156,6 +156,22 @@ No dimension/file-size prep needed on your end — just drop in full-resolution 
   preload pointed at whichever frame is first in the DOM.
 - Galleries use **uncropped 2-column CSS-columns masonry** (`.gallery_masonry`, 1 col
   <600px). No cropping — best for a photographer.
+- **Masonry images ship a mobile-only `<source media="(max-width: 600px)">` carrying a
+  single 1600w WebP — deliberately "unoptimized."** Press-and-hold → Save on a phone hands
+  the OS whichever srcset candidate is already cached, so a responsive grid saves a
+  thumbnail (the owner hit this: 960w saves, ~88KB). One lone candidate removes the
+  browser's choice, so long-press anywhere in the grid saves 1600px. Emitted by
+  `buildPicture()`/`mobileSrc()` in `tools/rewrite-html.mjs`
+  (`GALLERY_MOBILE_MEDIA` + `GALLERY_MOBILE_WIDTH`); masters smaller than 1600w fall back to
+  their largest rung. The breakpoint must stay in sync with the 1-column rule in
+  `gallery_page.css`. Do not "fix" this as an oversized-image Lighthouse warning — it will
+  cost points on gallery pages (see backlog #4) and that is the accepted trade.
+  **Sizing history (2026-09-14):** tried 2400w first, which took the 59-photo Wagner gallery
+  from 6.8MB → 26.4MB on mobile; owner felt it and we settled on 1600w (13.1MB). 1600px
+  still beats Instagram's 1080px upload cap and prints at 5×7, so the extra 13MB bought
+  pixels almost nobody sees. Don't re-raise it without re-measuring page weight.
+- The lightbox (`gallery-lightbox.js`) opens `data-full` (largest WebP), **not** `img.src`
+  (the 1600w JPG fallback) — same reason: one unambiguous resource to save.
 - **Files are mixed CRLF/LF.** Node scripts that rewrite HTML must detect per-file EOL
   (`c.includes("\r\n") ? "\r\n" : "\n"`). Git autocrlf warnings on commit are harmless.
 - **Headless-Chrome screenshots** below ~480px clip the right edge — a capture artifact,

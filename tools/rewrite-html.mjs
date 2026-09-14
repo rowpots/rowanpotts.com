@@ -25,6 +25,22 @@ const SIZES = {
   content: "(min-width: 720px) 33vw, 100vw",
 };
 
+// Phones get one un-negotiable file for the masonry instead of a srcset the
+// browser picks from. Press-and-hold "Save" hands the OS whichever candidate is
+// already cached, so a responsive grid saves a thumbnail. 1600w is the tuned
+// compromise: big enough for a camera roll (Instagram caps uploads at 1080px
+// anyway) at ~220KB/photo, where 2400w doubled gallery weight for pixels almost
+// nobody sees. The lightbox still opens the full 2400w via data-full.
+// Media query matches the single-column breakpoint in gallery_page.css.
+const GALLERY_MOBILE_MEDIA = "(max-width: 600px)";
+const GALLERY_MOBILE_WIDTH = 1600;
+
+// largest webp at or below the mobile cap (smaller masters may top out lower)
+function mobileSrc(entry) {
+  const usable = entry.webp.filter((x) => x.w <= GALLERY_MOBILE_WIDTH);
+  return (usable.length ? usable[usable.length - 1] : entry.webp[0]).src;
+}
+
 function parseAttrs(tag) {
   const attrs = {};
   for (const m of tag.matchAll(/([\w-]+)\s*=\s*"([^"]*)"/g)) attrs[m[1]] = m[2];
@@ -53,8 +69,14 @@ function buildPicture(entry, attrs) {
   }
   if (isGallery) imgAttrs.push(`data-full="${entry.full}"`);
 
+  // a lone candidate, so the phone has no choice to get wrong
+  const mobileSource = isGallery
+    ? `<source media="${GALLERY_MOBILE_MEDIA}" type="image/webp" srcset="${mobileSrc(entry)}" />`
+    : "";
+
   return (
     `<picture>` +
+    mobileSource +
     `<source type="image/webp" srcset="${srcset(entry)}" sizes="${sizes}" />` +
     `<img ${imgAttrs.join(" ")} />` +
     `</picture>`

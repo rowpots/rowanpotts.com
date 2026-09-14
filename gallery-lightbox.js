@@ -4,6 +4,14 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightbox_image");
 const closeButton = document.getElementById("lightbox_close");
 
+// The grid <img> is responsive, so press-and-hold there saves whichever small
+// srcset candidate the phone happened to pick. The popup deliberately loads
+// data-full -- the biggest file we generated, with no srcset -- so there is
+// only one resource to save and press-and-hold gets the full-size photo.
+function fullSizeOf(image) {
+  return image.getAttribute("data-full") || image.src;
+}
+
 // this closes the popup
 function closeLightbox() {
   lightbox.classList.remove("is_open");
@@ -15,7 +23,7 @@ function closeLightbox() {
 // let each photo open the popup
 for (let i = 0; i < images.length; i++) {
   images[i].addEventListener("click", function () {
-    lightboxImage.src = images[i].src;
+    lightboxImage.src = fullSizeOf(images[i]);
     lightboxImage.alt = images[i].alt;
     lightbox.classList.add("is_open");
     document.body.classList.add("lightbox_open");
