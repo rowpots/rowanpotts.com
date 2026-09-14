@@ -90,9 +90,11 @@ picture { display: contents; }
   transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.3s ease;
 }
 
-.gallery_masonry .image:hover {
-  transform: scale(1.02);
-  filter: brightness(1.06);
+@media (hover: hover) {
+  .gallery_masonry .image:hover {
+    transform: scale(1.02);
+    filter: brightness(1.06);
+  }
 }
 
 @media (max-width: 600px) {
@@ -129,9 +131,7 @@ picture { display: contents; }
   align-items: center;
   justify-content: center;
   padding: 24px 16px;
-  background: rgba(8, 8, 9, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(8, 8, 9, 0.94);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.25s ease, visibility 0.25s ease;
