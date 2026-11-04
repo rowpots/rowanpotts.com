@@ -2,7 +2,7 @@
 
 .about_body {
   display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: clamp(32px, 6vw, 96px);
   padding: 0 var(--side);
 }
@@ -19,7 +19,6 @@
 
 .about_copy .btn { margin-top: 14px; }
 
-.about_img { max-width: 400px; }
 .about_img img { width: 100%; }
 
 @media (max-width: 760px) {
