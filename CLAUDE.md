@@ -129,6 +129,7 @@ No dimension/file-size prep needed on your end — just drop in full-resolution 
   If you ever need a grid layout, scope `picture{display:block}` to that grid container.
   Same reason: `:nth-child`/`:last-child` on `.image` won't match (the `<img>` is child #2
   of `<picture>`) — target `.gallery_masonry picture:nth-child(...)` instead.
+- **CSS links carry a version: `/base.css?v=20261104`.** After changing any stylesheet, bump the date on every root page, then sync mirrors. On the 2026-11-04 launch the Pages CDN kept serving old CSS at plain URLs next to new HTML, which broke the live site for everyone, not just one browser cache.
 - Do not add `picture{display:contents}` to `base.css`: `.svc_img`, `.wall` and others rely on
   `<picture>` being a box.
 - Homepage = two explicit flex columns (`.wall`/`.wall_col` in `landing.css`), not CSS columns, so
