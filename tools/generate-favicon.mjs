@@ -8,8 +8,8 @@ import path from "node:path";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
-const BG = "#0e0e0f"; // --bg
-const GOLD = "#c9a96a"; // --gold
+const BG = "#ffffff";
+const GOLD = "#000000"; // mark color
 
 // Same geometry as the inline <svg class="brand_mark"> in every page's <header>,
 // on a filled rounded-square backdrop and a slightly heavier stroke so the

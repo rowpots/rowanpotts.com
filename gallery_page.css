@@ -1,102 +1,29 @@
-/* gallery_page.css — individual gallery page in the "Dark Cinematic" language
-   (full-bleed cover + uncropped masonry). Loaded after base.css, which owns the
-   palette tokens, top bar, nav and buttons. This file styles the cover hero, the
-   photo masonry, the dark lightbox, the back-to-top button and the footer. */
+/* gallery_page.css — individual gallery page: plain title, uncropped two-column
+   masonry, white lightbox. No backdrop-filter on the lightbox: iOS saves a
+   screenshot of the page instead of the photo when one is present. */
 
 body.lightbox_open { overflow: hidden; }
 
 /* <picture> wrappers are layout-transparent so the inner <img> is the layout child */
 picture { display: contents; }
 
-/* ---- full-bleed cover hero with overlaid title ---- */
-.gp_cover {
-  position: relative;
-  overflow: hidden;
-  background: #000;
-}
-
-.gp_cover_img {
-  width: 100%;
-  height: clamp(440px, 78vh, 860px);
-  object-fit: cover;
-  object-position: center 28%;
-  display: block;
-}
-
-.gp_cover::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(14, 14, 15, 0.5) 0%,
-    rgba(14, 14, 15, 0) 24%,
-    rgba(14, 14, 15, 0.12) 56%,
-    rgba(14, 14, 15, 0.92) 100%
-  );
-}
-
-.gp_cover_cap {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  width: min(100%, var(--container));
-  margin-inline: auto;
-  padding: 0 var(--gutter) clamp(36px, 5vw, 68px);
-}
-
-.gp_back {
-  display: inline-block;
-  margin-bottom: 18px;
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-
-.gp_back:hover,
-.gp_back:focus-visible { color: var(--gold-2); }
-
-.gp_cover_cap h1 {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(2.8rem, 1.6rem + 6vw, 7rem);
-  line-height: 0.92;
-  letter-spacing: -0.012em;
-  color: var(--ink);
-  margin: 0;
-}
-
 /* ---- photo masonry (uncropped, two columns) ---- */
-.photo_container {
-  width: 100%;
-  padding: clamp(40px, 5vw, 76px) clamp(16px, 2.4vw, 44px) clamp(64px, 8vw, 110px);
-}
+.photo_container { width: 100%; padding: 0 var(--side); }
 
 .gallery_masonry {
   column-count: 2;
-  column-gap: clamp(12px, 1.4vw, 20px);
+  column-gap: var(--gap);
 }
 
 .gallery_masonry .image {
   width: 100%;
   display: block;
-  margin: 0 0 clamp(12px, 1.4vw, 20px);
-  background: #000;
+  margin: 0 0 var(--gap);
   cursor: zoom-in;
   break-inside: avoid;
-  transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.3s ease;
 }
 
-@media (hover: hover) {
-  .gallery_masonry .image:hover {
-    transform: scale(1.02);
-    filter: brightness(1.06);
-  }
-}
-
+/* must match GALLERY_MOBILE_MEDIA in tools/rewrite-html.mjs */
 @media (max-width: 600px) {
   .gallery_masonry { column-count: 1; }
 }
@@ -104,119 +31,46 @@ picture { display: contents; }
 /* ---- back-to-top ---- */
 .top_button {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  right: 16px;
+  bottom: 16px;
   z-index: 30;
-  padding: 11px 14px;
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  background: rgba(14, 14, 15, 0.72);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: var(--ink);
-  font-size: 0.7rem;
+  padding: 10px 14px;
+  background: #000;
+  color: #fff;
+  font-size: 15px;
   font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
 }
 
-.top_button:hover,
-.top_button:focus-visible { border-color: var(--gold); color: var(--gold); }
-
-/* ---- lightbox (dark) ---- */
+/* ---- lightbox ---- */
 .lightbox {
   position: fixed;
   inset: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px 16px;
-  background: rgba(8, 8, 9, 0.94);
-  opacity: 0;
+  background: #fff;
   visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
-  z-index: 1000;
+  opacity: 0;
 }
 
-.lightbox.is_open { opacity: 1; visibility: visible; }
+.lightbox.is_open { visibility: visible; opacity: 1; }
 
 .lightbox_image {
   max-width: min(94vw, 1600px);
   max-height: calc(100vh - 48px);
-  border-radius: 2px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
 }
 
 .lightbox_close {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 46px;
-  height: 46px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgba(14, 14, 15, 0.6);
-  color: var(--ink);
-  font-size: 1.1rem;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: #000;
+  color: #fff;
+  font: 600 16px/1 var(--font);
   cursor: pointer;
-  transition: border-color 0.2s ease, color 0.2s ease;
 }
-
-.lightbox_close:hover { border-color: var(--gold); color: var(--gold); }
-
-/* ---- footer (dark) ---- */
-.footer {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-  width: min(100%, var(--container));
-  margin: 0 auto;
-  padding: 52px var(--gutter) 64px;
-  border-top: 1px solid var(--hair);
-  color: var(--soft);
-}
-
-.footer_identity { display: grid; gap: 6px; }
-
-.footer_identity p {
-  margin: 0;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: var(--step-1);
-  color: var(--ink);
-}
-
-.footer_identity span { line-height: 1.5; font-size: var(--step--1); }
-
-.footer_links { display: flex; flex-wrap: wrap; gap: 10px 22px; }
-
-.footer a {
-  width: fit-content;
-  font-size: var(--step--1);
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--soft);
-}
-
-.footer a:hover,
-.footer a:focus-visible { color: var(--gold); }
-
-@media (min-width: 760px) {
-  .footer {
-    grid-template-columns: minmax(260px, 1fr) auto;
-    align-items: start;
-  }
-  .footer_links { justify-content: flex-end; }
-}
-
-/* ---- per-cover focal points (default .gp_cover_img is center 28%) ---- */
-.gp_cover_img[src*="wbb-16"] { object-position: center 38%; }
-.gp_cover_img[src*="app-state-41"] { object-position: center 24%; }
-.gp_cover_img[src*="jmutroy-50"] { object-position: center 30%; }
-.gp_cover_img[src*="myfarm-3"] { object-position: center 46%; }
-.gp_cover_img[src*="rpp-wsoftball-louisiana-13"] { object-position: center 40%; }
-.gp_cover_img[src*="resized-sunset-silhouette-1"] { object-position: center 45%; }
-.gp_cover_img[src*="dthp-15"] { object-position: center 40%; }
-.gp_cover_img[src*="resized-jmu-students-7"] { object-position: center 40%; }
-.gp_cover_img[src*="football-reedit-5"] { object-position: center 30%; }

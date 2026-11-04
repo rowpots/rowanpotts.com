@@ -24,77 +24,43 @@
   <link rel="stylesheet" href="/gallery_list.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" />
 <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet"
     media="print"
     onload="this.media='all'"
 />
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter:wght@400;500;600&display=swap" /></noscript>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" /></noscript>
 </head>
 
 <body>
   <div class="page">
-    <header class="topbar">
-      <a class="brand" href="/" aria-label="Rowan Potts Photography home">
-        <svg class="brand_mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
-          <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
-          <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
-          <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
-          <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
-          <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
-        </svg>
-        <span class="brand_name">Rowan Potts</span>
-      </a>
-
-      <input class="nav_toggle" type="checkbox" id="volleyball_nav_toggle" />
-      <label class="menu_tab" for="volleyball_nav_toggle" aria-label="Toggle navigation menu">
-        <span class="sr_only">Toggle navigation menu</span>
-        <span class="menu_icon" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </label>
-
-      <nav class="links_list" aria-label="Primary navigation">
-        <a href="/galleries">Galleries</a>
+    <header class="top">
+      <a class="mark" href="/" aria-label="Rowan Potts Photography home">Rowan Potts</a>
+      <nav aria-label="Primary navigation">
+        <a href="/galleries" aria-current="page">Work</a>
         <a href="/services">Services</a>
+        <a href="/about">About</a>
         <a href="/contact">Contact</a>
-        <a href="https://www.instagram.com/pottsey.photos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <span class="social">
+          <a href="https://www.instagram.com/pottsey.photos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/in/rowan-potts-7a2a72305/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4 9h3.4v11H4zM5.7 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM10 9h3.3v1.5c.5-.9 1.7-1.8 3.4-1.8 3.6 0 4.3 2.3 4.3 5.4V20h-3.5v-5.2c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V20H10z"/></svg></a>
+        </span>
       </nav>
     </header>
 
     <main>
-      <section class="g_hero" aria-labelledby="volleyball_title">
-        <div class="g_hero_inner"><h1 id="volleyball_title">Volleyball</h1></div>
-      </section>
+      <div class="page_head tight"><h1 id="volleyball_title">Volleyball</h1></div>
 
       <section class="g_rows" aria-label="Volleyball game galleries">
         <a class="r_item" href="/volleyball-loyola">
-          <picture><source type="image/webp" srcset="/img/volleyball/loyola/vbloyola-06-960.webp 960w, /img/volleyball/loyola/vbloyola-06-1600.webp 1600w, /img/volleyball/loyola/vbloyola-06-2400.webp 2400w" sizes="100vw" /><img src="/img/volleyball/loyola/vbloyola-06-1600.jpg" alt="JMU volleyball player serving in front of the JMU Volleyball banner during the Loyola match" loading="eager" fetchpriority="high" decoding="async" /></picture>
-          <span class="r_cap"><span class="r_name">JMU vs. Loyola</span><span class="r_view">View gallery &rarr;</span></span>
+          <picture><source type="image/webp" srcset="/img/volleyball/loyola/vbloyola-06-960.webp 960w, /img/volleyball/loyola/vbloyola-06-1600.webp 1600w, /img/volleyball/loyola/vbloyola-06-2400.webp 2400w" sizes="(min-width: 1080px) 1016px, 100vw" /><img src="/img/volleyball/loyola/vbloyola-06-1600.jpg" alt="JMU volleyball player serving in front of the JMU Volleyball banner during the Loyola match" loading="eager" fetchpriority="high" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">JMU vs. Loyola</span></span>
         </a>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="footer_identity">
-        <p>Rowan Potts Photography</p>
-        <span>Editorial photographer for <i>The Breeze</i> at JMU</span>
-        <span>Serving Harrisonburg, Virginia and James Madison University</span>
-      </div>
-      <nav class="footer_links" aria-label="Footer navigation">
-        <a href="/galleries">Galleries</a>
-        <a href="/services">Services</a>
-        <a href="/contact">Contact</a>
-        <a href="/contact">Email</a>
-        <a href="https://www.instagram.com/pottsey.photos/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      </nav>
-    </footer>
   </div>
 </body>
 

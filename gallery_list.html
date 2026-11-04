@@ -24,128 +24,91 @@
   <link rel="stylesheet" href="/gallery_list.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" />
 <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet"
     media="print"
     onload="this.media='all'"
 />
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter:wght@400;500;600&display=swap" /></noscript>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" /></noscript>
 </head>
 
 <body>
   <div class="page">
-    <header class="topbar">
-      <a class="brand" href="/" aria-label="Rowan Potts Photography home">
-        <svg class="brand_mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
-          <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
-          <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
-          <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
-          <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
-          <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
-        </svg>
-        <span class="brand_name">Rowan Potts</span>
-      </a>
-
-      <input class="nav_toggle" type="checkbox" id="gallery_list_nav_toggle" />
-      <label class="menu_tab" for="gallery_list_nav_toggle" aria-label="Toggle navigation menu">
-        <span class="sr_only">Toggle navigation menu</span>
-        <span class="menu_icon" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </label>
-
-      <nav class="links_list" aria-label="Primary navigation">
-        <a href="/">Home</a>
+    <header class="top">
+      <a class="mark" href="/" aria-label="Rowan Potts Photography home">Rowan Potts</a>
+      <nav aria-label="Primary navigation">
+        <a href="/galleries" aria-current="page">Work</a>
         <a href="/services">Services</a>
+        <a href="/about">About</a>
         <a href="/contact">Contact</a>
-        <a href="https://www.instagram.com/pottsey.photos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <span class="social">
+          <a href="https://www.instagram.com/pottsey.photos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/in/rowan-potts-7a2a72305/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4 9h3.4v11H4zM5.7 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM10 9h3.3v1.5c.5-.9 1.7-1.8 3.4-1.8 3.6 0 4.3 2.3 4.3 5.4V20h-3.5v-5.2c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V20H10z"/></svg></a>
+        </span>
       </nav>
     </header>
 
     <main>
-      <section class="g_hero" aria-labelledby="gallery_list_title">
-        <div class="g_hero_inner">
-          <h1 id="gallery_list_title">Galleries</h1>
-        </div>
-      </section>
+      <h1 id="gallery_list_title" class="sr_only">Work</h1>
 
       <section class="g_rows" aria-label="Gallery categories">
         <a class="r_item" href="/featured-works">
-          <picture><source type="image/webp" srcset="/img/bestcomp/football-reedit-5-960.webp 960w, /img/bestcomp/football-reedit-5-1600.webp 1600w, /img/bestcomp/football-reedit-5-2400.webp 2400w" sizes="100vw" /><img src="/img/bestcomp/football-reedit-5-1600.jpg" alt="Close-up portrait of a JMU football player in a purple jersey" loading="eager" fetchpriority="high" decoding="async" /></picture>
-          <span class="r_cap"><span class="r_name">Featured Works</span><span class="r_view">View gallery &rarr;</span></span>
+          <picture><source type="image/webp" srcset="/img/bestcomp/football-reedit-5-960.webp 960w, /img/bestcomp/football-reedit-5-1600.webp 1600w, /img/bestcomp/football-reedit-5-2400.webp 2400w" sizes="(min-width: 1080px) 1016px, 100vw" /><img src="/img/bestcomp/football-reedit-5-1600.jpg" alt="Close-up portrait of a JMU football player in a purple jersey" loading="eager" fetchpriority="high" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Featured Works</span></span>
         </a>
         <a class="r_item" href="/graduation">
-          <picture><source type="image/webp" srcset="/img/graduation/elizabeth-fowler-graduation-26-of-80-960.webp 960w, /img/graduation/elizabeth-fowler-graduation-26-of-80-1600.webp 1600w, /img/graduation/elizabeth-fowler-graduation-26-of-80-2400.webp 2400w" sizes="100vw" /><img src="/img/graduation/elizabeth-fowler-graduation-26-of-80-1600.jpg" alt="Graduation portrait session on a college campus" loading="lazy" decoding="async" /></picture>
-          <span class="r_cap"><span class="r_name">Graduation</span><span class="r_view">View gallery &rarr;</span></span>
+          <picture><source type="image/webp" srcset="/img/graduation/elizabeth-fowler-graduation-26-of-80-960.webp 960w, /img/graduation/elizabeth-fowler-graduation-26-of-80-1600.webp 1600w, /img/graduation/elizabeth-fowler-graduation-26-of-80-2400.webp 2400w" sizes="(min-width: 1080px) 1016px, 100vw" /><img src="/img/graduation/elizabeth-fowler-graduation-26-of-80-1600.jpg" alt="Graduation portrait session on a college campus" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Graduation</span></span>
         </a>
         <a class="r_item" href="/concerts">
-          <picture><source type="image/webp" srcset="/img/pitbull/pitbull-42-of-78-960.webp 960w, /img/pitbull/pitbull-42-of-78-1600.webp 1600w, /img/pitbull/pitbull-42-of-78-2400.webp 2400w" sizes="100vw" /><img src="/img/pitbull/pitbull-42-of-78-1600.jpg" alt="Pitbull performing live on stage with dancers and fog effects" loading="lazy" decoding="async" /></picture>
-          <span class="r_cap"><span class="r_name">Concerts</span><span class="r_view">View gallery &rarr;</span></span>
+          <picture><source type="image/webp" srcset="/img/pitbull/pitbull-42-of-78-960.webp 960w, /img/pitbull/pitbull-42-of-78-1600.webp 1600w, /img/pitbull/pitbull-42-of-78-2400.webp 2400w" sizes="(min-width: 1080px) 1016px, 100vw" /><img src="/img/pitbull/pitbull-42-of-78-1600.jpg" alt="Pitbull performing live on stage with dancers and fog effects" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Concerts</span></span>
         </a>
         <a class="r_item" href="/football">
-          <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-41-960.webp 960w, /img/football/app-state/top/app-state-41-1600.webp 1600w, /img/football/app-state/top/app-state-41-2400.webp 2400w" sizes="100vw" /><img src="/img/football/app-state/top/app-state-41-1600.jpg" alt="JMU football player during an Appalachian State game" loading="lazy" decoding="async" /></picture>
-          <span class="r_cap"><span class="r_name">Football</span><span class="r_view">View gallery &rarr;</span></span>
+          <picture><source type="image/webp" srcset="/img/football/app-state/top/app-state-41-960.webp 960w, /img/football/app-state/top/app-state-41-1600.webp 1600w, /img/football/app-state/top/app-state-41-2400.webp 2400w" sizes="(min-width: 1080px) 1016px, 100vw" /><img src="/img/football/app-state/top/app-state-41-1600.jpg" alt="JMU football player during an Appalachian State game" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Football</span></span>
         </a>
         <a class="r_item" href="/volleyball">
-          <picture><source type="image/webp" srcset="/img/volleyball/loyola/vbloyola-06-960.webp 960w, /img/volleyball/loyola/vbloyola-06-1600.webp 1600w, /img/volleyball/loyola/vbloyola-06-2400.webp 2400w" sizes="100vw" /><img src="/img/volleyball/loyola/vbloyola-06-1600.jpg" alt="JMU volleyball player serving in front of the JMU Volleyball banner" loading="lazy" decoding="async" /></picture>
-          <span class="r_cap"><span class="r_name">Volleyball</span><span class="r_view">View gallery &rarr;</span></span>
+          <picture><source type="image/webp" srcset="/img/volleyball/loyola/vbloyola-06-960.webp 960w, /img/volleyball/loyola/vbloyola-06-1600.webp 1600w, /img/volleyball/loyola/vbloyola-06-2400.webp 2400w" sizes="(min-width: 1080px) 1016px, 100vw" /><img src="/img/volleyball/loyola/vbloyola-06-1600.jpg" alt="JMU volleyball player serving in front of the JMU Volleyball banner" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Volleyball</span></span>
         </a>
         <a class="r_item" href="/basketball">
-          <picture><source type="image/webp" srcset="/img/basketball/wbb-16-960.webp 960w, /img/basketball/wbb-16-1600.webp 1600w, /img/basketball/wbb-16-2400.webp 2400w" sizes="100vw" /><img src="/img/basketball/wbb-16-1600.jpg" alt="JMU basketball player going up for a layup" loading="lazy" decoding="async" /></picture>
-          <span class="r_cap"><span class="r_name">Basketball</span><span class="r_view">View gallery &rarr;</span></span>
+          <picture><source type="image/webp" srcset="/img/basketball/wbb-16-960.webp 960w, /img/basketball/wbb-16-1600.webp 1600w, /img/basketball/wbb-16-2400.webp 2400w" sizes="(min-width: 1080px) 1016px, 100vw" /><img src="/img/basketball/wbb-16-1600.jpg" alt="JMU basketball player going up for a layup" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Basketball</span></span>
         </a>
         <a class="r_item" href="/myers-farm">
-          <picture><source type="image/webp" srcset="/img/myers-farm/myfarm-3-960.webp 960w, /img/myers-farm/myfarm-3-1600.webp 1600w, /img/myers-farm/myfarm-3-2400.webp 2400w" sizes="100vw" /><img src="/img/myers-farm/myfarm-3-1600.jpg" alt="Highland cow at Myers Farm" loading="lazy" decoding="async" /></picture>
-          <span class="r_cap"><span class="r_name">Myers Farm</span><span class="r_view">View gallery &rarr;</span></span>
+          <picture><source type="image/webp" srcset="/img/myers-farm/myfarm-3-960.webp 960w, /img/myers-farm/myfarm-3-1600.webp 1600w, /img/myers-farm/myfarm-3-2400.webp 2400w" sizes="(min-width: 1080px) 1016px, 100vw" /><img src="/img/myers-farm/myfarm-3-1600.jpg" alt="Highland cow at Myers Farm" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Myers Farm</span></span>
         </a>
         <a class="r_item" href="/baseball">
-          <picture><source type="image/webp" srcset="/img/baseball/crop-1-of-1-960.webp 960w, /img/baseball/crop-1-of-1-1600.webp 1600w, /img/baseball/crop-1-of-1-2400.webp 2400w" sizes="100vw" /><img src="/img/baseball/crop-1-of-1-1600.jpg" alt="Baseball player during game coverage" loading="lazy" decoding="async" /></picture>
-          <span class="r_cap"><span class="r_name">Baseball</span><span class="r_view">View gallery &rarr;</span></span>
+          <picture><source type="image/webp" srcset="/img/baseball/crop-1-of-1-960.webp 960w, /img/baseball/crop-1-of-1-1600.webp 1600w, /img/baseball/crop-1-of-1-2400.webp 2400w" sizes="(min-width: 1080px) 1016px, 100vw" /><img src="/img/baseball/crop-1-of-1-1600.jpg" alt="Baseball player during game coverage" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Baseball</span></span>
         </a>
         <a class="r_item" href="/softball">
-          <picture><source type="image/webp" srcset="/img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-960.webp 960w, /img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-1600.webp 1600w, /img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-2400.webp 2400w" sizes="100vw" /><img src="/img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-1600.jpg" alt="JMU softball player during game coverage" loading="lazy" decoding="async" /></picture>
-          <span class="r_cap"><span class="r_name">Softball</span><span class="r_view">View gallery &rarr;</span></span>
+          <picture><source type="image/webp" srcset="/img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-960.webp 960w, /img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-1600.webp 1600w, /img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-2400.webp 2400w" sizes="(min-width: 1080px) 1016px, 100vw" /><img src="/img/softball/wsoftballlousiana/rpp-wsoftball-louisiana-13-1600.jpg" alt="JMU softball player during game coverage" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Softball</span></span>
         </a>
         <a class="r_item" href="/portrait">
-          <picture><source type="image/webp" srcset="/img/portrait/resized-sunset-silhouette-1-960.webp 960w, /img/portrait/resized-sunset-silhouette-1-1600.webp 1600w" sizes="100vw" /><img src="/img/portrait/resized-sunset-silhouette-1-1600.jpg" alt="Silhouette portrait at sunset" loading="lazy" decoding="async" /></picture>
-          <span class="r_cap"><span class="r_name">Portrait</span><span class="r_view">View gallery &rarr;</span></span>
+          <picture><source type="image/webp" srcset="/img/portrait/resized-sunset-silhouette-1-960.webp 960w, /img/portrait/resized-sunset-silhouette-1-1600.webp 1600w" sizes="(min-width: 1080px) 1016px, 100vw" /><img src="/img/portrait/resized-sunset-silhouette-1-1600.jpg" alt="Silhouette portrait at sunset" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Portrait</span></span>
         </a>
         <a class="r_item" href="/downtown-gallery">
-          <picture><source type="image/webp" srcset="/img/downtown-gallary/dthp-15-960.webp 960w, /img/downtown-gallary/dthp-15-1600.webp 1600w, /img/downtown-gallary/dthp-15-2400.webp 2400w" sizes="100vw" /><img src="/img/downtown-gallary/dthp-15-1600.jpg" alt="Downtown Harrisonburg street photography scene" loading="lazy" decoding="async" /></picture>
-          <span class="r_cap"><span class="r_name">Downtown</span><span class="r_view">View gallery &rarr;</span></span>
+          <picture><source type="image/webp" srcset="/img/downtown-gallary/dthp-15-960.webp 960w, /img/downtown-gallary/dthp-15-1600.webp 1600w, /img/downtown-gallary/dthp-15-2400.webp 2400w" sizes="(min-width: 1080px) 1016px, 100vw" /><img src="/img/downtown-gallary/dthp-15-1600.jpg" alt="Downtown Harrisonburg street photography scene" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Downtown</span></span>
         </a>
         <a class="r_item" href="/comedy-show">
-          <picture><source type="image/webp" srcset="/img/comedyshow/cs-12-of-20-960.webp 960w, /img/comedyshow/cs-12-of-20-1600.webp 1600w, /img/comedyshow/cs-12-of-20-2400.webp 2400w" sizes="100vw" /><img src="/img/comedyshow/cs-12-of-20-1600.jpg" alt="Stand-up comedian performing under a spotlight" loading="lazy" decoding="async" /></picture>
-          <span class="r_cap"><span class="r_name">Comedy Show</span><span class="r_view">View gallery &rarr;</span></span>
+          <picture><source type="image/webp" srcset="/img/comedyshow/cs-12-of-20-960.webp 960w, /img/comedyshow/cs-12-of-20-1600.webp 1600w, /img/comedyshow/cs-12-of-20-2400.webp 2400w" sizes="(min-width: 1080px) 1016px, 100vw" /><img src="/img/comedyshow/cs-12-of-20-1600.jpg" alt="Stand-up comedian performing under a spotlight" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Comedy Show</span></span>
         </a>
         <a class="r_item" href="/other">
-          <picture><source type="image/webp" srcset="/img/other/resized-jmu-students-7-960.webp 960w, /img/other/resized-jmu-students-7-1600.webp 1600w" sizes="100vw" /><img src="/img/other/resized-jmu-students-7-1600.jpg" alt="JMU students gathered outdoors" loading="lazy" decoding="async" /></picture>
-          <span class="r_cap"><span class="r_name">Assorted</span><span class="r_view">View gallery &rarr;</span></span>
+          <picture><source type="image/webp" srcset="/img/other/resized-jmu-students-7-960.webp 960w, /img/other/resized-jmu-students-7-1600.webp 1600w" sizes="(min-width: 1080px) 1016px, 100vw" /><img src="/img/other/resized-jmu-students-7-1600.jpg" alt="JMU students gathered outdoors" loading="lazy" decoding="async" /></picture>
+          <span class="r_cap"><span class="r_name">Assorted</span></span>
         </a>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="footer_identity">
-        <p>Rowan Potts Photography</p>
-        <span>Editorial photographer for <i>The Breeze</i> at JMU</span>
-        <span>Serving Harrisonburg, Virginia and James Madison University</span>
-      </div>
-      <nav class="footer_links" aria-label="Footer navigation">
-        <a href="/featured-works">Featured Works</a>
-        <a href="/galleries">Galleries</a>
-        <a href="/services">Services</a>
-        <a href="/contact">Contact</a>
-        <a href="/contact">Email</a>
-        <a href="https://www.instagram.com/pottsey.photos/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      </nav>
-    </footer>
   </div>
 </body>
 

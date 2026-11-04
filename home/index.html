@@ -24,185 +24,62 @@
   <meta name="twitter:image" content="https://rowanpotts.com/img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-1600.jpg" />
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["ProfessionalService","LocalBusiness"],"@id":"https://rowanpotts.com/#business","name":"Rowan Potts Photography","url":"https://rowanpotts.com/","image":"https://rowanpotts.com/img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-1600.jpg","description":"Portrait, sports, and event photography in Harrisonburg, VA and the Shenandoah Valley.","priceRange":"$$","areaServed":[{"@type":"Place","name":"Harrisonburg, Virginia"},{"@type":"Place","name":"James Madison University"},{"@type":"Place","name":"Shenandoah Valley"}],"founder":{"@type":"Person","name":"Rowan Potts"},"address":{"@type":"PostalAddress","addressLocality":"Harrisonburg","addressRegion":"VA","addressCountry":"US"},"sameAs":["https://www.instagram.com/pottsey.photos/","https://www.linkedin.com/in/rowan-potts-7a2a72305"]},{"@type":"WebSite","@id":"https://rowanpotts.com/#website","url":"https://rowanpotts.com/","name":"Rowan Potts Photography","publisher":{"@id":"https://rowanpotts.com/#business"}}]}</script>
   <!-- seo:auto end -->
-  <!-- must stay pointed at the FIRST hero slide (the LCP element), not whichever
-       frame happens to be second. fetchpriority="high" belongs HERE, not only on the
-       <img>: the preload scanner starts this request before the <img> is parsed, at the
-       default Low image priority, and the <img> then just reuses the in-flight request --
-       so a hint on the <img> alone never takes effect. -->
-  <link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-960.webp 960w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.webp 1600w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-2400.webp 2400w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-3840.webp 3840w" imagesizes="100vw" />
+  <!-- Keep pointed at the first photo in the wall (the LCP). fetchpriority="high" belongs
+       here too: the preload scanner starts this request before the <img> is parsed. -->
+  <link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="/img/bestcomp/football-reedit-5-480.webp 480w, /img/bestcomp/football-reedit-5-960.webp 960w, /img/bestcomp/football-reedit-5-1600.webp 1600w, /img/bestcomp/football-reedit-5-2400.webp 2400w" imagesizes="(min-width: 760px) 50vw, 100vw" />
 
   <link rel="stylesheet" href="/base.css" />
   <link rel="stylesheet" href="/landing.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" />
 <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet"
     media="print"
     onload="this.media='all'"
 />
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" /></noscript>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" /></noscript>
 </head>
 
 <body>
   <div class="page">
-    <header class="topbar">
-      <a class="brand" href="/" aria-label="Rowan Potts Photography home">
-        <svg class="brand_mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
-          <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
-          <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
-          <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
-          <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
-          <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
-        </svg>
-        <span class="brand_name">Rowan Potts</span>
-      </a>
-
-      <input class="nav_toggle" type="checkbox" id="landing_nav_toggle" />
-      <label class="menu_tab" for="landing_nav_toggle" aria-label="Toggle navigation menu">
-        <span class="sr_only">Toggle navigation menu</span>
-        <span class="menu_icon" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </label>
-
-      <nav class="links_list" aria-label="Primary navigation">
-        <a href="/galleries">Galleries</a>
+    <header class="top">
+      <a class="mark" href="/" aria-label="Rowan Potts Photography home">Rowan Potts</a>
+      <nav aria-label="Primary navigation">
+        <a href="/galleries">Work</a>
         <a href="/services">Services</a>
+        <a href="/about">About</a>
         <a href="/contact">Contact</a>
-        <a href="https://www.instagram.com/pottsey.photos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <span class="social">
+          <a href="https://www.instagram.com/pottsey.photos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/in/rowan-potts-7a2a72305/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4 9h3.4v11H4zM5.7 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM10 9h3.3v1.5c.5-.9 1.7-1.8 3.4-1.8 3.6 0 4.3 2.3 4.3 5.4V20h-3.5v-5.2c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V20H10z"/></svg></a>
+        </span>
       </nav>
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero_title">
-        <div class="hero_slides" aria-hidden="true">
-          <picture class="slide"><source type="image/webp" srcset="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-960.webp 960w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.webp 1600w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-2400.webp 2400w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-3840.webp 3840w" sizes="100vw" /><img src="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.jpg" alt="Graduation portrait photography by Rowan Potts" width="6141" height="4094" loading="eager" fetchpriority="high" decoding="async" /></picture>
-          <!-- Slides 2-6 are decorative and nobody sees them for 6-30s, but the browser
-               fetches every in-viewport <img> up front, so they used to race the LCP frame
-               for bandwidth. loading="lazy" is a no-op here (they are all inside the
-               viewport) and fetchpriority="low" only reorders the race. So they hold their
-               URLs in data-* and get promoted after load -- see the script at end of body.
-               Capped at 2400w: they sit behind the scrim, 3840w is not worth the bytes. -->
-          <picture class="slide" data-defer><source type="image/webp" data-srcset="/img/graduation/cora-grad-27-of-69-960.webp 960w, /img/graduation/cora-grad-27-of-69-1600.webp 1600w, /img/graduation/cora-grad-27-of-69-2400.webp 2400w" sizes="100vw" /><img data-src="/img/graduation/cora-grad-27-of-69-1600.jpg" alt="" width="5849" height="3899" decoding="async" /></picture>
-          <picture class="slide" data-defer><source type="image/webp" data-srcset="/img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-960.webp 960w, /img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-1600.webp 1600w, /img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-2400.webp 2400w" sizes="100vw" /><img data-src="/img/bestcomp/elizabeth-fowler-graduation-8-of-80-1-1600.jpg" alt="" width="5771" height="3847" decoding="async" /></picture>
-          <picture class="slide" data-defer><source type="image/webp" data-srcset="/img/bestcomp/myfarm-3-960.webp 960w, /img/bestcomp/myfarm-3-1600.webp 1600w, /img/bestcomp/myfarm-3-2400.webp 2400w" sizes="100vw" /><img data-src="/img/bestcomp/myfarm-3-1600.jpg" alt="" width="5701" height="3801" decoding="async" /></picture>
-          <picture class="slide" data-defer><source type="image/webp" data-srcset="/img/bestcomp/football-reedit-5-960.webp 960w, /img/bestcomp/football-reedit-5-1600.webp 1600w, /img/bestcomp/football-reedit-5-2400.webp 2400w" sizes="100vw" /><img data-src="/img/bestcomp/football-reedit-5-1600.jpg" alt="" width="6240" height="4160" decoding="async" /></picture>
-          <picture class="slide" data-defer><source type="image/webp" data-srcset="/img/bestcomp/basketball-reedit-1-960.webp 960w, /img/bestcomp/basketball-reedit-1-1600.webp 1600w, /img/bestcomp/basketball-reedit-1-2400.webp 2400w" sizes="100vw" /><img data-src="/img/bestcomp/basketball-reedit-1-1600.jpg" alt="" width="7129" height="4753" decoding="async" /></picture>
-        </div>
-        <div class="hero_scrim" aria-hidden="true"></div>
-        <div class="hero_inner">
-          <h1 id="hero_title">Rowan Potts <em>Photography</em></h1>
-          <p class="lede">
-            Portraits, graduation, sports, and events around James Madison University
-            and the Shenandoah Valley.
-          </p>
-          <div class="actions">
-            <a class="button primary" href="/galleries">View Galleries</a>
-            <a class="button ghost" href="/contact">Book a Shoot</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="work" aria-labelledby="work_title">
-        <div class="work_head">
-          <h2 id="work_title">Selected Work</h2>
-          <a class="all_link" href="/galleries">All galleries &rarr;</a>
-        </div>
-        <div class="work_rows">
-          <a class="work_row" href="/graduation">
-            <picture><source type="image/webp" srcset="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-480.webp 480w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-960.webp 960w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.webp 1600w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-2400.webp 2400w" sizes="100vw" /><img src="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.jpg" alt="Graduation portrait session by Rowan Potts" width="6141" height="4094" loading="lazy" fetchpriority="low" decoding="async" /></picture>
-            <span class="work_cap"><span class="work_num">01</span><span class="work_name">Graduation</span></span>
-          </a>
-          <a class="work_row" href="/football">
-            <picture><source type="image/webp" srcset="/img/bestcomp/football-reedit-5-480.webp 480w, /img/bestcomp/football-reedit-5-960.webp 960w, /img/bestcomp/football-reedit-5-1600.webp 1600w, /img/bestcomp/football-reedit-5-2400.webp 2400w" sizes="100vw" /><img src="/img/bestcomp/football-reedit-5-1600.jpg" alt="JMU football photograph by Rowan Potts" width="6240" height="4160" loading="lazy" fetchpriority="low" decoding="async" /></picture>
-            <span class="work_cap"><span class="work_num">02</span><span class="work_name">Football</span></span>
-          </a>
-          <a class="work_row" href="/myers-farm">
-            <picture><source type="image/webp" srcset="/img/bestcomp/myfarm-3-480.webp 480w, /img/bestcomp/myfarm-3-960.webp 960w, /img/bestcomp/myfarm-3-1600.webp 1600w, /img/bestcomp/myfarm-3-2400.webp 2400w" sizes="100vw" /><img src="/img/bestcomp/myfarm-3-1600.jpg" alt="Myers Farm event photograph by Rowan Potts" width="5701" height="3801" loading="lazy" fetchpriority="low" decoding="async" /></picture>
-            <span class="work_cap"><span class="work_num">03</span><span class="work_name">Myers Farm</span></span>
-          </a>
-        </div>
-      </section>
-
-      <section class="about_teaser" aria-labelledby="about_teaser_title">
-        <div class="about_inner">
-          <div class="about_media">
-            <picture><source type="image/webp" srcset="/img/photos/1725295094297-400.webp 400w" sizes="(min-width: 760px) 33vw, 100vw" /><img src="/img/photos/1725295094297-400.jpg" alt="Rowan Potts" width="400" height="400" loading="lazy" decoding="async" /></picture>
-          </div>
-          <div class="about_copy">
-            <h2 id="about_teaser_title">I&rsquo;m Rowan.</h2>
-            <p>
-              A Harrisonburg, VA photographer shooting portraits, graduation,
-              sports, and events around James Madison University, the
-              Shenandoah Valley, and Northern Virginia. My work has appeared in
-              JMU&rsquo;s award-winning student newspaper, <i>The Breeze</i>.
-            </p>
-            <div class="about_actions">
-              <a class="button primary" href="/contact">Book a Shoot</a>
-            </div>
-            <p class="about_ig">
-              <a href="https://www.instagram.com/pottsey.photos/" target="_blank" rel="noopener noreferrer">Follow @pottsey.photos &rarr;</a>
-            </p>
-          </div>
-        </div>
-      </section>
+      <h1 class="sr_only">Rowan Potts Photography</h1>
+      <div class="wall">
+<div class="wall_col">
+<a href="/football"><picture><source type="image/webp" srcset="/img/bestcomp/football-reedit-5-480.webp 480w, /img/bestcomp/football-reedit-5-960.webp 960w, /img/bestcomp/football-reedit-5-1600.webp 1600w, /img/bestcomp/football-reedit-5-2400.webp 2400w" sizes="(min-width: 760px) 50vw, 100vw" /><img src="/img/bestcomp/football-reedit-5-1600.jpg" alt="JMU football player in face paint" width="6240" height="4160" loading="eager" fetchpriority="high" decoding="async" /></picture></a>
+<a href="/football-georgia-southern"><picture><source type="image/webp" srcset="/img/football/georgia-southern/top/rpp-gs-football-14-480.webp 480w, /img/football/georgia-southern/top/rpp-gs-football-14-960.webp 960w, /img/football/georgia-southern/top/rpp-gs-football-14-1600.webp 1600w, /img/football/georgia-southern/top/rpp-gs-football-14-2400.webp 2400w" sizes="(min-width: 760px) 50vw, 100vw" /><img src="/img/football/georgia-southern/top/rpp-gs-football-14-1600.jpg" alt="JMU football players celebrating under the lights" width="5552" height="3701" loading="lazy" decoding="async" /></picture></a>
+<a href="/football-troy"><picture><source type="image/webp" srcset="/img/bestcomp/troy-reedit-3-480.webp 480w, /img/bestcomp/troy-reedit-3-960.webp 960w, /img/bestcomp/troy-reedit-3-1600.webp 1600w, /img/bestcomp/troy-reedit-3-2400.webp 2400w" sizes="(min-width: 760px) 50vw, 100vw" /><img src="/img/bestcomp/troy-reedit-3-1600.jpg" alt="JMU football player in front of the marching band" width="3245" height="4056" loading="lazy" decoding="async" /></picture></a>
+<a href="/football-troy"><picture><source type="image/webp" srcset="/img/bestcomp/troy-reedit-1-480.webp 480w, /img/bestcomp/troy-reedit-1-960.webp 960w, /img/bestcomp/troy-reedit-1-1600.webp 1600w, /img/bestcomp/troy-reedit-1-2400.webp 2400w" sizes="(min-width: 760px) 50vw, 100vw" /><img src="/img/bestcomp/troy-reedit-1-1600.jpg" alt="JMU football players at night" width="2989" height="3736" loading="lazy" decoding="async" /></picture></a>
+<a href="/football-georgia-southern"><picture><source type="image/webp" srcset="/img/football/georgia-southern/top/rpp-gs-football-36-480.webp 480w, /img/football/georgia-southern/top/rpp-gs-football-36-960.webp 960w, /img/football/georgia-southern/top/rpp-gs-football-36-1600.webp 1600w, /img/football/georgia-southern/top/rpp-gs-football-36-2400.webp 2400w" sizes="(min-width: 760px) 50vw, 100vw" /><img src="/img/football/georgia-southern/top/rpp-gs-football-36-1600.jpg" alt="Georgia Southern player hurdling a diving JMU defender" width="4311" height="2874" loading="lazy" decoding="async" /></picture></a>
+</div>
+<div class="wall_col">
+<a href="/football-wagner"><picture><source type="image/webp" srcset="/img/football/wagner/top/rpp-wagner-football-42-480.webp 480w, /img/football/wagner/top/rpp-wagner-football-42-960.webp 960w, /img/football/wagner/top/rpp-wagner-football-42-1600.webp 1600w, /img/football/wagner/top/rpp-wagner-football-42-2400.webp 2400w" sizes="(min-width: 760px) 50vw, 100vw" /><img src="/img/football/wagner/top/rpp-wagner-football-42-1600.jpg" alt="JMU ball carrier stiff-arming a Wagner defender" width="6039" height="4026" loading="lazy" decoding="async" /></picture></a>
+<a href="/football-wagner"><picture><source type="image/webp" srcset="/img/football/wagner/top/rpp-wagner-football-21-480.webp 480w, /img/football/wagner/top/rpp-wagner-football-21-960.webp 960w, /img/football/wagner/top/rpp-wagner-football-21-1600.webp 1600w, /img/football/wagner/top/rpp-wagner-football-21-2400.webp 2400w" sizes="(min-width: 760px) 50vw, 100vw" /><img src="/img/football/wagner/top/rpp-wagner-football-21-1600.jpg" alt="A tackle in front of a packed JMU crowd" width="2798" height="3498" loading="lazy" decoding="async" /></picture></a>
+<a href="/concerts"><picture><source type="image/webp" srcset="/img/pitbull/pitbull-42-of-78-480.webp 480w, /img/pitbull/pitbull-42-of-78-960.webp 960w, /img/pitbull/pitbull-42-of-78-1600.webp 1600w, /img/pitbull/pitbull-42-of-78-2400.webp 2400w" sizes="(min-width: 760px) 50vw, 100vw" /><img src="/img/pitbull/pitbull-42-of-78-1600.jpg" alt="Pitbull on stage between smoke cannons" width="6240" height="4160" loading="lazy" decoding="async" /></picture></a>
+<a href="/basketball"><picture><source type="image/webp" srcset="/img/bestcomp/basketball-reedit-1-480.webp 480w, /img/bestcomp/basketball-reedit-1-960.webp 960w, /img/bestcomp/basketball-reedit-1-1600.webp 1600w, /img/bestcomp/basketball-reedit-1-2400.webp 2400w" sizes="(min-width: 760px) 50vw, 100vw" /><img src="/img/bestcomp/basketball-reedit-1-1600.jpg" alt="JMU basketball player in smoke and blue light" width="7129" height="4753" loading="lazy" decoding="async" /></picture></a>
+<a href="/graduation"><picture><source type="image/webp" srcset="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-480.webp 480w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-960.webp 960w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.webp 1600w, /img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-2400.webp 2400w" sizes="(min-width: 760px) 50vw, 100vw" /><img src="/img/bestcomp/elizabeth-fowler-graduation-26-of-80-1-1600.jpg" alt="Graduation portrait at a stone archway" width="6141" height="4094" loading="lazy" decoding="async" /></picture></a>
+</div>
+      </div>
+      <section class="book"><p>I&rsquo;m Rowan Potts, a photographer for <i>The Breeze</i> at JMU. I also shoot portraits, graduations and events in Harrisonburg and Northern Virginia.</p><a class="btn" href="/contact">Book a shoot</a></section>
     </main>
 
-    <footer class="site_footer">
-      <span class="foot_brand">Rowan Potts Photography</span>
-      <nav aria-label="Footer">
-        <a href="/galleries">Galleries</a>
-        <a href="/services">Services</a>
-        <a href="/contact">Contact</a>
-        <a href="https://www.instagram.com/pottsey.photos/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      </nav>
-    </footer>
   </div>
-
-  <script>
-    // Hero frames 2-6 are held out of the initial fetch so they cannot compete with
-    // slide 1 (the LCP element) for bandwidth -- six full-bleed frames at once used to
-    // push the LCP past 4s on a mid-range connection and paint the hero in black bands.
-    // They are promoted the moment slide 1 has landed, which is both the earliest point
-    // at which they are free and ~6s of lead time before frame 2 is due. The crossfade
-    // then waits for them to decode, so it can never fade into a frame with no bytes.
-    // With JS off nothing is promoted, .is_ready never lands, and the CSS leaves the
-    // hero parked on slide 1 as a still.
-    (function () {
-      var wrap = document.querySelector(".hero_slides");
-      var slides = wrap ? wrap.querySelectorAll(".slide[data-defer]") : [];
-      if (!slides.length) return;
-
-      function start() {
-        var pending = slides.length;
-        function settled() {
-          // errors count too: a missing frame must not wedge the hero on slide 1
-          if (--pending === 0) wrap.classList.add("is_ready");
-        }
-        Array.prototype.forEach.call(slides, function (slide) {
-          var source = slide.querySelector("source");
-          var img = slide.querySelector("img");
-          img.addEventListener("load", settled, { once: true });
-          img.addEventListener("error", settled, { once: true });
-          if (source) source.srcset = source.dataset.srcset;
-          img.src = img.dataset.src;
-        });
-      }
-
-      var lead = wrap.querySelector(".slide:first-child img");
-      if (!lead || lead.complete) start();
-      else {
-        lead.addEventListener("load", start, { once: true });
-        lead.addEventListener("error", start, { once: true });
-      }
-    })();
-  </script>
 </body>
 
 </html>

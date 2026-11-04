@@ -24,17 +24,18 @@ a small bio note, not the centerpiece).
 
 ### CSS layering
 Every page loads **`/base.css` first, then its own page stylesheet.** `base.css` owns the
-shared design system: palette tokens, the absolute-overlay topbar, the aperture brand
-mark, nav, buttons, and the base footer. Page CSS owns everything else.
+shared design system: tokens, the header (`.top`, wordmark + nav + social icons), `.btn`,
+`.page_head`, and the `.book` call-to-action strip. There is no site footer. Page CSS owns everything else.
 
 | Stylesheet | Used by |
 |---|---|
-| `base.css` | **every page** (loaded first) — except `about.html` |
+| `base.css` | **every page** (loaded first) |
 | `landing.css` | homepage (`index.html` + `home/index.html`) |
-| `gallery_list.css` | galleries index (`gallery_list.html` + `galleries/index.html`) |
+| `gallery_list.css` | galleries index plus the `football`, `concerts`, `volleyball` hubs |
 | `gallery_page.css` | all 12 individual gallery pages + mirrors |
 | `contact_style.css` | contact page |
-| `about.css` | `about.html` only — **LEGACY paper theme, not yet migrated** |
+| `services.css` | services page |
+| `about.css` | about page |
 
 ### Dual-file mirror rule
 Each page exists twice: a root `<slug>.html` **and** a `<slug>/index.html` mirror (so both
@@ -47,17 +48,24 @@ Each page exists twice: a root `<slug>.html` **and** a `<slug>/index.html` mirro
 - Never hand-edit a `<slug>/index.html` mirror — it will be overwritten.
 - Run sync + `--check` before every commit.
 
-### Design system — "Dark Cinematic"
+### Design system — clean white (replaced Dark Cinematic, 2026-11-04)
 Tokens live in `base.css :root`:
-- Palette: `--bg:#0e0e0f`, `--bg-2:#16150f`, `--panel:#191917`, `--ink:#f3eee3` (off-white),
-  `--soft:#a8a092`, `--gold:#c9a96a`, `--gold-2:#d8bd84`,
-  `--hair:rgba(243,238,227,.12)`, `--line:rgba(201,169,106,.22)`.
-- Type: `--serif` = **Fraunces** (light, 300, for headings/brand) + `--sans` = **Inter**.
-- Layout: `--container:1320px`, `--gutter:clamp(20px,4vw,56px)`; a fluid `--step--1…--step-4` scale.
-- Brand = inline **aperture (lens) SVG mark** in gold + "Rowan Potts" serif wordmark
-  (`.brand`/`.brand_mark`); hovering rotates the aperture.
-- Nav (~15% larger as of 2026-07-01): Galleries / Services / Contact / Instagram. **About was
-  removed from all nav/footers** — see backlog.
+- Colors: white page, `--black:#000`, `--gray:#666`, `--line:#dcdcdc`, `--tint:#f2f2f2` (image
+  placeholder). No accent color; the photos carry the color.
+- Type: **Instrument Sans** only (`--font`). Headings 700 with tight tracking.
+- Layout: `--side` (page gutter), `--gap` (photo gap), `--col:1080px` (galleries column).
+- Brand = plain "Rowan Potts" wordmark (`.mark`). Nav: Work / Services / About / Contact plus
+  Instagram and LinkedIn icons. "Work" is the `/galleries` URL. No hamburger: nav wraps on phones.
+
+**Style rules from the owner — apply to all design work:** sleek and professional, not soft,
+and it must not look AI-made. Reference: Levon Biss's site.
+- Do: neutral white and black, one strong sans, square corners, strict alignment, plain direct copy.
+- Don't: serif or italic display type, cream or warm tones, gold or decorative accents, gradients,
+  shadows, frosted panels, cards, pills, tiny tracked uppercase labels, 01/02/03 numbering, arrows on
+  links, middle-dot strings, hover zooms, scroll fades, slogans, three-item feature lists.
+
+**Going back:** the previous Dark Cinematic site is preserved at git tag `dark-cinematic-final`.
+See "Restoring the old design" near the end of this file.
 
 ## Image pipeline (`tools/`, local-only Node + sharp; not deployed)
 Full detail in the owner's memory; the workflow when adding/changing photos:
@@ -76,24 +84,20 @@ hero onto gallery pages), `hero-hires.mjs` (3840px hero WebP), `reencode-hero1.m
 
 - Masters are backed up in git-ignored `masters/`; the owner's originals also live in
   in-tree source folders (`bestcomp/`, etc.) intentionally.
-- Hero images are served up to 3840px WebP (100vw, hi-DPI). The homepage first frame is
-  encoded at q88 (others q80).
 
 ## Adding a new gallery (established process)
 All the tools auto-discover root HTML — no tool edits needed. (First done for
 `comedy-show.html`, 2026-07-04.)
 1. Drop original JPGs into a source folder in the repo root (e.g. `comedyshow/`).
-2. Copy **`baseball.html`** (canonical template) to a new root `<slug>.html`. Update:
-   title / meta description / canonical / OG+Twitter block, unique `<slug>_nav_toggle` +
-   `<slug>_title` ids, the `gp_cover` h1, and the images as **plain** `<img>` tags — cover:
-   `<img class="gp_cover_img" src="/<folder>/<cover>.jpg" alt="…">`; masonry: one
-   `<img class="image" src="/<folder>/<file>.jpg" alt="<Title> photo N">` per photo
-   (cover not repeated in the grid). Don't hand-write srcsets — the pipeline does that.
+2. Copy **`baseball.html`** (canonical template) to a new root `<slug>.html`. Update: title / meta
+   description / canonical / OG+Twitter block, the `.page_head` h1 and its unique `<slug>_title` id,
+   and the images as **plain** tags: one `<img class="image" src="/<folder>/<file>.jpg"
+   alt="<Title> photo N">` per photo. The first one is the page's lead photo. Don't hand-write
+   srcsets; the pipeline does that.
 3. `node tools/optimize-images.mjs <folder>` then `node tools/rewrite-html.mjs`.
-4. **Hand-fix the cover `<picture>`** — rewrite-html doesn't know `gp_cover_img`, so it
-   emits content sizes + lazy. Match baseball.html's cover block: `sizes="100vw"`, drop the
-   480w srcset entry, `loading="eager" fetchpriority="high"`, no width/height. Then point
-   `og:image`/`twitter:image` at the optimized `/img/<slug>/…-1600.jpg` URL.
+4. `node tools/apply-clean-chrome.mjs --finish` marks the first gallery photo eager +
+   `fetchpriority="high"` (it is the LCP). Then point `og:image`/`twitter:image` at the optimized
+   `/img/<slug>/…-1600.jpg` URL.
 5. Add an `<a class="r_item" href="/<slug>">` row to `gallery_list.html` (copy an existing
    row; keep the catch-all "Assorted" row last).
 6. `node tools/sync-mirrors.mjs` + `--check`, review in browser, owner commits.
@@ -125,35 +129,17 @@ No dimension/file-size prep needed on your end — just drop in full-resolution 
   If you ever need a grid layout, scope `picture{display:block}` to that grid container.
   Same reason: `:nth-child`/`:last-child` on `.image` won't match (the `<img>` is child #2
   of `<picture>`) — target `.gallery_masonry picture:nth-child(...)` instead.
-- **Do NOT add `picture{display:contents}` to `base.css`/`landing.css`** — the homepage
-  hero crossfade needs each `.slide` (`<picture>`) to stay a positioned box.
-- Homepage hero = 6-frame CSS crossfade in `landing.css` (`hero_fade`, 36s, delays
-  0/6/12/18/24/30s — 6s per frame; the keyframe percentages are derived from the
-  duration, so changing the frame count means recomputing both). Order is set by DOM
-  order + `nth-child` delays.
-  **Only slide 1 loads with the page.** Frames 2-6 carry their URLs in
-  `data-srcset`/`data-src` and are promoted by the inline script at the end of
-  `index.html` once slide 1 has landed; the script then adds `.is_ready` to
-  `.hero_slides`, which is what actually starts the crossfade. Loading all six up front
-  costs ~4.4MB of contention and pushes the LCP past 4s on a mid-range connection.
-  When editing this, three things bite:
-  - Every rule carrying the animation is scoped under `.is_ready`, so the per-slide
-    `animation-delay` rules must be scoped to match. An unscoped
-    `.slide:nth-child(n)` loses to the `.is_ready` shorthand, which resets all delays
-    to 0 and stacks the six frames on top of each other.
-  - Slide 1 uses `hero_fade_first`, a variant that starts held at opacity 1 (it is
-    already on screen when the gate opens) and fades back in at 97.917% instead of at
-    the wrap. With the shared keyframes it dips to black for 0.75s when `.is_ready`
-    lands.
-  - `loading="lazy"` on a hero frame is a no-op — they are all inside the viewport.
-  Only slide 1 needs a 3840px WebP (frames 2-6 are capped at 2400w — they sit behind
-  the scrim): add the base to `tools/hero-hires.mjs` and run it with a substring filter
-  (e.g. `node tools/hero-hires.mjs cora-grad-27`) so the others aren't re-encoded.
-- The homepage `<link rel="preload">` for slide 1 must carry `fetchpriority="high"`
-  **on the link itself**. The preload scanner starts that request before the `<img>` is
-  parsed, at the default Low image priority, and the `<img>` then reuses the in-flight
-  request — so `fetchpriority` on the `<img>` alone silently never applies. Keep the
-  preload pointed at whichever frame is first in the DOM.
+- Do not add `picture{display:contents}` to `base.css`: `.svc_img`, `.wall` and others rely on
+  `<picture>` being a box.
+- Homepage = two explicit flex columns (`.wall`/`.wall_col` in `landing.css`), not CSS columns, so
+  the owner's photo order is exact. To reorder, move the `<a>` lines in `index.html`. The photos
+  are 3:2 or 4:5, so swapping like for like keeps the columns level.
+- The homepage `<link rel="preload">` must carry `fetchpriority="high"` **on the link itself**, and
+  must point at the first photo in the wall. The preload scanner starts that request before the
+  `<img>` is parsed, so a hint on the `<img>` alone never applies.
+- `/galleries` rows are very wide and short (about 4:1), so crops are tight. Each photo's focal
+  point is an `.r_item img[src*="…"]` rule in `gallery_list.css`. Check by eye after changing a
+  cover. The "Work" h1 on that page is `sr_only` on purpose (owner removed the visible heading).
 - Galleries use **uncropped 2-column CSS-columns masonry** (`.gallery_masonry`, 1 col
   <600px). No cropping — best for a photographer.
 - **Masonry images ship a mobile-only `<source media="(max-width: 600px)">` carrying a
@@ -182,57 +168,44 @@ No dimension/file-size prep needed on your end — just drop in full-resolution 
   `@pottsey.photos`. Direct email `rowanpotts2005@gmail.com`.
 - Keep pages that look redundant but aren't: `football.html` (live `/football` hub),
   `selected-work.html` (deliberate meta-refresh redirect → `/featured-works`).
+- The `.book` line at the end of gallery pages shows a price on `graduation.html` only. The owner
+  removed prices from every other gallery page; new galleries use the generic line.
 - **`football.html`'s game-gallery rows are ordered newest-first.** When adding a new
   football game gallery, put its `r_item` row first (it becomes the LCP image — give it
   `loading="eager" fetchpriority="high"` and demote the previous first row to
   `loading="lazy"`).
 
 ## Current state (live on `main`)
-All Dark Cinematic and pushed:
-- **Homepage** — hero crossfade (opens on the graduation-26 frame, q88), Selected Work
-  full-width rows, dark About band.
-- **Galleries index** — full-bleed alternating photo rows.
-- **12 individual gallery pages** — cover hero + uncropped 2-col masonry + dark lightbox
-  (Comedy Show added 2026-07-04).
-- **Contact** — full-page dimmed photo-collage background, "Contact me" hero, frosted
-  details panel (email / IG / LinkedIn / location / response time / what-to-include) +
-  Formspree form with a shoot-type dropdown.
-- **Services / Pricing** (`/services`, shipped 2026-07-01, commit `9979165`) — full-width
-  alternating photo rows, named packages with starting prices (Portraits $100 /
-  Graduation $150 / Sports and Editorial $200); linked in nav + footer of every page.
-  Session-length/turnaround figures on the page are still placeholders pending owner
-  confirmation.
-- **Nav** enlarged ~15% site-wide; **all About links removed** from nav/footers/CTAs.
-- Full-res originals live in git-ignored `masters/` (moved out of the tracked tree
-  2026-08-11 via `tools/move-masters.mjs`); in-tree source folders now only hold the
-  optimized `/img` pipeline output.
-- **Favicon set** (2026-08-11) — generated from the aperture brand mark (`favicon.svg`
-  + `.ico` + PNG sizes + apple-touch-icon), replacing the old leftover yellow "R" icon.
-  **`404.html`** (2026-08-11) — Dark Cinematic themed, not mirrored (in `sync-mirrors.mjs`
-  `SKIP` list; GitHub Pages serves it directly at the root for any unmatched path).
-  Google Fonts stylesheet now loads async (preload + media-swap) site-wide instead of
-  render-blocking. See `tools/generate-favicon.mjs`, `tools/update-favicon-links.mjs`,
-  `tools/async-fonts.mjs`.
+Clean white redesign shipped 2026-11-04 (built with `tools/apply-clean-chrome.mjs`, a one-off).
+- **Homepage** — two-column uncropped wall of 10 owner-picked photos, each linking to its gallery,
+  then a short intro + "Book a shoot".
+- **Work** (`/galleries`) — alternating rows in a narrow column with a white label cut into each
+  photo. Hubs (`/football`, `/concerts`, `/volleyball`) share this layout.
+- **Gallery pages** — plain title, uncropped 2-col masonry, white lightbox, booking line.
+- **Services** — ruled rows per package. Graduation $100 / Portraits $75 / Sports and Editorial
+  $150. Prices, session lengths and turnaround confirmed by the owner 2026-11-04.
+- **Contact** — large email + Formspree form. **About** — short bio, back in the nav.
+- **No site footer** — the owner removed it from every page.
+- Favicons regenerated in black (`tools/generate-favicon.mjs`). `404.html` is not mirrored.
+- Full-res originals live in git-ignored `masters/`. Redesign mockups are in
+  `masters/mockups-2026/` (local only).
 
 ## Backlog — what we still need to do
-1. **About page** — the last page still on the old "paper" theme (`about.css`). It is
-   currently **orphaned** (unlinked; reachable only via direct `/about`). Decide:
-   (a) redesign to Dark Cinematic and re-link — this doubles as the photographer-story
-   About that's part of the conversion goal below — or (b) retire it. While it stays
-   unlinked, consider adding `noindex` so search engines drop it.
-2. **Verify the Formspree form** actually delivers (submit a live test).
-3. **Conversion extras:** testimonials + FAQ. (Confirm the Services page's placeholder
-   session-length/turnaround figures while in there.)
-4. **Re-check Lighthouse post-deploy.** Pre-fix production scores (2026-08-11): Home 75 /
-   Services 81 / a gallery page 86 perf (Accessibility/Best Practices/SEO already 100
-   everywhere). Fixed the two biggest hits — render-blocking Google Fonts (~900ms) and
-   oversized homepage "Selected Work" images (missing 480w/960w srcset entries) — but
-   haven't re-measured against production since deploying (GH Pages' 4-hour cache means
-   the fix needs time to actually serve). If still short of 90, re-run
-   `npx lighthouse <url> --only-categories=performance` and check `image-delivery-insight`/
-   `render-blocking-insight`/`cache-insight` in the JSON output for what's left — the
-   4-hour cache TTL itself isn't fixable from the repo (GH Pages has no custom-headers
-   support).
+1. **Decide on Featured Works.** It duplicates the homepage. Suggested: drop its row from
+   `/galleries` and redirect `/featured-works` and `/selected-work` to `/`. First check that no
+   photo appears only there.
+2. **One-line "what and where" above the homepage wall** — proposed, awaiting the owner's call.
+3. **Conversion extras:** testimonials (real quotes only) + FAQ.
+4. **Lighthouse.** Pre-launch local mobile runs on 2026-11-04: home 86 perf, Baseball 81, both 100
+   accessibility; target 90+. Re-run with `npx lighthouse <url> --only-categories=performance`. The
+   4-hour cache TTL isn't fixable from the repo.
+
+## Restoring the old design
+Dark Cinematic is preserved at the annotated tag `dark-cinematic-final` (pushed to GitHub).
+- Look at it: `git switch --detach dark-cinematic-final`, then `git switch main` to come back.
+- Restore a single file: `git checkout dark-cinematic-final -- landing.css`.
+- Roll the whole site back: `git revert` the redesign commit (keeps history), then push.
+Galleries added after the redesign would need converting by hand if rolled back.
 
 ## Related notes
 Deeper session-by-session history lives in the owner's Claude memory

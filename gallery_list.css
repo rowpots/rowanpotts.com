@@ -1,207 +1,68 @@
-/* gallery_list.css — Galleries index in the "Dark Cinematic" language.
-   Loaded after base.css (which owns the palette tokens, top bar, nav and
-   buttons). This file styles only the page-specific pieces: the typographic
-   hero band, the full-bleed alternating category rows, and the footer. */
+/* gallery_list.css — /galleries and the football, concerts and volleyball hubs.
+   Alternating rows held to a narrow column so several show at once. The label is a
+   white block cut into the photo, so no scrim is needed. */
 
-/* ---- typographic hero band (photo-free) ---- */
-.g_hero {
-  position: relative;
-  background:
-    radial-gradient(120% 150% at 14% -10%, rgba(201, 169, 106, 0.12), rgba(14, 14, 15, 0) 48%),
-    var(--bg);
-  border-bottom: 1px solid rgba(201, 169, 106, 0.16);
-  overflow: hidden;
-}
-
-.g_hero_inner {
-  position: relative;
-  z-index: 2;
-  width: min(100%, var(--container));
-  margin-inline: auto;
-  padding: clamp(92px, 13vw, 180px) var(--gutter) clamp(48px, 6vw, 76px);
-}
-
-.g_hero h1 {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(3rem, 1.5rem + 7.5vw, 7.5rem);
-  line-height: 0.92;
-  letter-spacing: -0.012em;
-  color: var(--ink);
-  margin: 0;
-}
-
-.g_hero h1::after {
-  content: "";
-  display: block;
-  width: clamp(48px, 6vw, 84px);
-  height: 2px;
-  background: var(--gold);
-  margin-top: clamp(20px, 2.5vw, 30px);
-}
-
-/* ---- full-bleed alternating category rows ---- */
 .g_rows {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  gap: var(--gap);
+  width: min(100%, var(--col));
+  margin-inline: auto;
+  padding: 0 var(--side);
 }
 
 .r_item {
   position: relative;
   display: block;
+  height: clamp(190px, 20vw, 260px);
   overflow: hidden;
+  background: var(--tint);
 }
 
 .r_item picture { display: contents; }
 
 .r_item img {
   width: 100%;
-  height: clamp(420px, 46vw, 680px);
+  height: 100%;
   object-fit: cover;
-  object-position: center 32%;
-  transition: transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+  object-position: center 35%;
 }
-
-.r_item:hover img,
-.r_item:focus-visible img { transform: scale(1.04); }
 
 /* per-image focal points so tall / high-subject shots keep their subject in frame */
 .r_item img[src*="app-state-41"] { object-position: center 24%; }
 .r_item img[src*="graduation-26-of-80"] { object-position: center 18%; }
-.r_item img[src*="crop-1-of-1"] { object-position: center 28%; }
+.r_item img[src*="crop-1-of-1"] { object-position: center 44%; }
 .r_item img[src*="wbb-16"] { object-position: center 38%; }
 .r_item img[src*="wsoftball-louisiana-13"] { object-position: center 62%; }
-.r_item img[src*="sunset-silhouette"] { object-position: center 40%; }
+.r_item img[src*="sunset-silhouette"] { object-position: center 10%; }
 .r_item img[src*="myfarm-3"] { object-position: center 46%; }
 .r_item img[src*="jmutroy-50"] { object-position: center 22%; }
-
-/* directional scrim: shade the caption side, fade to clear across the frame */
-.r_item::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(14, 14, 15, 0.86) 0%, rgba(14, 14, 15, 0.3) 46%, rgba(14, 14, 15, 0) 74%);
-}
-
-.r_item:nth-child(even)::after {
-  background: linear-gradient(270deg, rgba(14, 14, 15, 0.86) 0%, rgba(14, 14, 15, 0.3) 46%, rgba(14, 14, 15, 0) 74%);
-}
+.r_item img[src*="football-reedit-5"] { object-position: center 25%; }
+.r_item img[src*="dthp-15"] { object-position: center 68%; }
 
 .r_cap {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: clamp(24px, 5vw, 80px);
-  right: auto;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  max-width: min(44ch, 46%);
+  left: 0;
+  bottom: 0;
+  padding: 9px 16px 7px 0;
+  background: #fff;
 }
 
 .r_item:nth-child(even) .r_cap {
   left: auto;
-  right: clamp(24px, 5vw, 80px);
-  align-items: flex-end;
-  text-align: right;
+  right: 0;
+  padding: 9px 0 7px 16px;
 }
 
 .r_name {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(2rem, 1.4rem + 3vw, 3.8rem);
-  line-height: 1;
-  color: var(--ink);
+  font-size: clamp(1.3rem, 1rem + 1vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1.1;
 }
 
-.r_view {
-  display: inline-block;
-  margin-top: 16px;
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--gold);
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 4px;
-}
-
-/* ---- footer (dark) ---- */
-.footer {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-  width: min(100%, var(--container));
-  margin: 0 auto;
-  padding: 52px var(--gutter) 64px;
-  border-top: 1px solid var(--hair);
-  color: var(--soft);
-}
-
-.footer_identity {
-  display: grid;
-  gap: 6px;
-}
-
-.footer_identity p {
-  margin: 0;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: var(--step-1);
-  color: var(--ink);
-}
-
-.footer_identity span {
-  line-height: 1.5;
-  font-size: var(--step--1);
-}
-
-.footer_links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 22px;
-}
-
-.footer a {
-  width: fit-content;
-  font-size: var(--step--1);
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--soft);
-}
-
-.footer a:hover,
-.footer a:focus-visible { color: var(--gold); }
-
-/* ---- phones: bottom-anchored captions over a full-width scrim ---- */
-@media (max-width: 600px) {
-  .r_item img { height: clamp(360px, 86vw, 520px); }
-
-  .r_item::after,
-  .r_item:nth-child(even)::after {
-    background: linear-gradient(0deg, rgba(14, 14, 15, 0.92) 0%, rgba(14, 14, 15, 0.3) 52%, rgba(14, 14, 15, 0) 100%);
-  }
-
-  .r_cap,
-  .r_item:nth-child(even) .r_cap {
-    top: auto;
-    bottom: clamp(20px, 6vw, 30px);
-    left: clamp(18px, 6vw, 28px);
-    right: clamp(18px, 6vw, 28px);
-    transform: none;
-    align-items: flex-start;
-    text-align: left;
-    max-width: none;
-  }
-}
-
-@media (min-width: 760px) {
-  .footer {
-    grid-template-columns: minmax(260px, 1fr) auto;
-    align-items: start;
-  }
-
-  .footer_links { justify-content: flex-end; }
+.r_item:hover .r_name,
+.r_item:focus-visible .r_name {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
