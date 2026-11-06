@@ -31,7 +31,7 @@ shared design system: tokens, the header (`.top`, wordmark + nav + social icons)
 |---|---|
 | `base.css` | **every page** (loaded first) |
 | `landing.css` | homepage (`index.html` + `home/index.html`) |
-| `gallery_list.css` | galleries index plus the `football`, `concerts`, `volleyball` hubs |
+| `gallery_list.css` | galleries index plus the `football`, `concerts`, `volleyball`, `basketball` hubs |
 | `gallery_page.css` | all 12 individual gallery pages + mirrors |
 | `contact_style.css` | contact page |
 | `services.css` | services page |
@@ -129,7 +129,7 @@ No dimension/file-size prep needed on your end — just drop in full-resolution 
   If you ever need a grid layout, scope `picture{display:block}` to that grid container.
   Same reason: `:nth-child`/`:last-child` on `.image` won't match (the `<img>` is child #2
   of `<picture>`) — target `.gallery_masonry picture:nth-child(...)` instead.
-- **CSS links carry a version: `/base.css?v=20261104`.** After changing any stylesheet, bump the date on every root page, then sync mirrors. On the 2026-11-04 launch the Pages CDN kept serving old CSS at plain URLs next to new HTML, which broke the live site for everyone, not just one browser cache.
+- **CSS links carry a version: `/base.css?v=20261106`.** After changing any stylesheet, bump the date on every root page, then sync mirrors. On the 2026-11-04 launch the Pages CDN kept serving old CSS at plain URLs next to new HTML, which broke the live site for everyone, not just one browser cache.
 - Do not add `picture{display:contents}` to `base.css`: `.svc_img`, `.wall` and others rely on
   `<picture>` being a box.
 - Homepage = two explicit flex columns (`.wall`/`.wall_col` in `landing.css`), not CSS columns, so
@@ -181,7 +181,7 @@ Clean white redesign shipped 2026-11-04 (built with `tools/apply-clean-chrome.mj
 - **Homepage** — two-column uncropped wall of 10 owner-picked photos, each linking to its gallery,
   then a short intro + "Book a shoot".
 - **Work** (`/galleries`) — alternating rows in a narrow column with a white label cut into each
-  photo. Hubs (`/football`, `/concerts`, `/volleyball`) share this layout.
+  photo. Hubs (`/football`, `/concerts`, `/volleyball`, `/basketball`) share this layout.
 - **Gallery pages** — plain title, uncropped 2-col masonry, white lightbox, booking line.
 - **Services** — ruled rows per package. Graduation $100 / Portraits $75 / Sports and Editorial
   $150. Prices, session lengths and turnaround confirmed by the owner 2026-11-04.
