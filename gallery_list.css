@@ -1,4 +1,4 @@
-/* gallery_list.css — /galleries and the football, concerts and volleyball hubs.
+/* gallery_list.css — /galleries and the football, concerts, volleyball and basketball hubs.
    Alternating rows held to a narrow column so several show at once. The label is a
    white block cut into the photo, so no scrim is needed. */
 
@@ -39,6 +39,15 @@
 .r_item img[src*="jmutroy-50"] { object-position: center 22%; }
 .r_item img[src*="football-reedit-5"] { object-position: center 25%; }
 .r_item img[src*="dthp-15"] { object-position: center 68%; }
+
+.g_group + .g_group { margin-top: clamp(40px, 5vw, 72px); }
+
+.g_head {
+  width: min(100%, var(--col));
+  margin-inline: auto;
+  padding: 0 var(--side) clamp(12px, 1.4vw, 18px);
+  font-size: clamp(1.4rem, 1.1rem + 1vw, 2rem);
+}
 
 .r_cap {
   position: absolute;
